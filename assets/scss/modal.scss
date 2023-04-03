@@ -1,0 +1,143 @@
+.modal-box{
+    .modal-dialog{
+      max-width: 920px;
+      background: url(../images/bg-box-modal.png) center center no-repeat;
+      -webkit-background-size: contain;
+        -moz-background-size: contain;
+          -o-background-size: contain;
+              background-size: contain;
+      border: 0;
+    }
+    &.modal-box-hero{
+      .modal-dialog{
+        max-width: 520px;
+        background: url(../images/bg-box-modal-2.png) center center no-repeat;
+        -webkit-background-size: contain;
+          -moz-background-size: contain;
+            -o-background-size: contain;
+                background-size: contain;
+        border: 0;
+      }
+      .modal-content{
+        min-height: 600px;
+        padding: 20px;
+      }
+    }
+    .modal-content{
+      background: transparent;
+      border: 0;
+      min-height: 577px;
+      padding: 50px;
+      img.status{
+        max-width: 443px;
+        max-height: 342px;
+        min-width: 443px;
+      }
+      .modal-box-img{
+        img{
+          max-width: 199px;
+          max-height: 163px;
+          min-width: auto;
+        }
+      }
+      .token-buy{
+        min-width: 50px;
+        max-width: 50px;
+        height: 50px;
+        img{
+          max-width: 26px;
+          max-height: 28px;
+        }
+      }
+    }
+  }
+  
+  .modal-box-name{
+    background: url(../images/bg-modal-name.png) center center no-repeat;
+      -webkit-background-size: contain;
+        -moz-background-size: contain;
+          -o-background-size: contain;
+              background-size: contain;
+    width: 332px;
+    height: 68px;
+    padding: 14px 10px;
+  }
+  
+  .modal-box-img-hero{
+    background: #FAFAFA;
+    width: 170px;
+    height: 170px;
+    position: relative;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    img{
+      max-width: 78px;
+      max-height: 126px;
+    }
+    &:before{
+      content: " ";
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      bottom: -16px;
+      right: -16px;
+      -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+              border-radius: 50%;
+      border: 4px solid #FDD400;
+    }
+  }
+
+
+#hero-join-game-modal , #hero-in-game-modal , #robot-join-game-modal , #robot-in-game-modal  {
+  .modal-content {
+    background: url(../images/modal-approve-bg.png) center center no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 468px;
+    .modal-body {
+      text-align: center;
+      .img {
+        margin: auto;
+        margin-top: 26px;
+        margin-bottom: 30px;
+        width: 192px;
+        height: 192px;
+      }
+      .description {
+        color: #fff;
+        h4.quality {
+          font-size: 18px;
+          line-height: 27px;
+        }
+        p {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+    .modal-footer {
+      border-top: 0;
+      justify-content: center;
+      button.btn {
+        width: 336px;
+        height: 60px;
+        border: 0;
+      }
+      button.btn-approve {
+        background: url(../images/approve-btn-bg.png) center center no-repeat;
+        background-size: cover;
+      }
+      button.btn-set-avatar , button.btn-out-game , button.btn-set-in-game {
+        background: url(../images/set-avatar-btn-bg.png) center center no-repeat;
+        background-size: cover;
+      }
+      button.btn-set-avatar:hover , button.btn-out-game:hover ,button.btn-set-in-game:hover {
+        background: url(../images/set-avatar-btn-active-bg.png) center center no-repeat;
+        background-size: cover;
+        color: #000;
+      }
+    }
+  }
+}

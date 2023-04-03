@@ -1,0 +1,200 @@
+<script>
+    //hero list
+    $(document).ready(function(){
+        initData();
+        $("#modalHeroNFTJoinGame").load("modals/HeroNFTJoinGame.html");
+        $("#modalHeroNFTInGame").load("modals/HeroNFTInGame.html");
+        $("#modalRobotNFTJoinGame").load("modals/RobotNFTJoinGame.html");
+        $("#modalRobotNFTInGame").load("modals/RobotNFTInGame.html");
+
+    });
+    $('.hero-tab').click(function() {
+        $(this).addClass('active');
+        $('#pills-hero-in-game').show();
+        $('#pills-hero').show();
+        $('#pills-robot').hide();
+        $('#pills-robot-in-game').hide();
+        $('.robo-tab').removeClass('active');
+    });
+    $('.robo-tab').click(function() {
+        $(this).addClass('active');
+        $('#pills-hero-in-game').hide();
+        $('#pills-hero').hide();
+        $('#pills-robot').show();
+        $('#pills-robot-in-game').show();
+        $('.hero-tab').removeClass('active');
+    });
+    function initData()
+    {   
+        // init data
+        renderUserNftRobotIngame();
+        renderUserNftsRobot();
+        renderUserNftIngame();
+        renderUserNfts();
+        reloadData();
+    }
+    
+    function reloadData()
+    {
+        setTimeout(() => {
+            initData()
+        }, 300000);
+    }
+
+    async function renderUserNfts()
+    {
+        let data = await PixilSaga.HeroNFT.getAllHeroIdOfUser();
+        let totalNFT = data.totalNFT;
+        let renderListHeroNFT = "";
+        if(totalNFT > 0)
+        {
+            for(let i = 0; i < totalNFT; i++)
+            {
+                renderListHeroNFT +=
+                `<div class="col-md-3 col-sm-12" data-bs-toggle="modal" data-bs-target="#hero-join-game-modal" data-heroId="${data[i].heroId}">
+                    <div class="hero-card">
+                        <div class="avatar">
+                            <img src="../assets/images/avatar-card-light.png" alt="" class = "avatar-hover-image">
+                            <img src="${data[i].src}" alt="">
+                        </div>
+                        <div class="hero-status">
+                            <h4 class="name-hero">
+                                Hero #${data[i].heroId}
+                            </h4>
+                            <p class="status">Not Logged in</p>
+                        </div>
+                    </div>
+                </div>`
+            }
+        }
+        else
+        {
+            renderListHeroNFT = `<div class="fs-64 c-16 text-center py-150 flex-grow-1">No items to display</div>`
+        }
+
+        $('.list-hero #pills-hero .row').html(renderListHeroNFT);
+    }
+    async function renderUserNftIngame()
+    {
+        let data = await PixilSaga.GameController.GetDataUser(null);
+        if (data.heroId == 0) return;
+        let infoHeroIngame = await PixilSaga.HeroNFT.getInfoHeroByHeroId(data.heroId);
+        let renderHeroNFTingame =
+        `<div class="col-md-3 col-sm-12" data-bs-toggle="modal" data-bs-target="#hero-in-game-modal" data-heroId="${infoHeroIngame.heroId}">
+            <div class="hero-card">
+                <div class="avatar">
+                    <img src="../assets/images/avatar-card-light.png" alt="" class = "avatar-hover-image">
+                    <img src="${infoHeroIngame.src}" alt="">
+                </div>
+                <div class="hero-status">
+                    <h4 class="name-hero">
+                        Hero #${infoHeroIngame.heroId}
+                    </h4>
+                    <p class="status">Logged</p>
+                </div>
+            </div>
+        </div>`
+        $('.list-hero #pills-hero-in-game .row').html(renderHeroNFTingame);
+    }
+    // robot list
+    async function renderUserNftsRobot()
+    {
+        let dataRobot = await PixilSaga.RobotNFT.getAllRobotOfUser();
+        let totalNFT = dataRobot.totalNFT;
+        let renderListRobotNFT = "";
+        if(totalNFT > 0)
+        {
+            for(let i = 0; i < totalNFT; i++)
+            {
+                renderListRobotNFT +=
+                `<div class="col-md-3 col-sm-12" data-bs-toggle="modal" data-bs-target="#robot-join-game-modal" data-robotId="${dataRobot[i].RobotId}">
+                    <div class="hero-card">
+                        <div class="avatar">
+                            <img src="../assets/images/avatar-card-light.png" alt="" class = "avatar-hover-image">
+                            <img src="${dataRobot[i].src}" alt="">
+                        </div>
+                        <div class="hero-status">
+                            <h4 class="name-hero">
+                                Robot #${dataRobot[i].RobotId}
+                            </h4>
+                            <p class="status">Not Logged in</p>
+                        </div>
+                    </div>
+                </div>`
+            }
+        }
+        else
+        {
+            renderListRobotNFT = `<div class="fs-64 c-16 text-center py-150 flex-grow-1">No items to display</div>`
+        }
+
+        $('.list-hero #pills-robot .row').html(renderListRobotNFT);
+    }
+    async function renderUserNftRobotIngame()
+    {
+        let dataRobot = await PixilSaga.GameController.GetDataUser(null);
+        if (dataRobot.robotId == 0) return;
+        let infoRobotIngame = await PixilSaga.RobotNFT.getInfoRobotByRobotId(dataRobot.robotId);
+        let renderRobotNFTingame =
+        `<div class="col-md-3 col-sm-12" data-bs-toggle="modal" data-bs-target="#robot-in-game-modal" data-robotId="${infoRobotIngame.RobotId}">
+            <div class="hero-card">
+                <div class="avatar">
+                    <img src="../assets/images/avatar-card-light.png" alt="" class = "avatar-hover-image">
+                    <img src="${infoRobotIngame.src}" alt="">
+                </div>
+                <div class="hero-status">
+                    <h4 class="name-hero">
+                        Robot #${infoRobotIngame.RobotId}
+                    </h4>
+                    <p class="status">Logged</p>
+                </div>
+            </div>
+        </div>`
+        $('.list-hero #pills-robot-in-game .row').html(renderRobotNFTingame);
+    }
+</script>    
+
+<div class = "dashboard-page">
+    <div class="container-fluid">
+        <h1 class="title">
+            Dashboard
+            <div class="swap-hero-and-robot">
+                <div class="d-lg-flex align-items-center justify-content-center">
+                    <div class="item-link mr-30 hero-tab active">
+                      <p  class="text-decoration-none fs-16 b-600">Hero</p>
+                    </div>
+
+                    <div class="item-link robo-tab">
+                      <p  class="text-decoration-none fs-16 b-600 ">Robot</p>
+                    </div>
+                </div>
+            </div>
+        </h1>
+        <div class="list-hero">
+            <div id="pills-hero-in-game" >
+                <div class="row">
+                    
+                </div>
+            </div>
+            <div id="pills-hero">
+                <div class="row">
+                    
+                </div>
+            </div>
+            <div id="pills-robot-in-game" style="display: none;">
+                <div class="row">
+                    
+                </div>
+            </div>
+            <div id="pills-robot" style="display: none;">
+                <div class="row">
+                    
+                </div>
+            </div>          
+        </div>
+    </div>
+</div>
+<div id="modalHeroNFTJoinGame"></div>
+<div id="modalHeroNFTInGame"></div>
+<div id="modalRobotNFTJoinGame"></div>
+<div id="modalRobotNFTInGame"></div>

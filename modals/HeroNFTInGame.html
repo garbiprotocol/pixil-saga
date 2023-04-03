@@ -1,0 +1,45 @@
+<div class="modal fade" id="hero-in-game-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="img">
+              <img src="" class="image-hero" >
+          </div>
+          <div class="description">
+              <h4 class="quality">Quality: Common</h4>
+              <p class="f-inter">Set this NFT to your Avatar to display and make it eligible for more benefits in the Pixil Saga</p>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-out-game" >Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  var heroId = null;
+  var setHeroJoinGameId = null;
+  var user = null;
+  $("#hero-in-game-modal").on("show.bs.modal",async function(event)
+  {
+    var tokenId = $(event.relatedTarget).data('heroid');
+    heroId = tokenId ? parseInt(tokenId) : heroId;
+    // render info
+    let teamId = await PixilSaga.HeroNFT.getTeamIdByHeroId(heroId);
+    renderInfoHero(teamId);
+  });
+  $(".btn-out-game").click(function ()
+  {
+    LetHeroOutOfGame();
+  });
+  function renderInfoHero (teamId) 
+  {
+    $('.image-hero').attr('src', `../assets/images/Hero_Team_Id_${teamId}.png`);
+  }
+  function LetHeroOutOfGame ()
+  {
+    PixilSaga.GameController.LetHeroOutOfGame();
+  }
+</script>

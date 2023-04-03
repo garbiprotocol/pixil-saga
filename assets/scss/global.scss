@@ -1,0 +1,275 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap);
+@font-face {
+  font-family: 'RETRO-LAND-MAYHEM';
+  src: 
+        url('../fonts/RETRO-LAND-MAYHEM.woff') format('woff'),
+        url('../fonts/RETRO-LAND-MAYHEM.otf') format('otf'),
+        url('../fonts/RETRO-LAND-MAYHEM.ttf') format('truetype'), 
+        url('../fonts/RETRO-LAND-MAYHEM.eot') format('eot'), 
+        url('../fonts/RETRO-LAND-MAYHEM.svg') format('svg');
+}
+
+
+*{
+  font-family: 'RETRO-LAND-MAYHEM', sans-serif;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.f-inter{
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  font-family: 'RETRO-LAND-MAYHEM', sans-serif;
+  font-size: 14px;
+	line-height: 20px;
+  color: #181425;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+figure{
+	max-width: 100%!important;
+}
+
+iframe{
+  max-width: 100%!important;
+}
+
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+textarea{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.text-break-all{
+  word-break: break-all;
+}
+
+$fonts: 12, 14, 16, 22, 24, 25, 30, 45;
+
+@each $font in $fonts {
+  .f-#{$font} {
+    font-size: #{$font}px;
+    line-height: 1.4;
+  }
+}
+
+$weights: 400, 600, 700, 900;
+
+@each $weight in $weights {
+  .b-#{$weight} {
+    font-weight: #{$weight};
+  }
+}
+
+$colors: (
+  "black": #000000,
+  "white": #fff,
+  "main": #11121C,
+  "body": #181425,
+  "transparent": transparent,
+  "1": #F2CE0D,
+  "2": #006EB3,
+  "3": #393A4D,
+  "4": #FAFAFA,
+  "5": #CCCCCC,
+  "6": #009DFF,
+  "7": #E90982,
+  "8": #0CA364,
+  "9": #52242A,
+  "10": #FDD400,
+  "11": #0CCD7C,
+  "12": #FF5D5D,
+  "13": #61321A,
+  "14": #955323,
+  "15": #E94040,
+  "16": #B3BACC,
+  "17": #F51B18,
+  "18": #6F94F7,
+);
+
+
+@each $i, $color in $colors {
+  .c-#{$i} {
+    color: $color;	
+  }
+  .c-hover-#{$i} {
+    color: #FAFAFA;	
+  }
+  .background-#{$i} {
+    background: $color;	
+  }
+  .background-hover-#{$i}:hover {
+    border: 1px solid $color;
+    background: transparent;
+    color: $color;
+  }
+  .background-hover-#{$i}-2:hover {
+    border: 2px solid $color;
+    background: transparent;
+    color: $color;
+  }
+  .border-#{$i} {
+    border: 1px solid $color;	
+  }
+  .border-#{$i}-2 {
+    border: 2px solid $color;	
+  }
+  .border-btn-hover-#{$i}:hover {
+    border: 1px solid transparent;
+    background:	$color;
+    color: #fff;
+  }
+  .border-btn-hover-#{$i}-2:hover {
+    border: 2px solid transparent;
+    background:	$color;
+    color: #fff;
+  }
+  .text-shadow-#{$i}{
+    text-shadow: 1px 0 $color, -1px 0 $color, 0 1px $color, 0 -1px $color,
+             1px 1px $color, -1px -1px $color, 1px -1px $color, -1px 1px$color;
+  }
+  .text-shadow-#{$i}-2{
+    text-shadow: 2px 0 $color, -2px 0 $color, 0 2px $color, 0 -2px $color,
+             2px 2px $color, -2px -2px $color, 2px -2px $color, -2px 2px$color;
+  }
+}
+
+@for $i from 0 through 300 {
+  .fs-#{$i} {
+    font-size: #{$i}px;
+    line-height: 1.3;
+  }
+
+  .w-#{$i} {
+    width: #{$i}px;
+  }
+
+  .h-#{$i} {
+    height: #{$i}px;
+  }
+
+  .maxw-#{$i} {
+    max-width: #{$i}px;
+  }
+
+  .maxh-#{$i} {
+    max-height: #{$i}px;
+  }
+
+  .minw-#{$i} {
+    min-width: #{$i}px;
+  }
+
+  .minh-#{$i} {
+    min-height: #{$i}px;
+  }
+
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+
+  .mx-#{$i} {
+    margin-left: #{$i}px;
+    margin-right: #{$i}px;
+  }
+
+  .my-#{$i} {
+    margin-top: #{$i}px;
+    margin-bottom: #{$i}px;
+  }
+
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+
+  .px-#{$i} {
+    padding-left: #{$i}px;
+    padding-right: #{$i}px;
+  }
+
+  .py-#{$i} {
+    padding-top: #{$i}px;
+    padding-bottom: #{$i}px;
+  }
+
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+}
+
+$borderRadius: 8, 20, 30;
+
+@each $radius in $borderRadius {
+  .border-radius-#{$radius} {
+    -webkit-border-radius: #{$radius}px;
+       -moz-border-radius: #{$radius}px;
+            border-radius: #{$radius}px;	
+  }
+}
+
+.btn-transition{
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.container-common{
+  width: 100%;
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main-page{
+  min-height: -webkit-calc(100vh - 252px);
+  min-height: -moz-calc(100vh - 252px);
+  min-height: calc(100vh - 252px);
+  padding: 30px 0 100px;
+}

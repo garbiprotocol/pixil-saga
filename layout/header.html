@@ -1,0 +1,209 @@
+<script src="../assets/js/web3.min.js"></script>
+<script src="../js/core.js"></script>
+<div class="header">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="row align-items-center flex-grow-1">
+          <div class="col-lg-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <a href="/" class="logo">
+                <img src="../assets/images/logo-pixil.png" alt="logo" />
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="row align-items-center flex-grow-1">
+                <div class="col-lg-9">
+                  <div class="d-lg-flex align-items-center justify-content-center">
+                    <!-- <div class="dropdown show item-link mr-30">
+                      <a class="text-decoration-none fs-16 c-main b-600 dropdown-toggle dropdown-toggle-game" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Game
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu__game-header" aria-labelledby="dropdownMenuLink">
+                        <div>
+                          <a class="dropdown-item d-flex align-items-center" href="#">
+                            <span class="img mr-8"><img src="../public/assets/images/game-1.jpg" /></span>
+                            <span class="b-700">Game#1</span>
+                          </a>
+                        </div>
+                        <div>
+                          <a class="dropdown-item d-flex align-items-center" href="#">
+                            <span class="img mr-8"><img src="../public/assets/images/game-2.jpg" /></span>
+                            <span class="b-700">Game#2</span>
+                          </a>
+                        </div>
+                        <div>
+                          <a class="dropdown-item d-flex align-items-center" href="#">
+                            <span class="img mr-8"><img src="../public/assets/images/game-3.jpg" /></span>
+                            <span class="b-700">Game#3</span>
+                          </a>
+                        </div>
+                        <div>
+                          <a class="dropdown-item d-flex align-items-center" href="#">
+                            <span class="img mr-8"><img src="../public/assets/images/game-4.jpg" /></span>
+                            <span class="b-700">Game#4</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-link mr-30"><a href="/" class="text-decoration-none fs-16 c-main b-600">NFT Market</a></div>
+                    <div class="item-link"><a href="/" class="text-decoration-none fs-16 c-main b-600">Inventory</a></div> -->
+                    <div class="item-link mr-30">
+                      <a href="/genesis-hero" class="text-decoration-none fs-16 c-4 b-600 menu-genesis-hero">Genesis Hero</a>
+                    </div>
+
+                    <div class="item-link mr-30">
+                      <a href="/dashboard" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard">Dashboard</a>
+                    </div>
+
+                    <div class="item-link">
+                      <a href="/faucet" class="text-decoration-none fs-16 c-4 b-600 menu-faucet">Get Faucet</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="d-lg-flex align-items-center justify-content-end">
+                    <!-- <div class="item-link"><a href="/" class="login text-decoration-none fs-16 c-main b-600 d-inline-block mr-30">Login</a></div>
+                     <div class="item-link"><a href="/" class="register text-decoration-none fs-16 b-600 c-main background-1 border-transparent-2 background-hover-1-2 py-8 px-24 border-radius-20 btn-transition d-inline-block mr-30">Register</a></div> -->
+
+                    <div class="wrap-user-acct dropdown show">
+                      <a class="text-decoration-none fs-16 c-main b-600 dropdown-toggle dropdown-toggle-game d-flex align-items-center" href="#" role="button" id="dropdownMenuLinkInfo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="avatar mr-8" id="pixil-saga-avatar">
+                          <img src="../assets/images/default_avatar.png" />
+                        </span>
+                       
+                        <span class="b-600 user-acct">0x00</span>
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu__game-info" aria-labelledby="dropdownMenuLinkInfo">
+                        <div class="mb-16">
+                          <a class="dropdown-item d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#modalChangeAvatar" href="#">
+                            <span class="fs-14 b-600">Setting</span>
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.8125 6L15.8125 12L9.8125 18" stroke="#52242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </a>
+                        </div>
+
+                        <div class="mb-16">
+                          <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                            <span class="fs-14 b-600">Sercurity</span>
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.8125 6L15.8125 12L9.8125 18" stroke="#52242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </a>
+                        </div>
+
+                        <!-- <div class="wrap-btn-connect"><a href="#" class="btn-logout text-decoration-none fs-16 b-600 c-white background-15 border-15-2 border-btn-hover-15-2 p-8 border-radius-8 btn-transition d-inline-block w-100 text-center f-inter">Log out</a></div> -->
+                      </div>
+                    </div>
+
+                    <div class="wrap-user-btn show">
+                        <div class="wrap-btn-connect"><a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white border-transparent-2 py-8 px-24 border-radius-20 btn-transition d-inline-block">Connect Wallet</a></div>
+                      </div>
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <!-- <div class="modal fade" id="modalChangeAvatar" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Update Profile</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="avatar-upload">
+              <div class="avatar-edit">
+                <span class="imageUpload"></span>
+              </div>
+              <div class="avatar-preview text-center">
+                <img class="profile-user-img img-fluid" id="imagePreview" src="../public/assets/images/avatar.png" alt="User profile picture">
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#modalListAvatar">Change Profile Pic</button>
+            <button type="button" class="btn btn-primary w-100" onclick="removeAvatar()">Remove Profile Pic</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- <div class="modal fade" id="modalListAvatar" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Your Heroes</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="avatar-list">
+                    <div class="row">
+                         <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="avatar-item text-center mb-3 border p-3 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalAvatarDetail">
+                                <div class="avatar-preview text-center mb-3">
+                                <img class="profile-user-img img-fluid rounded-circle" id="imagePreview" src="https://adminlte.io/themes/AdminLTE/dist/img/user3-128x128.jpg" alt="User profile picture">
+                                </div>
+                                <div class="text-center c-black">#12345</div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>  -->
+
+
+    <div class="modal-detail-wrapper">
+    </div>
+  </div>
+</div>
+<script>
+    function activeMenu(activeClass) {
+      $('.menu-genesis-hero').removeClass('active');
+      $('.menu-dashboard').removeClass('active');
+      $('.menu-faucet').removeClass('active');
+      if (activeClass) $(`.${activeClass}`).addClass('active');
+    }
+    function getActiveClass() 
+    {
+        let pathname = window.location.pathname;
+        let activeClass;
+        if (pathname.includes("/genesis-hero")) 
+        {
+            activeClass = "menu-genesis-hero";
+        } 
+        else if (pathname.includes("/dashboard")) 
+        {
+            activeClass = "menu-dashboard";
+        }
+        else if (pathname.includes("/faucet")) 
+        {
+            activeClass = "menu-faucet";
+        }
+        return activeClass;
+    }
+    var coreHelper = new $.Core();
+
+    $(document).ready(function() 
+    {
+        coreHelper.init({});
+        $('body').delegate('.btn-go-to-home', 'click', function () 
+        {
+          window.location.href = "/";  
+        });
+        activeMenu(getActiveClass());
+    });
+</script>

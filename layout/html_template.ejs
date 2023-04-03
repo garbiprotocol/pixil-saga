@@ -1,0 +1,77 @@
+<!-- <script class="user-avatar-list hide" type="text/x-handlebars-template">
+    <@ data.forEach( function ( avatar ) { @>
+        <@
+            var imgSrc = ``;
+            if(avatar && avatar.image) {
+                var cid = avatar.image.slice(7, avatar.image.length);
+                imgSrc  = `https://${cid}.ipfs.cf-ipfs.com`
+            }
+        @>
+        <div class="test-<@= cid @>">
+            <div class="avatar-preview text-center mb-3">
+                <img class="profile-user-img img-fluid" id="imagePreview" src="<@=imgSrc@>" alt="User profile picture">
+            </div>
+        </div>
+    <@ }); @>
+</script>
+
+<script class="user-box-list" type="text/x-handlebars-template"> 
+    <@ if(boxes.length > 0) { @>
+        <@ boxes.forEach( function ( box ) { @>  
+            <@ var isActive = activeId == box.tokenId ? 'active' : '' @>
+            <div class="dashboard-item text-center mb-36 cursor-pointer <@=isActive@>" data-bs-toggle="modal" data-bs-target="#modal-box" data-box="<@=box.tokenId@>">
+                <div class="dashboard-item-img d-flex align-items-center justify-content-center mx-auto mb-22">
+                    <@
+                        var imgSrc = box && box.imgUrl ? box.imgUrl : ''; 
+                    @>
+                    <img src="<@=imgSrc@>" alt="item" />
+                </div>
+                <div class="dashboard-item-name d-flex align-items-center justify-content-center fs-24 c-9 mx-auto">Box #<@=box.tokenId@></div>
+            </div>
+        <@ }); @>
+    <@ } else { @>
+        <div class="fs-64 c-16 text-center py-150 flex-grow-1">No items to display</div>
+    <@ } @>
+</script> -->
+
+<script class="user-avatars-list" type="text/x-handlebars-template">
+    <@console.log(data)@>
+    <@ if(data.length > 0) { @>
+        <@ data.forEach( function ( avatar ) { @>  
+            <!-- <@ var isActive = activeId == avatar.tokenId ? 'active' : '' @> -->
+            <div class="dashboard-item text-center mb-36 cursor-pointer " data-bs-toggle="modal" data-bs-target="#choose-hero-box" data-avatar="<@=avatar.heroId@>">
+                <@
+                    var imgSrc = data && data.src ? data.src : ''; 
+                @>
+                <div class="dashboard-item-img d-flex align-items-center justify-content-center mx-auto mb-22">
+                    <img src="<@=imgSrc@>" alt="hero" />
+                </div>
+                <div class="dashboard-item-name d-flex align-items-center justify-content-center fs-24 c-13 mx-auto">data #<@=data.heroId@></div>
+            </div>
+        <@ }); @>
+    <@ } else { @>
+        <div class="fs-64 c-16 text-center py-150 flex-grow-1">No items to display</div>
+    <@ } @>    
+</script>
+
+<!-- <script class="set-avatar-btn-groups" type="text/x-handlebars-template">
+    <@ if(avatar && avatar.operator != '0x0000000000000000000000000000000000000000') { @>
+        <div class="text-center">
+            <button type="button" class="btn-box-2 py-16 px-10" style="width: 400px;" onclick="setAvatar()">
+            <span class="c-6 fs-20">Use this NFT as your Avatar</span>
+            </button>
+        </div>
+    <@ } else { @>
+        <div class="text-center mb-16">
+            <button type="button" class="btn-box-3 py-16 px-10" style="width: 400px;" onclick="approve()">
+            <span class="c-11 fs-20">Approve</span>
+            </button>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn-box-4 py-20 px-10" style="width: 400px;">
+                <span class="c-body fs-20">Use this NFT as your Avatar</span>
+            </button>
+        </div>
+    <@ }; @>
+</script> -->
+

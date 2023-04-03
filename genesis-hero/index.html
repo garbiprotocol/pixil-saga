@@ -1,0 +1,135 @@
+<script>
+    $(document).ready(function()
+    {
+        $("#modalPending").load("./models/pending.html");
+        $("#modalSuccess").load("./models/success.html");
+        $("#modalFail").load("./models/fail.html");
+        // $(".btn-mint-hero").click(function()
+        // {
+        //     $("#modalPending").modal("show");
+        // });
+        
+        // test
+        $(".buy-team-id-1").click(function()
+        {
+            MintNFT(1);
+        })
+        $(".buy-team-id-2").click(function()
+        {
+            MintNFT(2);
+        })
+        $(".buy-team-id-3").click(function()
+        {
+            MintNFT(3);
+        })
+        $(".buy-team-id-4").click(function()
+        {
+            MintNFT(4);
+        })
+    });
+    
+    function MintNFT(teamId)
+    {
+        PixilSaga.GameController.MintHeroNFT(teamId);
+    }
+    
+    async function ApproveCreditTokenWhenMint()
+    {
+        let spender = PixilSaga.GameController.configs.Contract.GetGameControllerContract();
+        let amount = '115792089237316195423570985008687907853269984665640564039457584007913129639935';
+        
+        PixilSaga.Grb.approve(spender, amount) 
+    }
+
+    async function CheckApproveCreditTokenWhenMint()
+    {
+        let spender = PixilSaga.GameController.configs.Contract.GetGameControllerContract();
+        let amountApproved = await PixilSaga.Grb.allowance(null, spender);
+        let priceCreditMint = await PixilSaga.GameController.PriceCreditMint();
+
+        if(amountApproved > priceCreditMint) return true;
+
+        return false;
+    }
+</script>
+
+<div id="buy-box">
+    <div class="container-fluid">
+        <h4 class="title">
+            Buy Pixil Saga Hero
+        </h4>
+        <p class="f-inter">Ut egestas vitae urna sem eget quam proin tincidunt scelerisque. Nibh convallis gravida odio nulla non pellentesque. Pulvinar tristique volutpat aliquam proin risus venenatis sagittis at turpis. Sed ornare egestas tincidunt imperdiet sed duis ultricies.</p>
+        <div class="list-hero-claim">
+            <div class="hero-info">
+                <div class="img">
+                    <img src="../assets/images/Hero_Team_Id_1.png" alt="Hero 1">
+                </div>
+                <div class="description">
+                    <h4 class="name">HODL hero</h4>
+                    <p class="f-inter info">This team is all about the classic strategy of holding onto their digital assets for the long term. Members of this team are patient and strategic, always thinking about the big picture and the potential future value of their investments.</p>
+                </div>
+            </div>
+            <div class="hero-info">
+                <div class="img">
+                    <img src="../assets/images/Hero_Team_Id_2.png" alt="Hero 2">
+                </div>
+                <div class="description">
+                    <h4 class="name">Trading Titans</h4>
+                    <p class="f-inter info">This team is focused on short-term gains through active trading in the crypto market. Members of this team are skilled traders, always looking for opportunities to buy and sell at the right time for maximum profit.</p>
+                </div>
+            </div>
+            <div class="hero-info">
+                <div class="img">
+                    <img src="../assets/images/Hero_Team_Id_3.png" alt="Hero 3">
+                </div>
+                <div class="description">
+                    <h4 class="name">NFT Ninjas</h4>
+                    <p class="f-inter info">This team is focused on short-term gains through active trading in the crypto market. Members of this team are skilled traders, always looking for opportunities to buy and sell at the right time for maximum profit.</p>
+                </div>
+            </div>
+            <div class="hero-info">
+                <div class="img">
+                    <img src="../assets/images/Hero_Team_Id_4.png" alt="Hero 4">
+                </div>
+                <div class="description">
+                    <h4 class="name">Staking Stars</h4>
+                    <p class="f-inter info">This team is focused on earning through the process of staking, which involves holding a certain amount of digital assets in a wallet in order to support the network and earn rewards. Members of this team are strategic and focused on maximizing their staking rewards.</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="heroes row page-description text-center">
+            <div class="hero col">
+                <img src="../assets/images/Hero_Team_Id_1.png" alt="Hero 1">
+                <h2>HODL hero</h2>
+                <button type="button" class="btn-box-5 pt-20 pb-24 w-100 c-7 fs-32 btn-mint-hero" style="max-width: 276px;"  >
+                    <span class="c-6 fs-32 buy-team-id-1">Buy</span>
+                </button>
+            </div>
+            <div class="hero col">
+                <img src="../assets/images/Hero_Team_Id_2.png" alt="Hero 2">
+                <h2>nft ninjas</h2>
+                <button type="button" class="btn-box-5 pt-20 pb-24 w-100 c-7 fs-32 btn-mint-hero" style="max-width: 276px;"  >
+                    <span class="c-6 fs-32 buy-team-id-2">Buy</span>
+                </button>
+            </div>
+            <div class="hero col">
+                <img src="../assets/images/Hero_Team_Id_3.png" alt="Hero 3">
+                <h2>stacking star</h2>
+                <button type="button" class="btn-box-5 pt-20 pb-24 w-100 c-7 fs-32 btn-mint-hero" style="max-width: 276px;"  >
+                    <span class="c-6 fs-32 buy-team-id-3">Buy</span>
+                </button>
+            </div>
+            <div class="hero col">
+                <img src="../assets/images/Hero_Team_Id_4.png" alt="Hero 4">
+                <h2>trading titan</h2>
+                <button type="button" class="btn-box-5 pt-20 pb-24 w-100 c-7 fs-32 btn-mint-hero" style="max-width: 276px;"  >
+                    <span class="c-6 fs-32 buy-team-id-4">Buy</span>
+                </button>
+            </div>
+          </div> -->
+    </div> 
+</div>
+
+<div id="modalPending"></div>
+<div id="modalSuccess"></div>
+<div id="modalFail"></div>
