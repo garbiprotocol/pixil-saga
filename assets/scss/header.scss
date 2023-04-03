@@ -16,6 +16,25 @@
         color: #52242A;
       }   
     }
+    .button-play-game {
+      button {
+        height: 40px;
+        width: 160px;
+        outline: none;
+        align-items: center;
+        border-radius: 3.625rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 500;
+        background: url(../images/play-button-bg.png) center center no-repeat;
+        background-size: cover;
+        font-size: 16px;
+        color: #fff;
+        margin-right: 10px;
+      }
+    }
     .dropdown-toggle-game.show{
       &:after {
         -webkit-transition: all 0.3s;

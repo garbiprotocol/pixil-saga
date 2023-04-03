@@ -19,7 +19,10 @@ const server = http.createServer(function(req, res)
     {
         req.url = "/views/faucet.html";
     }
-
+    if(req.url === "/hodl-hero")
+    {
+        req.url = "/views/hero-1-claim.html";
+    }
     fs.readFile("./" + req.url, function(err, data)
     {
         if(!err)

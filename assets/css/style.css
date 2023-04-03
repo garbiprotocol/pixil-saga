@@ -28155,6 +28155,23 @@ textarea {
   right: 25px;
   color: #52242A;
 }
+.header .button-play-game button {
+  height: 40px;
+  width: 160px;
+  outline: none;
+  align-items: center;
+  border-radius: 3.625rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 500;
+  background: url(../images/play-button-bg.png) center center no-repeat;
+  background-size: cover;
+  font-size: 16px;
+  color: #fff;
+  margin-right: 10px;
+}
 .header .dropdown-toggle-game.show:after {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -28925,6 +28942,59 @@ textarea {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 0;
+}
+
+#buy-box .hero-info-to-claim {
+  display: inline-block;
+  padding: 40px;
+  background: #EAEAEA;
+  border-radius: 16px;
+  margin-bottom: 80px;
+}
+#buy-box .hero-info-to-claim .img {
+  margin-right: 47px;
+  width: 216px;
+  height: 216px;
+  float: left;
+  background: url(../images/buy-avatar-bg.png) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#buy-box .hero-info-to-claim .img img {
+  width: 192px;
+  height: 192px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+#buy-box .hero-info-to-claim .description h4.name {
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 16px;
+}
+#buy-box .hero-info-to-claim .description p.info {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 42px;
+}
+#buy-box .hero-info-to-claim .description span.price {
+  font-size: 20px;
+  line-height: 30px;
+  color: #DA5132;
+}
+#buy-box .button-claim {
+  display: flex;
+  justify-content: center;
+}
+#buy-box .button-claim button.btn-mint-hero {
+  background: url(../images/approve-btn-bg.png) center center no-repeat;
+  background-size: cover;
+  width: 336px;
+  height: 60px;
+  border: 0;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
 }
 
 .modal-box .modal-dialog {

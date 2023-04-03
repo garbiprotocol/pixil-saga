@@ -442,3 +442,59 @@
     }
   }
 }
+#buy-box {
+  .hero-info-to-claim {
+    display: inline-block;
+    padding: 40px;
+    background: #EAEAEA;
+    border-radius: 16px;
+    margin-bottom: 80px;
+    .img {
+        margin-right: 47px;
+        width: 216px;
+        height: 216px;
+        float: left;
+        background: url(../images/buy-avatar-bg.png) center center no-repeat;
+        background-size: cover;
+        position: relative;
+        img {
+          width: 192px;
+          height: 192px;
+          position: absolute;
+          top: 12px;
+          right: 12px;
+        }
+    }
+    .description {
+      h4.name {
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 16px;
+      }
+      p.info {
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 42px;
+      }
+      span.price {
+        font-size: 20px;
+        line-height: 30px;
+        color: #DA5132;
+      }
+    }
+  }
+  .button-claim {
+    display: flex;
+    justify-content: center;
+    button.btn-mint-hero {
+      background: url(../images/approve-btn-bg.png) center center no-repeat;
+      background-size: cover;
+      width: 336px;
+      height: 60px;
+      border: 0;
+      font-size: 20px;
+      line-height: 30px;
+      color: #fff;
+    }
+  }
+}
