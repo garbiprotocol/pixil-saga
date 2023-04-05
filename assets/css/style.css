@@ -28420,54 +28420,54 @@ textarea {
   margin-bottom: 64px;
 }
 
-.connect-game-and-road-map {
-  background: url(../images/bg-road-map.png) center no-repeat;
+.connect-to-game {
+  background: url(../images/connect-game-bg.png) center no-repeat;
   background-size: cover;
 }
-.connect-game-and-road-map .connect-game {
+.connect-to-game .connect-game {
   text-align: center;
   padding: 219px 0;
 }
-.connect-game-and-road-map .connect-game .logo-connect {
+.connect-to-game .connect-game .logo-connect {
   margin-bottom: 141px;
 }
-.connect-game-and-road-map .connect-game .button-connect-game a.btn-connect-to-game {
+.connect-to-game .connect-game .button-connect-game a.btn-connect-to-game {
   background: url(../images/button-connect.png) center no-repeat;
   background-size: cover;
   width: 576px;
   height: 144px;
 }
-.connect-game-and-road-map .road-map {
+.road-map {
   padding: 72px 0;
   text-align: center;
 }
-.connect-game-and-road-map .road-map .info-road-map {
+.road-map .info-road-map {
   margin-left: 54px;
   border-left: 8px solid #546374;
   padding-left: 71px;
 }
-.connect-game-and-road-map .road-map .info-road-map .item-road-map {
+.road-map .info-road-map .item-road-map {
   text-align: left;
   position: relative;
   margin-bottom: 80px;
 }
-.connect-game-and-road-map .road-map .info-road-map .item-road-map img {
+.road-map .info-road-map .item-road-map img {
   position: absolute;
   left: -130px;
   top: -10px;
 }
-.connect-game-and-road-map .road-map .info-road-map .item-road-map .description {
+.road-map .info-road-map .item-road-map .description {
   color: #fff;
 }
-.connect-game-and-road-map .road-map .info-road-map .item-road-map .description .day-update {
+.road-map .info-road-map .item-road-map .description .day-update {
   font-size: 18px;
   margin-bottom: 16px;
 }
-.connect-game-and-road-map .road-map .info-road-map .item-road-map .description p {
+.road-map .info-road-map .item-road-map .description p {
   font-size: 16px;
   line-height: 24px;
 }
-.connect-game-and-road-map .road-map .info-road-map .item-near-update .day-update {
+.road-map .info-road-map .item-near-update .day-update {
   color: #B4ED60;
 }
 
