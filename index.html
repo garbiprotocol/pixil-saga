@@ -135,7 +135,54 @@
                             </div>
                         </div>
                         <div class="container-fluid" style="background: linear-gradient(0deg, #13071D -3.86%, rgba(28, 28, 38, 0.9) 100%);">
-                            <div class="road-map">
+                            <div class="list-hero-claim">
+                                <a href="/claim-hodl-hero.html">
+                                    <div class="hero-info">
+                                        <div class="img">
+                                            <img src="../assets/images/Hero_Team_Id_1.png" alt="Hero 1">
+                                        </div>
+                                        <div class="description">
+                                            <h4 class="name">HODL hero</h4>
+                                            <p class="f-inter info">This team is all about the classic strategy of holding onto their digital assets for the long term. Members of this team are patient and strategic, always thinking about the big picture and the potential future value of their investments.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="/claim-nft-ninjas.html">
+                                    <div class="hero-info">
+                                        <div class="img">
+                                            <img src="../assets/images/Hero_Team_Id_2.png" alt="Hero 2">
+                                        </div>
+                                        <div class="description">
+                                            <h4 class="name">NFT Ninjas</h4>
+                                            <p class="f-inter info">This team is focused on short-term gains through active trading in the crypto market. Members of this team are skilled traders, always looking for opportunities to buy and sell at the right time for maximum profit.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="/caim-trading-tiffans.html">
+                                    <div class="hero-info">
+                                        <div class="img">
+                                            <img src="../assets/images/Hero_Team_Id_3.png" alt="Hero 3">
+                                        </div>
+                                        <div class="description">
+                                            <h4 class="name">Trading Titans</h4>
+                                            <p class="f-inter info">This team is focused on short-term gains through active trading in the crypto market. Members of this team are skilled traders, always looking for opportunities to buy and sell at the right time for maximum profit.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="/claim-staking-stars.html">
+                                    <div class="hero-info">
+                                        <div class="img">
+                                            <img src="../assets/images/Hero_Team_Id_4.png" alt="Hero 4">
+                                        </div>
+                                        <div class="description">
+                                            <h4 class="name">Staking Stars</h4>
+                                            <p class="f-inter info">This team is focused on earning through the process of staking, which involves holding a certain amount of digital assets in a wallet in order to support the network and earn rewards. Members of this team are strategic and focused on maximizing their staking rewards.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="road-map">
                                 <h1 class="title">
                                     Roadmaps
                                 </h1>
@@ -177,7 +224,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                      
                     <!-- <div class="milestones">
@@ -301,6 +347,7 @@
                 let userWallet = coreHelper.getUserAccount();
                 let contractGameControllerRead = contractBaseHelper.getReadContract(_contractsObj['gameController']['contract'],_abiGameController);
                 contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                    let userWallet = coreHelper.getUserAccount();
                     if (result.avatarId == 0) {
                         $('.btn-play-game').attr('href', '/step-1.html');
                         $('.btn-connect-to-game').attr('href', '/step-1.html');
@@ -313,6 +360,22 @@
                     let src  = teamId == 0 ? "../assets/images/default_avatar.png" : `../assets/images/avatar_team_Id_${teamId}.png`;
                     $('#pixil-saga-avatar img').attr('src', src);
                 });
+                setInterval(function () {
+                    contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                        let userWallet = coreHelper.getUserAccount();
+                        if (result.avatarId == 0) {
+                            $('.btn-play-game').attr('href', '/step-1.html');
+                            $('.btn-connect-to-game').attr('href', '/step-1.html');
+                        }
+                        else {
+                            $('.btn-play-game').attr('href', 'http://159.89.203.177:5055/');
+                            $('.btn-connect-to-game').attr('href', 'http://159.89.203.177:5055/');
+                        }
+                        let teamId = result.teamId;
+                        let src  = teamId == 0 ? "../assets/images/default_avatar.png" : `../assets/images/avatar_team_Id_${teamId}.png`;
+                        $('#pixil-saga-avatar img').attr('src', src);
+                    });
+                }, 3000);
             });
     </script>
 
