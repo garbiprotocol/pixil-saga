@@ -28421,21 +28421,36 @@ textarea {
 }
 
 .connect-to-game {
-  background: url(../images/connect-game-bg.png) center no-repeat;
+  background: url(../images/bg-road-map.png) center no-repeat;
   background-size: cover;
 }
 .connect-to-game .connect-game {
   text-align: center;
-  padding: 219px 0;
+  margin-bottom: 120px;
 }
 .connect-to-game .connect-game .logo-connect {
-  margin-bottom: 141px;
+  margin-bottom: 32px;
 }
 .connect-to-game .connect-game .button-connect-game a.btn-connect-to-game {
   background: url(../images/button-connect.png) center no-repeat;
   background-size: cover;
   width: 576px;
   height: 144px;
+}
+.connect-to-game .description {
+  text-align: center;
+}
+.connect-to-game .description h1.title {
+  color: #B4ED60;
+  font-size: 48px;
+  line-height: 72px;
+  margin-bottom: 32px;
+}
+.connect-to-game .description p {
+  font-size: 40px;
+  line-height: 60px;
+  color: #fff;
+  margin-bottom: 0;
 }
 .road-map {
   padding: 72px 0;
