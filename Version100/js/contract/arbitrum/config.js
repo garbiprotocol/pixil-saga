@@ -230,178 +230,12 @@ $.CONFIG.prototype = (function() {
             harvestMachine: ""
         },
         421613: {
-            info: {
-                getAllowTransfer: '0x23E8f78ab3813Cf2297b3F49BaF93Ef9fDD5cD8B',
-                balanceInfo: '0x18B9Bc83623c53b92e185A33b482F5206a1eD27b',
-                priceInfo: ''
+            gameController: {
+                contract: "0xBdEadEeBea3EB233E8c1dE50722f43f10a75D144"
             },
-            protocolLiquidityLaunch: {
-                contract: "0x658fA49C37c41833923ef48E4eCfDB527D2cc6b0",
-                totalOffered: 250000
+            heroNft: {
+                contract: "0x3BDBCbc35B48E13e726d6cb75EC5F4fDb9653B3A"
             },
-            publicSale: {
-                contract: "0xC535363F6E4BFf54d5A3d489194956baE2F9eA61",
-                totalOffered: 200000
-            },
-            privateSale: {
-                contract: "0xb62153e33C14B8B5fC37c94031E24579144745dF",
-                totalOffered: 50000
-            },
-            launchData: {
-                contract: "0xF1fab3169bd20F9384181599d711f28Afe560788"
-            },
-            garbiVestGRB: {
-                contract: "0x18c0d036b684899254fa88b67b4e5405ac5c7ee5"
-            },
-            garbiStakeGRB1Week: {
-                contract: "0x741071c6b068f25ca9d832282a0e91563b8ff0ce"
-            },
-            garbiStakeGRB1Month: {
-                contract: "0x14551e6b43d8d22195e0b2df7746300132c79f48"
-            },
-            garbiStakeGRB1Year: {
-                contract: "0xe5a9b4d6719a1329e452e8e11f20e1235df12d72"
-            },
-            garbiStakeVeGRB1Week: {
-                contract: "0x14eca65a5e9ac57117e44aebbcaeb2e18360da76"
-            },
-            garbiStakeVeGRB1Month: {
-                contract: "0xce797f40d1783ec1681e735cceed4e8a78fa9792"
-            },
-            garbiStakeVeGRB1Year: {
-                contract: "0xbf802cc94215a096de917dcb533d37e81ac9c21e"
-            },
-            gecExchangeInfo: {
-                contract: "0x1f1d5365edd3dbb43d600590079d732f74ee0485"
-            },
-            garbiRepositoryManager: {
-                contract: "0x18784b6ac1849e0015d83944a173427ee100a805"
-            },
-            NonfungiblePositionManager: {
-                contract: "0x622e4726a167799826d1E1D150b076A7725f5D81"
-            },
-            GarbiFarmUniV3: {
-                contract: "0x9ef0d08F55AFaE9421057E79Bd52554CB0b611a2"
-            },
-            garbiRepository: {
-                'dai': '0x508C16e20C4d3730570C7b9B73e1c88538dA8a26',
-                'usdc': '0xdf52a59987dfca14a09287e101e01654f143cde1',
-                'usdt': '0x02c90b0a584ead487ee5bee35f74cd0132789dd3'
-            },
-            garbiSwapPairs: {
-                'wethgrb': {
-                    contract: '0x1914513cc76018f399e58ccc9b87be681423a9ce',
-                    tradeFee: 0.001,
-                    performanceFee: 0.5,
-                    safuFund: 0,
-                    lbDecimal: 18,
-                    base: 'weth',
-                    token: 'grb'
-                },
-                'grbweth': {
-                    contract: '0x1914513cc76018f399e58ccc9b87be681423a9ce',
-                    tradeFee: 0.001,
-                    performanceFee: 0.5,
-                    safuFund: 0,
-                    lbDecimal: 18,
-                    base: 'weth',
-                    token: 'grb'
-                }
-            },
-            garbiSwap: {
-                pool: {
-                    default: {
-                        tradeMachine: '0x8591663134607bcd9e6d73d99c6aeee4bcbbaca0',
-                        info: {
-                            pairs: '0x870eE86395736F6C149F94551E995b8d60b276f9'
-                        },
-                        pairs: [
-                             {
-                                contract: '0x1914513cc76018f399e58ccc9b87be681423a9ce',
-                                tradeFee: 0.001,
-                                performanceFee: 0.5,
-                                safuFund: 0,
-                                lbDecimal: 18,
-                                base: 'weth',
-                                token: 'grb'
-                            },
-                            {
-                                contract: '0x644434ccba741b2892485e857e60f332264f3ab8',
-                                tradeFee: 0.001,
-                                performanceFee: 0.5,
-                                safuFund: 0,
-                                lbDecimal: 6,
-                                base: 'usdc',
-                                token: 'usdt'
-                            },
-                            {
-                                contract: '0xb957d13250443706717d0d95cdb67e4a02650b6c',
-                                tradeFee: 0.001,
-                                performanceFee: 0.5,
-                                safuFund: 0,
-                                lbDecimal: 18,
-                                base: 'usdc',
-                                token: 'dai'
-                            }
-                        ]
-                    }
-                },
-            },
-            farms: {
-                2: {
-                    type: 'garbi_pool',
-                    contract: '0xd157e43d28de8e5a645bc70f37b3458e3f857983',
-                    want: '0x1914513cc76018f399e58ccc9b87be681423a9ce', // 
-                    wantDecimal: 18,
-                    pid: 2,
-                    isActive: true,
-                    isERC20: true,
-                    isActive: true,
-                    label: 'GarbiFarm.GRB_ETH.LP',
-                    price: 35,
-                    version: 1
-                },
-                4: {
-                    type: 'garbi_pool',
-                    contract: '0x9b935126d5bb5ac934e8fc9abf51df6a11ccb9a0',
-                    want: '0x644434ccba741b2892485e857e60f332264f3ab8', // 
-                    wantDecimal: 6,
-                    pid: 4,
-                    isActive: true,
-                    isERC20: true,
-                    isActive: true,
-                    label: 'GarbiFarm.USDT_USDC.LP',
-                    price: 2,
-                    version: 1
-                },
-                3: {
-                    type: 'garbi_pool',
-                    contract: '0xea715ebf7d98924b5f3cd2b19b4b2f84fd48cb03',
-                    want: '0xb957d13250443706717d0d95cdb67e4a02650b6c', // 
-                    wantDecimal: 18,
-                    pid: 3,
-                    isActive: true,
-                    isERC20: true,
-                    isActive: true,
-                    label: 'GarbiFarm.DAI_USDC.LP',
-                    price: 2,
-                    version: 1
-                },
-                13: {
-                    type: 'garbi_pool',
-                    contract: '0x45b6EeCc4CDeB14A39DcF638fAbF1A563D528538',
-                    want: '0x965782738c1acca851104444bda0a03ee68355dc', // 
-                    wantDecimal: 18,
-                    pid: 13,
-                    isActive: true,
-                    isERC20: true,
-                    isActive: true,
-                    label: 'GarbiFarm.GEC.LP',
-                    price: 1,
-                    version: 1
-                }
-            },
-            harvestMachine: ""
         },
     };
     var TOKENS = {
@@ -424,7 +258,8 @@ $.CONFIG.prototype = (function() {
             'usdc': '0x29680BD5F3f324001Add9229d6B44615353f554c',
             'usdt': '0x2E4e7eBfF934B6999BDc2983F17F6bd4b6A84206',
             'dai': '0x9Ce3C139316A560A57c861F558284CF31EBC8acE',
-            'gec': '0x965782738c1acca851104444bda0a03ee68355dc'
+            'gec': '0x965782738c1acca851104444bda0a03ee68355dc',
+            'mgrb' : '0x570A6cFA0e11f0Db8594E6a74B9106d5F21151C0',
         }
     }
     var TOKENS_DECIMAL = {
@@ -505,23 +340,18 @@ $.CONFIG.prototype = (function() {
          * @param _chainId {Number} 42161 || 421613
          * @param _tokenName {String}
          */
-        getTokenByTokenName(_chainId = 42161, _tokenName = '') {
+        getTokenAddressByTokenName(_chainId = 42161, _tokenName = '') {
             _tokenName = _tokenName.toLowerCase();
             return TOKENS[_chainId][_tokenName];
         },
-        getTokenNameByAddress(_chainId = 42161, _tokenAddr = '') {
-            _tokenAddr = _tokenAddr.toLowerCase();
-            let _tokens = TOKENS[_chainId];
-            for (let _tokenName in _tokens) {
-                if (_tokens[_tokenName].toLowerCase() == _tokenAddr) return _tokenName;
-            }
-            return "";
-        },
         getAddressByTokenName(_chainId = 42161, _tokenName = '') {
-            _tokenName = _tokenName.toLowerCase();
+            _tokenName = _tokenName.toLowerCase();           
             let _tokens = TOKENS[_chainId];
+            console.log(_tokens);
             for (let _tokenAddr in _tokens) {
                 if (_tokens[_tokenAddr].toLowerCase() == _tokenName) return _tokenAddr;
+                console.log(_tokens[_tokenAddr].toLowerCase());
+                console.log(_tokenName);
             }
             return "";
         },

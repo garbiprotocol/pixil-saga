@@ -22,7 +22,7 @@ $.Core.prototype = (function() {
             let self = this;
             let _acc = this.getCurrentAddress();
             if (_acc && _acc != '') {
-                $('.wrap-user-acct').html(`${_acc.slice(0,5)}...${_acc.slice(-5)}`);
+                $('.wrap-user-acct .user-acct').html(`${_acc.slice(0,5)}...${_acc.slice(-5)}`);
                 $('.wrap-user-acct').show();
                 $('.wrap-btn-connect').hide();
             } else {
