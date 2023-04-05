@@ -28477,6 +28477,47 @@ textarea {
   color: #fff;
   margin-bottom: 0;
 }
+.connect-to-game .list-hero-claim {
+  margin-top: 0;
+  background: transparent;
+  padding:0;
+  align-items: flex-start;
+}
+.list-hero-claim h4.title {
+  color: #7E9DB6;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 0px;
+}
+.list-hero-claim p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.list-hero-claim .list-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.list-hero-claim .list-hero .description  {
+  text-align: left;
+}
+.list-team {
+  padding-bottom: 263px!important;
+}
+.list-team .description {
+  padding-top: 167px;
+}
+.list-team .description h1.title {
+  margin-bottom: 8px;
+}
+.list-team .description h4.title {
+  color: #7E9DB6;
+  font-size: 32px;
+  line-height: 48px;
+}
 .road-map {
   padding: 72px 0;
   text-align: center;
@@ -28970,7 +29011,7 @@ textarea {
   line-height: 24px;
   margin-bottom: 32px;
 }
-#buy-box .list-hero-claim {
+.list-hero-claim {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -28980,10 +29021,10 @@ textarea {
   background: #EAEAEA;
   border-radius: 16px;
 }
-#buy-box .list-hero-claim a {
+.list-hero-claim a {
   text-decoration: none;
 }
-#buy-box .list-hero-claim .hero-info {
+.list-hero-claim .hero-info {
   width: 996px;
   height: 150px;
   background: url(../images/buy-box-bg.png) center center no-repeat;
@@ -28991,26 +29032,26 @@ textarea {
   padding: 15px;
   cursor: pointer;
 }
-#buy-box .list-hero-claim .hero-info .img {
+.list-hero-claim .hero-info .img {
   margin-right: 16px;
   width: fit-content;
   float: left;
 }
-#buy-box .list-hero-claim .hero-info .img img {
+.list-hero-claim .hero-info .img img {
   width: 120px;
   height: 120px;
   border-radius: 8px;
 }
-#buy-box .list-hero-claim .hero-info .description {
+.list-hero-claim .hero-info .description {
   color: #fff;
   padding: 5px;
 }
-#buy-box .list-hero-claim .hero-info .description h4.name {
+.list-hero-claim .hero-info .description h4.name {
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 16px;
 }
-#buy-box .list-hero-claim .hero-info .description p.info {
+.list-hero-claim .hero-info .description p.info {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 0;
