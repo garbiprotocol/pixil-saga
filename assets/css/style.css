@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap);
 @font-face {
-  font-family: "RETRO-LAND-MAYHEM";
-  src: url("../fonts/RETRO-LAND-MAYHEM.woff") format("woff"), url("../fonts/RETRO-LAND-MAYHEM.otf") format("otf"), url("../fonts/RETRO-LAND-MAYHEM.ttf") format("truetype"), url("../fonts/RETRO-LAND-MAYHEM.eot") format("eot"), url("../fonts/RETRO-LAND-MAYHEM.svg") format("svg");
+  font-family: "retro-land-mayhem";
+  src: url("../fonts/retro-land-mayhem.woff") format("woff"), url("../fonts/retro-land-mayhem.otf") format("otf"), url("../fonts/retro-land-mayhem.ttf") format("truetype"), url("../fonts/retro-land-mayhem.eot") format("eot"), url("../fonts/retro-land-mayhem.svg") format("svg");
 }
 * {
-  font-family: "RETRO-LAND-MAYHEM", sans-serif;
+  font-family: "retro-land-mayhem", sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "RETRO-LAND-MAYHEM", sans-serif;
+  font-family: "retro-land-mayhem", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #181425;
@@ -28155,7 +28155,7 @@ textarea {
   right: 25px;
   color: #52242A;
 }
-.header .button-play-game button {
+.header .button-play-game a {
   height: 40px;
   width: 160px;
   outline: none;
@@ -28171,6 +28171,10 @@ textarea {
   font-size: 16px;
   color: #fff;
   margin-right: 10px;
+  text-decoration: none;
+}
+.header .button-play-game a.btn-make-new-avatar {
+  font-size: 12px;
 }
 .header .dropdown-toggle-game.show:after {
   -webkit-transition: all 0.3s;
@@ -28888,8 +28892,32 @@ textarea {
 }
 
 #buy-box {
-  height: calc(100vh - 276.8px);
-  padding-top: 88px;
+  padding-top: 64px;
+  padding-bottom: 160px;
+}
+#buy-box .step-to-join-game h1.title {
+  font-size: 36px;
+  line-height: 54px;
+  margin-bottom: 32px;
+  color: #7E9DB6;
+}
+#buy-box .step-to-join-game .step-by-step {
+  display: flex;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #B9CAD7;
+  margin-bottom: 32px;
+}
+#buy-box .step-to-join-game .step-by-step span {
+  margin-right: 31px;
+  color: #B9CAD7;
+}
+#buy-box .step-to-join-game .step-by-step .on-step span {
+  color: #1C1C26;
+}
+#buy-box span.credit-cost {
+  font-size: 14px;
+  line-height: 20px;
+  color: #DA5132;
 }
 #buy-box h4.title {
   font-size: 24px;
@@ -28903,6 +28931,7 @@ textarea {
   margin-bottom: 32px;
 }
 #buy-box .list-hero-claim {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28910,6 +28939,9 @@ textarea {
   gap: 16px;
   background: #EAEAEA;
   border-radius: 16px;
+}
+#buy-box .list-hero-claim a {
+  text-decoration: none;
 }
 #buy-box .list-hero-claim .hero-info {
   width: 996px;
@@ -28944,7 +28976,12 @@ textarea {
   margin-bottom: 0;
 }
 
+#genesis-hero {
+  min-height: calc(100vh - 276.8px);
+}
+
 #buy-box .hero-info-to-claim {
+  margin-top: 40px;
   display: inline-block;
   padding: 40px;
   background: #EAEAEA;
@@ -28995,6 +29032,69 @@ textarea {
   font-size: 20px;
   line-height: 30px;
   color: #fff;
+}
+
+#hero-join-game {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+#hero-join-game .hero-join-game-info {
+  background: url(../images/modal-approve-bg.png) center center no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 468px;
+  text-align: center;
+  padding: 17px;
+}
+#hero-join-game .hero-join-game-info .img {
+  margin: auto;
+  margin-top: 26px;
+  margin-bottom: 30px;
+  width: 192px;
+  height: 192px;
+}
+#hero-join-game .hero-join-game-info .description {
+  color: #fff;
+}
+#hero-join-game .hero-join-game-info .description h4.quality {
+  font-size: 18px;
+  line-height: 27px;
+}
+#hero-join-game .hero-join-game-info .description p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+#hero-join-game .hero-join-game-info .button-area {
+  border-top: 0;
+  justify-content: center;
+}
+#hero-join-game .hero-join-game-info .button-area button.btn {
+  width: 336px;
+  height: 60px;
+  border: 0;
+}
+button.btn-approve {
+  background: url(../images/approve-btn-bg.png) center center no-repeat;
+  background-size: cover;
+  margin-bottom: 15px;
+  width: 336px;
+  height: 60px;
+  border: 0;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  margin-right: 20px;
+}
+#hero-join-game .hero-join-game-info .button-area button.btn-set-avatar, #hero-join-game .hero-join-game-info .button-area button.btn-out-game, #hero-join-game .hero-join-game-info .button-area button.btn-set-in-game {
+  background: url(../images/set-avatar-btn-bg.png) center center no-repeat;
+  background-size: cover;
+}
+#hero-join-game .hero-join-game-info .button-area button.btn-set-avatar:hover, #hero-join-game .hero-join-game-info .button-area button.btn-out-game:hover, #hero-join-game .hero-join-game-info .button-area button.btn-set-in-game:hover {
+  background: url(../images/set-avatar-btn-active-bg.png) center center no-repeat;
+  background-size: cover;
+  color: #000;
 }
 
 .modal-box .modal-dialog {
@@ -29082,54 +29182,80 @@ textarea {
   border: 4px solid #FDD400;
 }
 
-#hero-join-game-modal .modal-content, #hero-in-game-modal .modal-content, #robot-join-game-modal .modal-content, #robot-in-game-modal .modal-content {
-  background: url(../images/modal-approve-bg.png) center center no-repeat;
+#claim-first-robot .modal-content {
+  background: url(../images/claim-first-robot-bg.png) center center no-repeat;
   background-size: cover;
-  height: 600px;
-  width: 468px;
-}
-#hero-join-game-modal .modal-content .modal-body, #hero-in-game-modal .modal-content .modal-body, #robot-join-game-modal .modal-content .modal-body, #robot-in-game-modal .modal-content .modal-body {
+  width: 900px;
+  height: 732px;
   text-align: center;
 }
-#hero-join-game-modal .modal-content .modal-body .img, #hero-in-game-modal .modal-content .modal-body .img, #robot-join-game-modal .modal-content .modal-body .img, #robot-in-game-modal .modal-content .modal-body .img {
-  margin: auto;
-  margin-top: 26px;
-  margin-bottom: 30px;
-  width: 192px;
-  height: 192px;
+#claim-first-robot .modal-content .modal-header {
+  border-bottom: 0;
 }
-#hero-join-game-modal .modal-content .modal-body .description, #hero-in-game-modal .modal-content .modal-body .description, #robot-join-game-modal .modal-content .modal-body .description, #robot-in-game-modal .modal-content .modal-body .description {
+#claim-first-robot .modal-content .modal-footer {
+  border-top: 0;
+  display: flex;
+  justify-content: center;
+  height: 110px;
+}
+#claim-first-robot .modal-content .modal-footer a {
+    height: 40px;
+    width: 160px;
+    outline: none;
+    align-items: center;
+    border-radius: 3.625rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 500;
+    background: url(../images/play-button-bg.png) center center no-repeat;
+    background-size: cover;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+#claim-first-robot .modal-content .modal-header .btn-close {
+  background: url(../images/btn-close-bg.png) center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+#claim-first-robot .modal-content .info-robot {
+  margin-top: 11px;
+}
+#claim-first-robot .modal-content .info-robot .img {
+  position: absolute;
+  left: 158px;
+  top: 25px;
+}
+#claim-first-robot .modal-content .info-robot .img img {
+  margin-bottom: 30px;
+}
+#claim-first-robot .modal-content .info-robot .img h4.name-hero {
+  font-size: 24px;
+  line-height: 36px;
   color: #fff;
 }
-#hero-join-game-modal .modal-content .modal-body .description h4.quality, #hero-in-game-modal .modal-content .modal-body .description h4.quality, #robot-join-game-modal .modal-content .modal-body .description h4.quality, #robot-in-game-modal .modal-content .modal-body .description h4.quality {
-  font-size: 18px;
-  line-height: 27px;
+#claim-first-robot .modal-content .info-robot .description h4.title {
+  color: #B4ED60;
+  font-size: 24px;
+  line-height: 36px;
 }
-#hero-join-game-modal .modal-content .modal-body .description p, #hero-in-game-modal .modal-content .modal-body .description p, #robot-join-game-modal .modal-content .modal-body .description p, #robot-in-game-modal .modal-content .modal-body .description p {
-  font-size: 20px;
-  line-height: 30px;
+#claim-first-robot .modal-content .info-robot .description {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
-#hero-join-game-modal .modal-content .modal-footer, #hero-in-game-modal .modal-content .modal-footer, #robot-join-game-modal .modal-content .modal-footer, #robot-in-game-modal .modal-content .modal-footer {
-  border-top: 0;
-  justify-content: center;
-}
-#hero-join-game-modal .modal-content .modal-footer button.btn, #hero-in-game-modal .modal-content .modal-footer button.btn, #robot-join-game-modal .modal-content .modal-footer button.btn, #robot-in-game-modal .modal-content .modal-footer button.btn {
-  width: 336px;
-  height: 60px;
-  border: 0;
-}
-#hero-join-game-modal .modal-content .modal-footer button.btn-approve, #hero-in-game-modal .modal-content .modal-footer button.btn-approve, #robot-join-game-modal .modal-content .modal-footer button.btn-approve, #robot-in-game-modal .modal-content .modal-footer button.btn-approve {
-  background: url(../images/approve-btn-bg.png) center center no-repeat;
-  background-size: cover;
-}
-#hero-join-game-modal .modal-content .modal-footer button.btn-set-avatar, #hero-join-game-modal .modal-content .modal-footer button.btn-out-game, #hero-join-game-modal .modal-content .modal-footer button.btn-set-in-game, #hero-in-game-modal .modal-content .modal-footer button.btn-set-avatar, #hero-in-game-modal .modal-content .modal-footer button.btn-out-game, #hero-in-game-modal .modal-content .modal-footer button.btn-set-in-game, #robot-join-game-modal .modal-content .modal-footer button.btn-set-avatar, #robot-join-game-modal .modal-content .modal-footer button.btn-out-game, #robot-join-game-modal .modal-content .modal-footer button.btn-set-in-game, #robot-in-game-modal .modal-content .modal-footer button.btn-set-avatar, #robot-in-game-modal .modal-content .modal-footer button.btn-out-game, #robot-in-game-modal .modal-content .modal-footer button.btn-set-in-game {
-  background: url(../images/set-avatar-btn-bg.png) center center no-repeat;
-  background-size: cover;
-}
-#hero-join-game-modal .modal-content .modal-footer button.btn-set-avatar:hover, #hero-join-game-modal .modal-content .modal-footer button.btn-out-game:hover, #hero-join-game-modal .modal-content .modal-footer button.btn-set-in-game:hover, #hero-in-game-modal .modal-content .modal-footer button.btn-set-avatar:hover, #hero-in-game-modal .modal-content .modal-footer button.btn-out-game:hover, #hero-in-game-modal .modal-content .modal-footer button.btn-set-in-game:hover, #robot-join-game-modal .modal-content .modal-footer button.btn-set-avatar:hover, #robot-join-game-modal .modal-content .modal-footer button.btn-out-game:hover, #robot-join-game-modal .modal-content .modal-footer button.btn-set-in-game:hover, #robot-in-game-modal .modal-content .modal-footer button.btn-set-avatar:hover, #robot-in-game-modal .modal-content .modal-footer button.btn-out-game:hover, #robot-in-game-modal .modal-content .modal-footer button.btn-set-in-game:hover {
-  background: url(../images/set-avatar-btn-active-bg.png) center center no-repeat;
-  background-size: cover;
-  color: #000;
+
+#claim-first-robot .modal-content .info-robot .description p {
+  color: #fff;
+  font-size: 24px;
+  line-height: 36px;
 }
 
 @media screen and (min-width: 1500px) {
