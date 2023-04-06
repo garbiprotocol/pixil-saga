@@ -28380,7 +28380,8 @@ textarea {
 }
 
 .footer {
-  background: #292D3A;
+  background: url(../images/footer-bg.png) center center no-repeat;
+  background-size: cover;
   padding: 241px 0;
   color: #FFFFFF;
   text-align: center;
@@ -28444,7 +28445,7 @@ textarea {
 }
 
 .connect-to-game {
-  background: url(../images/bg-road-map.png) center no-repeat;
+  background: url(../images/connect-game-bg.png) center no-repeat;
   background-size: cover;
 }
 .connect-to-game .connect-game {
@@ -28461,41 +28462,51 @@ textarea {
   width: 576px;
   height: 144px;
 }
-.connect-to-game .description {
+#home .list-team {
+  background: url(../images/team-bg.png) center no-repeat;
+  background-size: cover;
+}
+.description {
   text-align: center;
   padding-bottom: 80px;
 }
-.connect-to-game .description h1.title {
+#home .description h1.title {
   color: #B4ED60;
   font-size: 48px;
   line-height: 72px;
   margin-bottom: 32px;
 }
-.connect-to-game .description p {
+#home .description p {
   font-size: 40px;
   line-height: 60px;
   color: #fff;
   margin-bottom: 0;
 }
-.connect-to-game .list-hero-claim {
+#home .list-hero-claim {
   margin-top: 0;
   background: transparent;
   padding:0;
   align-items: flex-start;
 }
-.list-hero-claim h4.title {
+#home .list-hero-claim h4.title {
   color: #7E9DB6;
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 0px;
 }
-.list-hero-claim p {
+#home .list-hero-claim p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  margin-bottom: 24px;
+}
+#home .list-hero-claim .list-hero p {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
   margin-bottom: 24px;
 }
-.list-hero-claim .list-hero {
+#home .list-hero-claim .list-hero {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28505,10 +28516,10 @@ textarea {
   text-align: left;
 }
 .list-team {
-  padding-bottom: 263px!important;
+  padding-bottom: 382px!important;
 }
 .list-team .description {
-  padding-top: 167px;
+  padding-top: 240px;
 }
 .list-team .description h1.title {
   margin-bottom: 8px;
@@ -28519,8 +28530,9 @@ textarea {
   line-height: 48px;
 }
 .funcition-in-game {
-  background: url(../images/funcition-in-game-bg.png) center no-repeat;
-  background-size: cover;
+  /*background: url(../images/funcition-in-game-bg.png) center no-repeat;
+  background-size: cover;*/
+  background: #13071D;
 }
 .funcition-in-game h1.title {
     color: #B4ED60;
