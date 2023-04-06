@@ -28564,6 +28564,20 @@ textarea {
   width: 76px;
   height: 76px;
 }
+.quiz-to-earn {
+  position: relative;
+}
+.quiz-to-earn .einstein {
+  position: absolute;
+  right: -90px;
+  top: 555px;
+}
+.quiz-to-earn .einstein img.text-einstein-talk {
+   position: absolute;
+   max-width: 243px;
+   top: -135px;
+   left: -49px;
+}
 .upgrade-your-robot h1.title {
   margin-bottom: 64px;
 }
