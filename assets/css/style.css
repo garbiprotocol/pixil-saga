@@ -28428,7 +28428,9 @@ textarea {
   color: #B4ED60;
   margin-bottom: 40px;
 }
-
+.footer .logo-footer img {
+  width: 708px;
+}
 .container-footer {
   width: 100%;
   max-width: 1030px;
@@ -28455,13 +28457,13 @@ textarea {
   padding-top: 163px;
 }
 .connect-to-game .connect-game .logo-connect {
-  margin-bottom: 32px;
+  margin-bottom: 72px;
 }
 .connect-to-game .connect-game .button-connect-game a.btn-connect-to-game {
   background: url(../images/button-connect.png) center no-repeat;
   background-size: cover;
-  width: 576px;
-  height: 144px;
+  width: 336px;
+  height: 84px;
 }
 #home .list-team {
   background: url(../images/team-bg.png) center no-repeat;
