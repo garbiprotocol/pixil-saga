@@ -28382,7 +28382,8 @@ textarea {
 .footer {
   background: url(../images/footer-bg.png) center center no-repeat;
   background-size: cover;
-  padding: 241px 0;
+  padding: 240px 0;
+  padding-bottom: 266px;
   color: #FFFFFF;
   text-align: center;
 }
