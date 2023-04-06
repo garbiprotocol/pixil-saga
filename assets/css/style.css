@@ -28542,7 +28542,7 @@ textarea {
   margin-bottom: 64px;
 }
 .funcition-in-game .quiz-to-earn .carousel-inner {
-  width: 75%;
+  width: 900px;
   margin: auto;
 }
 .funcition-in-game .quiz-to-earn .carousel-control-next-icon {
@@ -28568,6 +28568,18 @@ textarea {
 }
 .upgrade-your-robot p {
   margin-bottom: 64px;
+}
+.upgrade-your-robot .carousel-control-next-icon {
+  background: url(../images/update-robot-next-carousel.png) center no-repeat;
+  background-size: cover;
+  width: 78px;
+  height: 78px;
+}
+.upgrade-your-robot .carousel-control-prev-icon {
+  background: url(../images/update-robot-pre-carousel.png) center no-repeat;
+  background-size: cover;
+  width: 78px;
+  height: 78px;
 }
 .road-map {
   padding: 72px 0;

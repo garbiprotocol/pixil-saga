@@ -172,7 +172,7 @@
                           <div class="modal-dialog modal-dialog-centered modal-xl">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                               </div>
                               <div class="modal-body">
                                 <div class="info-robot">
@@ -280,7 +280,7 @@
                 contractBaseHelper.init({
                     chainId
                 });
-
+                let teamId = 0 ;
                 let _abiGameController = abiHelper.getGameControllerABI();
                 let _contractsObj = configHelper.getContracts(chainId);
                 let userWallet = coreHelper.getUserAccount();
@@ -290,6 +290,10 @@
                 let contractMGRBWhrite = contractBaseHelper.getMainContract(MGRBAddr,_abiMGRB);
                 let contractGameControllerWhrite = contractBaseHelper.getMainContract(_contractsObj['gameController']['contract'],_abiGameController);
                 let contractGameControllerRead = contractBaseHelper.getReadContract(_contractsObj['gameController']['contract'],_abiGameController);
+                function updateAvatar(teamId) {
+                  let src = teamId == 0 ? "../assets/images/default_avatar.png" : `../assets/images/avatar_team_Id_${teamId}.png`;
+                  $('#pixil-saga-avatar img').attr('src', src);
+                }
                 contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
                     let userWallet = coreHelper.getUserAccount();
                     if (result.avatarId == 0) {
