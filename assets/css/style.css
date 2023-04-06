@@ -28545,6 +28545,13 @@ textarea {
   width: 900px;
   margin: auto;
 }
+.upgrade-your-robot .carousel-inner {
+  width: 729px;
+  margin: auto;
+}
+.upgrade-your-robot .carousel-indicators {
+  bottom: -150px;
+}
 .funcition-in-game .quiz-to-earn .carousel-control-next-icon {
   background: url(../images/next-arrow.png) center no-repeat;
   background-size: cover;
@@ -28568,6 +28575,12 @@ textarea {
 }
 .upgrade-your-robot p {
   margin-bottom: 64px;
+}
+.upgrade-your-robot .carousel-control-prev , .upgrade-your-robot .carousel-control-next {
+  position: unset;
+}
+.upgrade-your-robot button.carousel-control-prev:hover , .upgrade-your-robot button.carousel-control-next:hover {
+  opacity: 1;
 }
 .upgrade-your-robot .carousel-control-next-icon {
   background: url(../images/update-robot-next-carousel.png) center no-repeat;
@@ -29470,6 +29483,17 @@ button.btn-approve {
     background-color: #fff;
     margin: 0 5px;
     border: none;
+}
+.upgrade-your-robot .carousel-indicators button {
+  width: 68px!important;
+  height: 68px!important;
+  background-color: transparent;
+}
+.upgrade-your-robot .carousel-indicators img {
+  filter: grayscale(100%);
+}
+.upgrade-your-robot .carousel-indicators button.active img {
+  filter: none;
 }
 .carousel-fade .carousel-item {
   opacity: 0;
