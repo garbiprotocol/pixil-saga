@@ -28157,10 +28157,9 @@ textarea {
 }
 .header .button-play-game a {
   height: 40px;
-  width: 160px;
+  width: 134px;
   outline: none;
   align-items: center;
-  border-radius: 3.625rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -28168,10 +28167,11 @@ textarea {
   font-weight: 500;
   background: url(../images/play-button-bg.png) center center no-repeat;
   background-size: cover;
-  font-size: 16px;
   color: #fff;
   margin-right: 10px;
   text-decoration: none;
+  font-size: 12px;
+  line-height: 18px;
 }
 .header .button-play-game a.btn-make-new-avatar {
   font-size: 12px;
@@ -28462,8 +28462,8 @@ textarea {
 .connect-to-game .connect-game .button-connect-game a.btn-connect-to-game {
   background: url(../images/button-connect.png) center no-repeat;
   background-size: cover;
-  width: 336px;
-  height: 84px;
+  width: 360px;
+  height: 108px;
 }
 #home .list-team {
   background: url(../images/team-bg.png) center no-repeat;
@@ -28518,7 +28518,7 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.list-hero-claim .list-hero .description  {
+.hero-info .description , .hero-info-to-claim  .description {
   text-align: left;
 }
 .list-team {
@@ -29389,10 +29389,9 @@ button.btn-approve {
 }
 #claim-first-robot .modal-content .modal-footer a {
     height: 40px;
-    width: 160px;
+    width: 134px;
     outline: none;
     align-items: center;
-    border-radius: 3.625rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -29400,10 +29399,11 @@ button.btn-approve {
     font-weight: 500;
     background: url(../images/play-button-bg.png) center center no-repeat;
     background-size: cover;
-    font-size: 16px;
     color: #fff;
     margin-right: 10px;
     text-decoration: none;
+    font-size: 12px;
+    line-height: 18px;
 }
 #claim-first-robot .modal-content .modal-header .btn-close {
   background: url(../images/btn-close-bg.png) center center no-repeat;
@@ -29435,7 +29435,7 @@ button.btn-approve {
 }
 #claim-first-robot .modal-content .info-robot .description {
     position: absolute;
-    bottom: 0;
+    bottom: -90px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
