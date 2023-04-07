@@ -28389,13 +28389,13 @@ textarea {
 }
 
 .footer .social-area {
-  margin-bottom: 80px;
+  margin-bottom: 122px;
 }
 .footer .social-area a {
   text-decoration: none;
 }
 .footer .logo-footer {
-  margin-bottom: 144px;
+  margin-bottom: 122px;
 }
 .footer .menu-footer {
   text-align: center;
@@ -28443,7 +28443,7 @@ textarea {
 }
 .container-fluid h1.title {
   color: #86D0E1;
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 64px;
 }
 
@@ -28475,15 +28475,17 @@ textarea {
 }
 #home .description h1.title {
   color: #B4ED60;
-  font-size: 48px;
-  line-height: 72px;
-  margin-bottom: 32px;
+  font-size: 36px;
+  line-height: 54px;
+  margin-bottom: 40px;
 }
 #home .description p {
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 24px;
+  line-height: 36px;
   color: #fff;
   margin-bottom: 0;
+  width: 964px;
+  margin: auto;
 }
 #home .list-hero-claim {
   margin-top: 0;
@@ -28496,6 +28498,7 @@ textarea {
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 0px;
+  font-weight: bold;
 }
 #home .list-hero-claim p {
   font-size: 16px;
@@ -28504,7 +28507,7 @@ textarea {
   margin-bottom: 24px;
 }
 #home .list-hero-claim .list-hero p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   color: #fff;
   margin-bottom: 24px;
@@ -28525,12 +28528,12 @@ textarea {
   padding-top: 240px;
 }
 .list-team .description h1.title {
-  margin-bottom: 8px;
+  margin-bottom: 8px!important;
 }
 .list-team .description h4.title {
   color: #7E9DB6;
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 24px;
+  line-height: 36px;
 }
 .funcition-in-game {
   /*background: url(../images/funcition-in-game-bg.png) center no-repeat;
@@ -28539,19 +28542,17 @@ textarea {
 }
 .funcition-in-game h1.title {
     color: #B4ED60;
-    font-size: 48px;
-    line-height: 72px;
     text-align: center;
 }
 .funcition-in-game p {
   color: #fff;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .funcition-in-game .quiz-to-earn h1.title {
-    width: 80%;
+    width: 656px;
     margin: auto;
-    margin-bottom: 116px;
+    margin-bottom: 152px;
 }
 .funcition-in-game .quiz-to-earn p {
   margin-bottom: 64px;
@@ -28597,10 +28598,11 @@ textarea {
   margin-bottom: 64px;
 }
 .upgrade-your-robot h4.title {
-  font-size: 36px;
-  line-height: 54px;
+  font-size: 24px;
+  line-height: 36px;
   color: #7E9DB6;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 .upgrade-your-robot p {
   margin-bottom: 64px;
@@ -29134,8 +29136,9 @@ textarea {
   height: 150px;
   background: url(../images/buy-box-bg.png) center center no-repeat;
   background-size: cover;
-  padding: 15px;
+  padding: 12px;
   cursor: pointer;
+  margin-bottom: 16px;
 }
 .list-hero-claim .hero-info .img {
   margin-right: 16px;
@@ -29154,7 +29157,7 @@ textarea {
 .list-hero-claim .hero-info .description h4.name {
   font-size: 20px;
   line-height: 30px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .list-hero-claim .hero-info .description p.info {
   font-size: 14px;
