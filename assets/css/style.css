@@ -28694,7 +28694,39 @@ textarea {
   line-height: 72px;
   color: #fff;
 }
-
+.container-news {
+  padding: 0 190px;
+}
+.dev-update h1.title {
+  margin-bottom: 80px;
+}
+.dev-update .news {
+  background: url(../images/news-bg.png) center no-repeat;
+  background-size: cover;
+  width: 360px;
+  height: 480px;
+  padding: 40px 27px;
+}
+.dev-update .news .img {
+  margin-bottom: 33px;
+}
+.dev-update .news .img img {
+  width: 305px;
+  height: 253px;
+}
+.dev-update .news .info {
+  padding: 0 16px;
+}
+.dev-update .news .info p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+.dev-update .news .info span.date-time {
+  font-size: 12px;
+  line-height: 18px;
+  color: #B9CAD7;
+}
 .btn-buy {
   background: url(../images/bg-btn-buy.png) center center no-repeat;
   -webkit-background-size: contain;
