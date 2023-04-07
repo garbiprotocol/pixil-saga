@@ -131,9 +131,9 @@
             </header>
             <main id="main">
               <div id="home">
-                    <div class="connect-to-game">
-                        <div class="container-fluid" style="background: linear-gradient(180deg, rgba(28, 28, 38, 0) 0%, #1C1C26 87.87%);">
-                            <div class="connect-game">
+                    <div class="connect-to-game fade-in-bg">
+                        <div class="container-fluid " style="background: linear-gradient(180deg, rgba(28, 28, 38, 0) 0%, #1C1C26 87.87%);">
+                            <div class="connect-game fade-in">
                                 <div class="logo-connect">
                                     <img src="../assets/images/logo-start-game.png" alt="">
                                 </div>
@@ -141,18 +141,18 @@
                                     <a href="" type="button" class="btn-connect-to-game"></a>
                                 </div>
                             </div>
-                            <div class="description">
+                            <div class="description fade-in">
                                 <h1 class="title">Pixil Saga: Your Gateway to Web3 Adventures</h1>
                                 <p class="f-inter">Join Pixil Saga for an immersive web3 adventure! Explore new worlds, earn tokens, and discover the endless possibilities of NFTs. Start your journey to becoming a blockchain master today!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid list-team" >
-                        <div class="description">
-                            <h1 class="title">Meet the Teams of Pixil Saga</h1>
-                            <h4 class="title">Choose Your Path to Victory</h4>
+                    <div class="container-fluid list-team fade-in-bg" >
+                        <div class="description fade-in">
+                            <h1 class="title fade-in">Meet the Teams of Pixil Saga</h1>
+                            <h4 class="title fade-in">Choose Your Path to Victory</h4>
                         </div>
-                        <div class="list-hero-claim">
+                        <div class="list-hero-claim fade-in">
                             <h4 class="title f-inter">Pixil Saga Team</h4>
                             <p class = "f-inter">Get to know the teams behind Pixil Saga! Choose from the HODL Heroes, NFT Ninjas, Staking Stars, or Trading Titans, each with their own unique abilities and attributes that will help you succeed in our gamified DeFi world. Whether you're a seasoned blockchain veteran or new to the world of web3, our teams have something to offer. Join us now and discover the power of teamwork in Pixil Saga!</p>
                             <div class="list-hero">
@@ -195,9 +195,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="funcition-in-game">
+                    <div class="funcition-in-game fade-in-bg">
                         <div class="container-fluid" >
-                            <div class="quiz-to-earn pt-80 pb-168">
+                            <div class="quiz-to-earn pt-80 pb-168 fade-in">
                                 <h1 class="title">Become a Blockchain Expert with Pixil Saga's Quiz to Earn</h1>
                                 <p class="f-inter">Test your knowledge of blockchain technology and DeFi with Pixil Saga's daily quiz! Answer questions and earn Cyber Credits that can be used to unlock rewards and features in the game. Join us now and become a blockchain expert with Pixil Saga's Quiz to Earn!</p>
                                 <div class="einstein">
@@ -229,7 +229,7 @@
                                     </div>
                                 </div>  
                             </div>
-                            <div class="upgrade-your-robot pt-80 pb-248">
+                            <div class="upgrade-your-robot pt-80 pb-248 fade-in">
                                 <h1 class="title">Upgrade Your Robot and <br>Unlock a World of Possibilities in Pixil Saga</h1>
                                 <h4 class="title f-inter">Type of robot</h4>
                                 <p class="f-inter">Enim nibh neque ante vivamus hendrerit donec. A sit massa nec ut nec. Nec mi faucibus sapien maecenas elit adipiscing rhoncus. Risus malesuada mattis elementum leo fusce sed eu laoreet fermentum. Tincidunt et sit neque enim odio. Mattis tristique felis convallis et nisl.</p>
@@ -275,7 +275,7 @@
                                     </div>
                                 </div>  
                             </div>
-                            <div class="dev-update pt-80 pb-168">
+                            <div class="dev-update pt-80 pb-168 fade-in">
                                 <h1 class="title">DEVELOPER UPDATES</h1>
                                 <div class="row">
                                     <div class="col-lg-3">
@@ -338,11 +338,11 @@
                             </div> -->
               </div>
             </main>
-            <footer id="footer">
+            <footer id="footer" class="">
                 <footer id="is-footer-copyright-group">
-                    <div id="footer-main" class="footer footer-main" >
-                        <h1 class="title">STAY CONNECTED</h1>
-                        <div class="social-area">
+                    <div id="footer-main" class="footer footer-main fade-in-bg" >
+                        <h1 class="title fade-in">STAY CONNECTED</h1>
+                        <div class="social-area fade-in">
                             <a href="" target="_blank" class="mr-54"> 
                                 <img alt="tw" src="../assets/images/twiter-logo.png" style="width: 64px"> 
                             </a> 
@@ -353,10 +353,10 @@
                                 <img alt="gmail" src="../assets/images/gmail-logo.png" style="width: 64px">
                             </a>
                         </div>
-                        <div class="logo-footer">
+                        <div class="logo-footer fade-in">
                             <img src="../assets/images/logo-start-game.png" alt="">
                         </div>
-                        <div class="menu-footer ">
+                        <div class="menu-footer fade-in">
                             <nav class="navbar navbar-expand-lg navbar-light">
                                 <ul class="navbar-nav mx-auto">
                                   <li class="nav-item">
@@ -377,7 +377,7 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="copy-right">
+                        <div class="copy-right fade-in">
                             <p class="f-inter">All trademarks referenced here in are the properties of their respective owners.</p>
                         </div>
                      </div>
@@ -402,6 +402,31 @@
                 contractBaseHelper.init({
                     chainId
                 });
+                $('.fade-in-bg').addClass('active');
+                // Set up an Intersection Observer
+                const options = {
+                  root: null,
+                  rootMargin: '0px',
+                  threshold: 0.5
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      $(entry.target).addClass('active');
+                      observer.unobserve(entry.target);
+                    }
+                  });
+                }, options);
+
+                // Find all elements with class "fade-in"
+                const elements = $('.fade-in');
+
+                // Observe each element
+                elements.each((index, element) => {
+                  observer.observe(element);
+                });
+
 
                 let teamId = 0 ;
                 let _abiGameController = abiHelper.getGameControllerABI();
@@ -442,7 +467,7 @@
                             updateAvatar(teamId);
                         }
                     });
-                }, 3000);
+                }, 3000);               
             });
     </script>
 
