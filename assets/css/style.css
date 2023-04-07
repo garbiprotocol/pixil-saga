@@ -28172,9 +28172,10 @@ textarea {
   text-decoration: none;
   font-size: 12px;
   line-height: 18px;
+  transition: filter 0.2s ease-in-out;
 }
-.header .button-play-game a.btn-make-new-avatar {
-  font-size: 12px;
+.header .button-play-game a:hover {
+  filter: brightness(70%);
 }
 .header .dropdown-toggle-game.show:after {
   -webkit-transition: all 0.3s;
@@ -28464,6 +28465,10 @@ textarea {
   background-size: cover;
   width: 360px;
   height: 108px;
+  transition: filter 0.2s ease-in-out;
+}
+.connect-to-game .connect-game .button-connect-game a.btn-connect-to-game:hover {
+  filter: brightness(70%);
 }
 #home .list-team {
   background: url(../images/team-bg.png) center no-repeat;
@@ -28517,6 +28522,10 @@ textarea {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.hero-info:hover img {
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
 }
 .hero-info .description , .hero-info-to-claim  .description {
   text-align: left;
@@ -29144,11 +29153,12 @@ textarea {
   margin-right: 16px;
   width: fit-content;
   float: left;
+  overflow: hidden;
+  border-radius: 8px;
 }
 .list-hero-claim .hero-info .img img {
   width: 120px;
   height: 120px;
-  border-radius: 8px;
 }
 .list-hero-claim .hero-info .description {
   color: #fff;
