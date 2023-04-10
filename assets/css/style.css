@@ -29464,6 +29464,8 @@ button.btn-approve {
 }
 #claim-first-robot .modal-content .info-robot .img img {
   margin-bottom: 30px;
+  width: 192px;
+  height: 192px;
 }
 #claim-first-robot .modal-content .info-robot .img h4.name-hero {
   font-size: 24px;

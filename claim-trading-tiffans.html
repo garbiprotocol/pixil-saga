@@ -250,7 +250,18 @@
                 </footer>
             </footer>
         </div>
-
+        <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+          <div id="send-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay = "5000">
+            <div class="toast-body">
+              <p class="" style = "margin-bottom: 0;">Your <a href="" target="_blank" class="transaction-hash">transaction</a> is sent to the blockchain.</p>
+            </div>
+          </div>
+          <div id="confirmed-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay = "5000">
+            <div class="toast-body">
+              <p class="" style = "margin-bottom: 0;">Your <a href="" target="_blank" class="transaction-hash">transaction</a> is confirmed.</p>
+            </div>
+          </div>
+        </div>
     </body>
     <script>
             var abiHelper = new $.ABI();
@@ -332,16 +343,17 @@
                                 $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
                             })
                             .on('confirmation', (confirmationNumber, receipt) => {
-                                $('#claim-first-robot').modal('show');
-                                coreHelper.hidePopup('confirm-popup', 0);
-                                coreHelper.showPopup('success-confirm-popup');
-                                coreHelper.hidePopup('success-confirm-popup', 10000);
+                                $('#send-toast').show();
+                                setTimeout(function(){
+                                  $('#send-toast').hide();
+                                }, 5000);
                             })
                             .on('receipt', (receipt) => {
                                 $('#claim-first-robot').modal('show');
-                                coreHelper.hidePopup('confirm-popup', 0);
-                                coreHelper.showPopup('success-confirm-popup');
-                                coreHelper.hidePopup('success-confirm-popup', 10000);
+                                $('#confirmed-toast').show();
+                                setTimeout(function(){
+                                  $('#confirmed-toast').hide();
+                                }, 5000);
                             })
                             .on('error', (err, receipt) => {
                                 console.log(err);
@@ -361,18 +373,17 @@
                         $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
                     })
                     .on('confirmation', (confirmationNumber, receipt) => {
-                        $('.btn-approve').hide();
-                        $('.text-if-not-approve').hide()
-                        coreHelper.hidePopup('confirm-popup', 0);
-                        coreHelper.showPopup('success-confirm-popup');
-                        coreHelper.hidePopup('success-confirm-popup', 10000);
+                        $('#send-toast').show();
+                        setTimeout(function(){
+                          $('#send-toast').hide();
+                        }, 5000);
                     })
                     .on('receipt', (receipt) => {
                         $('.btn-approve').hide();
-                        $('.text-if-not-approve').hide()
-                        coreHelper.hidePopup('confirm-popup', 0);
-                        coreHelper.showPopup('success-confirm-popup');
-                        coreHelper.hidePopup('success-confirm-popup', 10000);
+                        $('#confirmed-toast').show();
+                        setTimeout(function(){
+                          $('#confirmed-toast').hide();
+                        }, 5000);
                     })
                     .on('error', (err, receipt) => {
                         console.log(err);
