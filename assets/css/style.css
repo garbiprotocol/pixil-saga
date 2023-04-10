@@ -29251,7 +29251,7 @@ textarea {
   color: #DA5132;
 }
 #buy-box .button-claim {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 #buy-box .button-claim button.btn-mint-hero {
