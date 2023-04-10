@@ -268,7 +268,7 @@
                 contractBaseHelper.init({
                     chainId
                 });
-                let teamId = 0 ;
+                let teamId ;
                 let _abiGameController = abiHelper.getGameControllerABI();
                 let _contractsObj = configHelper.getContracts(chainId);
                 let userWallet = coreHelper.getUserAccount();
@@ -279,8 +279,14 @@
                 let contractGameControllerWhrite = contractBaseHelper.getMainContract(_contractsObj['gameController']['contract'],_abiGameController);
                 let contractGameControllerRead = contractBaseHelper.getReadContract(_contractsObj['gameController']['contract'],_abiGameController);
                 function updateAvatar(teamId) {
-                  let src = teamId == 0 ? "../assets/images/default_avatar.png" : `../assets/images/avatar_team_Id_${teamId}.png`;
-                  $('#pixil-saga-avatar img').attr('src', src);
+                  if (teamId == 0) { 
+                        let src = "../assets/images/default_avatar.png" ;
+                        $('#pixil-saga-avatar img').attr('src', src);
+                    }
+                    else {
+                        let src = `../assets/images/avatar_team_Id_${teamId}.png`;
+                        $('#pixil-saga-avatar img').attr('src', src);
+                    }
                 }
                 contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
                     let userWallet = coreHelper.getUserAccount();
@@ -294,19 +300,16 @@
                     updateAvatar(teamId);
                 });
                 setInterval(function () {
+                    let userWallet = coreHelper.getUserAccount();
                     contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
-                        let userWallet = coreHelper.getUserAccount();
                         if (result.avatarId == 0) {
                             $('.btn-play-game').attr('href', '/step-1.html');
                         }
                         else {
                             $('.btn-play-game').attr('href', 'http://159.89.203.177:5055/');
                         }
-                        let latestTeamId = result.teamId;              
-                        if (latestTeamId != teamId) {
-                            teamId = latestTeamId;
-                            updateAvatar(teamId);
-                        }
+                        let teamId = result.teamId;
+                        updateAvatar(teamId);
                     });
                 }, 3000);
                 $('.btn-mint-hero').click(function () {

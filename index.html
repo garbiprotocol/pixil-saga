@@ -467,7 +467,6 @@
                 let userWallet = coreHelper.getUserAccount();
                 let contractGameControllerRead = contractBaseHelper.getReadContract(_contractsObj['gameController']['contract'],_abiGameController);
                 function updateAvatar(teamId) {
-                    let userWallet = coreHelper.getUserAccount();
                     if (teamId == 0) { 
                         let src = "../assets/images/default_avatar.png" ;
                         $('#pixil-saga-avatar img').attr('src', src);
