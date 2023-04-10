@@ -29123,6 +29123,8 @@ textarea {
 #buy-box {
   padding-top: 64px;
   padding-bottom: 160px;
+  background: url(../images/bg-step-page.png) center center no-repeat;
+  background-size: cover;
 }
 #buy-box .step-to-join-game h1.title {
   font-size: 36px;
@@ -29166,8 +29168,6 @@ textarea {
   align-items: center;
   padding: 40px 0px;
   gap: 16px;
-  background: #EAEAEA;
-  border-radius: 16px;
 }
 .list-hero-claim a {
   text-decoration: none;
