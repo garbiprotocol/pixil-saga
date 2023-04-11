@@ -44,8 +44,8 @@
                               <a href="/" class="logo">
                                 <img src="../assets/images/logo-pixil.png" alt="logo" />
                               </a>
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff;">
+                                 <i class="fas fa-bars"></i>
                               </button>
                             </div>
                           </div>
@@ -53,8 +53,8 @@
                           <div class="col-lg-10">
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <div class="row align-items-center flex-grow-1">
-                                <div class="col-lg-5">
-                                  <div class="d-lg-flex align-items-center justify-content-center">
+                                <div class="col-lg-7">
+                                  <div class="d-lg-flex align-items-center">
                                     <div class="item-link mr-30">
                                       <a href="/dashboard" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Dashboard</a>
                                     </div>
@@ -75,49 +75,51 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-lg-7">
-                                  <div class="d-lg-flex align-items-center justify-content-end" style="width: fit-content;float: right;">
-                                    <div class="wrap-user-acct dropdown show">
-                                      <a class="text-decoration-none fs-16 c-main b-600 dropdown-toggle dropdown-toggle-game d-flex align-items-center" href="#" role="button" id="dropdownMenuLinkInfo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="avatar mr-8" id="pixil-saga-avatar">
-                                          <img src="../assets/images/default_avatar.png" />
-                                        </span>
-                                       
-                                        <span class="b-600 user-acct">0x00</span>
-                                      </a>
-                                      <div class="dropdown-menu dropdown-menu__game-info" aria-labelledby="dropdownMenuLinkInfo">
-                                        <div class="mb-16">
-                                          <a class="dropdown-item d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#modalChangeAvatar" href="#">
-                                            <span class="fs-14 b-600">Setting</span>
-                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9.8125 6L15.8125 12L9.8125 18" stroke="#52242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                          </a>
-                                        </div>
-                                        <div class="mb-16">
-                                          <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                            <span class="fs-14 b-600">Sercurity</span>
-                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9.8125 6L15.8125 12L9.8125 18" stroke="#52242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                          </a>
-                                        </div>
+                                <div class="col-lg-5">
+                                    <div class="user-action">
+                                        <div class="d-lg-flex align-items-center justify-content-end user-wallet" >
+                                            <div class="wrap-user-acct dropdown show">
+                                              <a class="text-decoration-none fs-16 c-main b-600 dropdown-toggle dropdown-toggle-game d-flex align-items-center" href="#" role="button" id="dropdownMenuLinkInfo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="avatar mr-8" id="pixil-saga-avatar">
+                                                  <img src="../assets/images/default_avatar.png" />
+                                                </span>
+                                               
+                                                <span class="b-600 user-acct">0x00</span>
+                                              </a>
+                                              <div class="dropdown-menu dropdown-menu__game-info" aria-labelledby="dropdownMenuLinkInfo">
+                                                <div class="mb-16">
+                                                  <a class="dropdown-item d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#modalChangeAvatar" href="#">
+                                                    <span class="fs-14 b-600">Setting</span>
+                                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9.8125 6L15.8125 12L9.8125 18" stroke="#52242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                  </a>
+                                                </div>
+                                                <div class="mb-16">
+                                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                                    <span class="fs-14 b-600">Sercurity</span>
+                                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9.8125 6L15.8125 12L9.8125 18" stroke="#52242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                  </a>
+                                                </div>
 
-                                        <!-- <div class="wrap-btn-connect"><a href="#" class="btn-logout text-decoration-none fs-16 b-600 c-white background-15 border-15-2 border-btn-hover-15-2 p-8 border-radius-8 btn-transition d-inline-block w-100 text-center f-inter">Log out</a></div> -->
-                                      </div>
-                                    </div>
+                                                <!-- <div class="wrap-btn-connect"><a href="#" class="btn-logout text-decoration-none fs-16 b-600 c-white background-15 border-15-2 border-btn-hover-15-2 p-8 border-radius-8 btn-transition d-inline-block w-100 text-center f-inter">Log out</a></div> -->
+                                              </div>
+                                            </div>
 
-                                    <div class="wrap-user-btn show">
-                                        <div class="wrap-btn-connect">
-                                            <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white border-transparent-2 py-8 px-24 border-radius-20 btn-transition d-inline-block">Connect Wallet</a>
-                                        </div>
+                                            <div class="wrap-user-btn show">
+                                                <div class="wrap-btn-connect">
+                                                    <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white border-transparent-2 py-8 px-24 border-radius-20 btn-transition d-inline-block">Connect Wallet</a>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
+                                                <a href="" type="button" class="btn-play-game"  >
+                                                    <span class="">Play</span>
+                                                </a>
+                                          </div>
                                     </div>
-                                  </div>
-                                  <div class="d-lg-flex align-items-center justify-content-end button-play-game" style="width: fit-content;float: right;">
-                                        <a href="" type="button" class="btn-play-game"  >
-                                            <span class="">Play</span>
-                                        </a>
-                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -175,16 +177,20 @@
                             </div>
                         </div>
                         <div class="modal fade" id="claim-first-robot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered modal-xl">
+                          <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down modal-xl">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                               </div>
                               <div class="modal-body">
                                 <div class="info-robot">
-                                    <div class="img" style = "left: 151px;">
+                                    <div class="img" style="left: 151px;">
                                         <img src="../assets/images/Hero_Team_Id_3.png" alt="">
                                         <h4 class="name-hero">Trading Titans#1</h4>
+                                    </div>
+                                    <div class="img-robot"  style = "">
+                                        <img src="../assets/images/Robot_level_Id_0.png" alt="">
+                                        <h4 class="name-hero">Robot lvl 0</h4>
                                     </div>
                                     <div class="description">
                                         <h4 class="title">Congratulations!</h4>
@@ -203,25 +209,25 @@
                     </div> 
                 </div>
             </main>
-            <footer id="footer">
+            <footer id="footer" class="">
                 <footer id="is-footer-copyright-group">
-                    <div id="footer-main" class="footer footer-main" >
-                        <h1 class="title">STAY CONNECTED</h1>
-                        <div class="social-area">
+                    <div id="footer-main" class="footer footer-main fade-in-bg" >
+                        <h1 class="title fade-in">STAY CONNECTED</h1>
+                        <div class="social-area fade-in">
                             <a href="" target="_blank" class="mr-54"> 
-                                <img alt="tw" src="../assets/images/twiter-logo.png" style="width: 64px"> 
+                                <img alt="tw" src="../assets/images/twiter-logo.png" > 
                             </a> 
                             <a href="" target="_blank" class="mr-54"> 
-                                <img alt="tele" src="../assets/images/telegram-logo.png" style="width: 64px">
+                                <img alt="tele" src="../assets/images/telegram-logo.png" >
                             </a>
                             <a href="" target="_blank" class=""> 
-                                <img alt="gmail" src="../assets/images/gmail-logo.png" style="width: 64px">
+                                <img alt="gmail" src="../assets/images/gmail-logo.png" >
                             </a>
                         </div>
-                        <div class="logo-footer">
+                        <div class="logo-footer fade-in">
                             <img src="../assets/images/logo-start-game.png" alt="">
                         </div>
-                        <div class="menu-footer ">
+                        <div class="menu-footer fade-in">
                             <nav class="navbar navbar-expand-lg navbar-light">
                                 <ul class="navbar-nav mx-auto">
                                   <li class="nav-item">
@@ -242,14 +248,14 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="copy-right">
+                        <div class="copy-right fade-in">
                             <p class="f-inter">All trademarks referenced here in are the properties of their respective owners.</p>
                         </div>
                      </div>
                 </footer>
             </footer>
         </div>
-        <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+        <div class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
           <div id="send-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay = "5000">
             <div class="toast-body">
               <p class="" style = "margin-bottom: 0;">Your <a href="" target="_blank" class="transaction-hash">transaction</a> is sent to the blockchain.</p>
@@ -277,6 +283,30 @@
                 storeHelper.init({});
                 contractBaseHelper.init({
                     chainId
+                });
+                $('.fade-in-bg').addClass('active');
+                // Set up an Intersection Observer
+                const options = {
+                  root: null,
+                  rootMargin: '0px',
+                  threshold: 0.5
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      $(entry.target).addClass('active');
+                      observer.unobserve(entry.target);
+                    }
+                  });
+                }, options);
+
+                // Find all elements with class "fade-in"
+                const elements = $('.fade-in');
+
+                // Observe each element
+                elements.each((index, element) => {
+                  observer.observe(element);
                 });
                 let teamId ;
                 let _abiGameController = abiHelper.getGameControllerABI();
@@ -323,6 +353,38 @@
                         updateAvatar(teamId);
                     });
                 }, 3000);
+                $('.btn-approve').click(function () {
+                    let userWallet = coreHelper.getUserAccount();
+                    contractMGRBWhrite.methods
+                    .approve(_contractsObj['gameController']['contract'], coreHelper.getAmountAllow())
+                    .send({
+                        from: userWallet
+                    })
+                    .on('transactionHash', (hash) => {
+                        $('#send-toast').show();
+                        $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
+                    })
+                    .on('confirmation', (confirmationNumber, receipt) => {
+                        $('.btn-approve').hide();
+                        $('#send-toast').hide();
+                        $('#confirmed-toast').show();
+                        setTimeout(function(){
+                          $('#confirmed-toast').hide();
+                        }, 15000);
+                    })
+                    .on('receipt', (receipt) => {
+                        $('.btn-approve').hide();
+                        $('#send-toast').hide();
+                        $('#confirmed-toast').show();
+                        setTimeout(function(){
+                          $('#confirmed-toast').hide();
+                        }, 15000);
+                    })
+                    .on('error', (err, receipt) => {
+                        console.log(err);
+                    });
+
+                });
                 $('.btn-mint-hero').click(function () {
                     let userWallet = coreHelper.getUserAccount();
                     contractMGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
@@ -337,63 +399,29 @@
                             })
                             .on('transactionHash', (hash) => {
                                 $('#send-toast').show();
-                                setTimeout(function(){
-                                  $('#send-toast').hide();
-                                }, 5000);
                                 $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
                             })
                             .on('confirmation', (confirmationNumber, receipt) => {
                                 $('#claim-first-robot').modal('show');
+                                $('#send-toast').hide();
                                 $('#confirmed-toast').show();
                                 setTimeout(function(){
                                   $('#confirmed-toast').hide();
-                                }, 5000);
+                                }, 15000);
                             })
                             .on('receipt', (receipt) => {
                                 $('#claim-first-robot').modal('show');
+                                $('#send-toast').hide();
                                 $('#confirmed-toast').show();
                                 setTimeout(function(){
                                   $('#confirmed-toast').hide();
-                                }, 5000);
+                                }, 15000);
                             })
                             .on('error', (err, receipt) => {
                                 console.log(err);
                             });                      
                         }
                     });
-                });
-                $('.btn-approve').click(function () {
-                    let userWallet = coreHelper.getUserAccount();
-                    contractMGRBWhrite.methods
-                    .approve(_contractsObj['gameController']['contract'], coreHelper.getAmountAllow())
-                    .send({
-                        from: userWallet
-                    })
-                    .on('transactionHash', (hash) => {
-                        $('#send-toast').show();
-                        setTimeout(function(){
-                          $('#send-toast').hide();
-                        }, 5000);
-                        $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
-                    })
-                    .on('confirmation', (confirmationNumber, receipt) => {
-                        $('.btn-approve').hide();
-                        $('#confirmed-toast').show();
-                        setTimeout(function(){
-                          $('#confirmed-toast').hide();
-                        }, 5000);
-                    })
-                    .on('receipt', (receipt) => {
-                        $('.btn-approve').hide();
-                        $('#confirmed-toast').show();
-                        setTimeout(function(){
-                          $('#confirmed-toast').hide();
-                        }, 5000);
-                    })
-                    .on('error', (err, receipt) => {
-                        console.log(err);
-                    });
-
                 });
             });
     </script>

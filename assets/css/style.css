@@ -28155,6 +28155,12 @@ textarea {
   right: 25px;
   color: #52242A;
 }
+.header .user-wallet {
+  float: right;
+}
+.header .button-play-game {
+  float: right;
+}
 .header .button-play-game a {
   height: 40px;
   width: 134px;
@@ -28391,6 +28397,9 @@ textarea {
 
 .footer .social-area {
   margin-bottom: 122px;
+}
+.footer .social-area img {
+  width: 64px;
 }
 .footer .social-area a {
   text-decoration: none;
@@ -29419,6 +29428,7 @@ button.btn-approve {
   width: 900px;
   height: 732px;
   text-align: center;
+  margin: auto;
 }
 #claim-first-robot .modal-content .modal-header {
   border-bottom: 0;
@@ -29461,6 +29471,9 @@ button.btn-approve {
   position: absolute;
   left: 158px;
   top: 25px;
+}
+#claim-first-robot .modal-content .info-robot .img-robot {
+  display: none;
 }
 #claim-first-robot .modal-content .info-robot .img img {
   margin-bottom: 30px;
@@ -29549,6 +29562,192 @@ button.btn-approve {
     padding: 40px 0 0;
   }
 }
+@media screen and (max-width: 1440px) {
+    
+}
+@media (min-width: 992px) {
+  .modal-lg, .modal-xl {
+      max-width: 900px;
+  }
+}
+@media screen and (max-width: 991px) {
+    .container-fluid , .container-news {
+      padding: 0 50px;
+    }
+    .footer .navbar-expand-lg .navbar-nav.menu-footer {
+        padding: 20px 0 0 0;
+    }
+    .footer .navbar-expand-lg .navbar-nav.menu-footer .nav-item {
+        margin: 24px 0 0 0;
+    }
+    .header .navbar-expand-lg .navbar-nav.menu-header {
+        padding: 20px 0 0 0;
+    }
+    .header .navbar-expand-lg .navbar-nav.menu-header .nav-item {
+        margin: 24px 0 0 0;
+    }
+    .header .navbar-expand-lg .navbar-nav.menu-header .nav-link {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 6px 20px;
+        text-align: center;
+        border-radius: 12px;
+        display: inline-block;
+    }
+    .header .navbar-expand-lg .navbar-nav.menu-header .nav-item:hover .nav-link {
+        background: #25262D;
+        font-weight: bold;
+        color: #fff;
+    }
+    .header .navbar-expand-lg .navbar-nav.menu-header-swap {
+        background: transparent;
+        padding: 20px 0 0 0;
+        border-radius: 0;
+    }
+    .header .navbar-expand-lg .navbar-nav.menu-header-swap .nav-item {
+        margin: 0 2px;
+    }
+    .header .navbar-expand-lg .navbar-nav.menu-header-swap .nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 6px 10px;
+    }
+    .header .user-action {
+      margin-top: 15px;
+    }
+    .header .container-fluid {
+      padding : 0 50px;
+    }
+    .header .user-wallet , .header .button-play-game {
+      float: left;
+    }
+    #home .description p {
+      width: fit-content;
+    }
+    .list-hero-claim .hero-info {
+      width: fit-content;
+      height: 235px;
+    }
+    .list-hero-claim .hero-info .img {
+      height: 100%;
+    }
+    .list-hero-claim .hero-info .img img {
+      border-radius: 8px;
+    }
+    .funcition-in-game .quiz-to-earn h1.title {
+      width: fit-content;
+    }
+    .quiz-to-earn .einstein {
+      display: none;
+    }
+    .funcition-in-game .quiz-to-earn .carousel-inner {
+      width: fit-content;
+    }
+    .upgrade-your-robot .carousel-inner {
+      width: fit-content;
+    }
+    .upgrade-your-robot .carousel-control-prev-icon, .upgrade-your-robot .carousel-control-next-icon {
+      width: 53px;
+      height: 53px;
+    }
+    .dev-update .news {
+      margin:auto;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+    .footer .social-area a {
+      margin-right: 20px;
+    }
+    .footer .social-area img {
+      width: 30px;
+    }
+    .footer .nav-item {
+      flex-grow: 1;
+      text-align: center;
+    }
+    .hero-info-to-claim .description {
+        float: right;
+    }
+    .connect-to-game .connect-game .button-connect-game a.btn-connect-to-game {
+      width: 200px;
+    }
+    .dev-update .news .img img {
+      width: 100%;
+    }
+    #claim-first-robot .modal-content {
+      background: #fff;
+      width:100%;
+      height:100%;
+    }
+    #claim-first-robot .modal-content .info-robot .img {
+      position: unset;
+    }
+    #claim-first-robot .modal-content .info-robot .img-robot {
+      display: block;
+    }
+    #claim-first-robot .modal-content .info-robot .img-robot img {
+      width: 192px;
+      height: 192px;
+      margin-bottom: 30px;
+    }
+    #claim-first-robot .modal-content .info-robot .img h4.name-hero ,#claim-first-robot .modal-content .info-robot .description p {
+      color: #000;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    .wrapper {
+        width: 100%;
+        min-width: 400px;
+        max-height: max-content;
+    }
+    .blog__container {
+        max-width: 400;
+        width: 100%;
+        margin: 60px auto 0;
+    }
+    .pool__list {
+        width: 100%;
+        min-width: 350px;
+    }
+    .pool__list .logo {
+        min-width: 30px;
+        width: 60px;
+        margin-right: 15px;
+    }
+    .pool__list .logo .base-coin {
+        width: 30px;
+        height: 30px;
+        margin-top: -25px;
+    }
+    .pool__list .logo .token-coin {
+        width: 30px;
+        height: 30px;
+        margin-bottom: -23px;
+        margin-left: 20px;
+    }
+    .pool__list .logo .coin {
+        width: 30px;
+        height: 30px;
+        margin-left: 0px;
+    }
+    .pool__list .info {
+        width: 100%;
+    }
+    .home__analytics .title {
+        font-size: 32px;
+        line-height: 39px;
+    }
+    .home__banner {
+        min-height: 500px;
+        padding: 30px 0;
+    }
+    /* .ctmenu-sub {
+        margin-left: -15%;
+    } */
+
+}
 .carousel-indicators {
     bottom: -89px;
 }
@@ -29565,9 +29764,13 @@ button.btn-approve {
   height: 68px!important;
   background-color: transparent;
 }
+.upgrade-your-robot .carousel-indicators button:hover {
+  opacity: 1;
+}
 .upgrade-your-robot .carousel-indicators button:hover img {
   transform: scale(1.2);
   transition: all 0.5s ease-in-out;
+  filter: none;
 }
 .upgrade-your-robot .carousel-indicators img {
   filter: grayscale(100%);
@@ -29604,5 +29807,8 @@ button.btn-approve {
 
 .fade-in-bg.active {
   opacity: 1;
+}
+.toast {
+  background-color: rgba(255,255,255,1);
 }
 /*# sourceMappingURL=style.css.map */
