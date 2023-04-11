@@ -164,7 +164,6 @@
                                         </span>
                                     </div>
                                 </div>
-                                <p class="text-if-not-approve" style="display: none;">You need to approve GRB before Claim</p>
                                 <div class="button-claim">
                                     <button type="button" class="btn-approve" style="display: none;"  >
                                         <span class="">Approve</span>
@@ -327,10 +326,8 @@
                 $('.btn-mint-hero').click(function () {
                     let userWallet = coreHelper.getUserAccount();
                     contractMGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
-                        console.log(result);
                         if (result == 0) {
                             $('.btn-approve').show();
-                            $('.text-if-not-approve').show()
                         }
                         if (result != 0) {
                             contractGameControllerWhrite.methods
@@ -339,13 +336,17 @@
                                 from: userWallet
                             })
                             .on('transactionHash', (hash) => {
-                                coreHelper.showPopup('confirm-popup');
-                                $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
-                            })
-                            .on('confirmation', (confirmationNumber, receipt) => {
                                 $('#send-toast').show();
                                 setTimeout(function(){
                                   $('#send-toast').hide();
+                                }, 5000);
+                                $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
+                            })
+                            .on('confirmation', (confirmationNumber, receipt) => {
+                                $('#claim-first-robot').modal('show');
+                                $('#confirmed-toast').show();
+                                setTimeout(function(){
+                                  $('#confirmed-toast').hide();
                                 }, 5000);
                             })
                             .on('receipt', (receipt) => {
@@ -369,13 +370,17 @@
                         from: userWallet
                     })
                     .on('transactionHash', (hash) => {
-                        coreHelper.showPopup('confirm-popup');
-                        $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
-                    })
-                    on('confirmation', (confirmationNumber, receipt) => {
                         $('#send-toast').show();
                         setTimeout(function(){
                           $('#send-toast').hide();
+                        }, 5000);
+                        $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
+                    })
+                    on('confirmation', (confirmationNumber, receipt) => {
+                        $('.btn-approve').hide();
+                        $('#confirmed-toast').show();
+                        setTimeout(function(){
+                          $('#confirmed-toast').hide();
                         }, 5000);
                     })
                     .on('receipt', (receipt) => {

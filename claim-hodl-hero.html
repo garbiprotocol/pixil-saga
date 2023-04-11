@@ -327,7 +327,6 @@
                     contractMGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
                         if (result == 0) {
                             $('.btn-approve').show();
-                            $('.text-if-not-approve').show()
                         }
                         if (result != 0) {
                             contractGameControllerWhrite.methods
@@ -336,13 +335,17 @@
                                 from: userWallet
                             })
                             .on('transactionHash', (hash) => {
-                                coreHelper.showPopup('confirm-popup');
-                                $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
-                            })
-                            .on('confirmation', (confirmationNumber, receipt) => {
                                 $('#send-toast').show();
                                 setTimeout(function(){
                                   $('#send-toast').hide();
+                                }, 5000);
+                                $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
+                            })
+                            .on('confirmation', (confirmationNumber, receipt) => {
+                                $('#claim-first-robot').modal('show');
+                                $('#confirmed-toast').show();
+                                setTimeout(function(){
+                                  $('#confirmed-toast').hide();
                                 }, 5000);
                             })
                             .on('receipt', (receipt) => {
@@ -366,13 +369,17 @@
                         from: userWallet
                     })
                     .on('transactionHash', (hash) => {
-                        coreHelper.showPopup('confirm-popup');
-                        $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
-                    })
-                    .on('confirmation', (confirmationNumber, receipt) => {
                         $('#send-toast').show();
                         setTimeout(function(){
                           $('#send-toast').hide();
+                        }, 5000);
+                        $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
+                    })
+                    .on('confirmation', (confirmationNumber, receipt) => {
+                        $('.btn-approve').hide();
+                        $('#confirmed-toast').show();
+                        setTimeout(function(){
+                          $('#confirmed-toast').hide();
                         }, 5000);
                     })
                     .on('receipt', (receipt) => {
