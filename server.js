@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const port = 5000;
+const port = 3001;
 http.createServer(function(request, response) {
     if (request.url === '/') {
         request.url = 'index.html';
