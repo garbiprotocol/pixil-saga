@@ -106,7 +106,7 @@
                                             </div>
                                           </div>
                                           <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
-                                                <a href="" target="_blank" type="button" class="btn-play-game"  >
+                                                <a href=""  type="button" class="btn-play-game"  >
                                                     <span class="">Earn for Free</span>
                                                 </a>
                                           </div>
@@ -448,6 +448,8 @@
                         $('.btn-connect-to-game').attr('href', '/step-1.html');
                     }
                     else {
+                        $('.btn-play-game').attr('target', '_blank');
+                        $('.btn-connect-to-game').attr('target', '_blank');
                         $('.btn-play-game').attr('href', 'http://159.89.203.177:5055/');
                         $('.btn-connect-to-game').attr('href', 'http://159.89.203.177:5055/');
                     }
@@ -462,6 +464,8 @@
                             $('.btn-connect-to-game').attr('href', '/step-1.html');
                         }
                         else {
+                            $('.btn-play-game').attr('target', '_blank');
+                            $('.btn-connect-to-game').attr('target', '_blank');
                             $('.btn-play-game').attr('href', 'http://159.89.203.177:5055/');
                             $('.btn-connect-to-game').attr('href', 'http://159.89.203.177:5055/');
                         }

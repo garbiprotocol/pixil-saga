@@ -54,13 +54,13 @@
                                 <div class="col-lg-7">
                                   <div class="d-lg-flex align-items-center">
                                     <div class="item-link mr-30">
-                                      <a href="#list-team" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
+                                      <a href="/#list-team" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
                                     </div>
                                     <div class="item-link mr-30">
-                                      <a href="#quiz-to-earn" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Quiz to Earn</a>
+                                      <a href="/#quiz-to-earn" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Quiz to Earn</a>
                                     </div>
                                     <div class="item-link mr-30">
-                                      <a href="#robot" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Robot</a>
+                                      <a href="/#robot" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Robot</a>
                                     </div>
                                     <div class="item-link mr-30">
                                       <a href="#" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">How to Play</a>
@@ -107,7 +107,7 @@
                                             </div>
                                           </div>
                                           <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
-                                                <a href="" target="_blank" type="button" class="btn-play-game"  >
+                                                <a href="" type="button" class="btn-play-game"  >
                                                     <span class="">Earn for Free</span>
                                                 </a>
                                           </div>
@@ -329,6 +329,7 @@
                         $('.btn-play-game').attr('href', '/step-1.html');
                     }
                     else {
+                        $('.btn-play-game').attr('target', '_blank');
                         $('.btn-play-game').attr('href', 'http://159.89.203.177:5055/');
                     }
                     let teamId = result.teamId;
@@ -342,6 +343,7 @@
                             $('.btn-play-game').attr('href', '/step-1.html');
                         }
                         else {
+                            $('.btn-play-game').attr('target', '_blank');
                             $('.btn-play-game').attr('href', 'http://159.89.203.177:5055/');
                         }
                         let teamId = result.teamId;                                   
