@@ -392,17 +392,14 @@
                 });
                 $('nav a').on('click', function(event) {
                   if (this.hash !== '') {
-                    event.preventDefault();
-
                     const hash = this.hash;
-
                     $('html, body').animate({
-                      scrollTop: $(hash).offset().top
-                    }, 800, function(){
-                      window.location.hash = hash;
+                            scrollTop: $(hash).offset().top
+                        }, 500, function(){
                     });
                   }
                 });
+
                 $('.fade-in-bg').addClass('active');
                 // Set up an Intersection Observer
                 const options = {
