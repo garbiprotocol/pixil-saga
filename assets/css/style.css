@@ -28139,10 +28139,6 @@ textarea {
 .header {
   background: #292D3A;
   padding: 12px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 9999;
 }
 .header .container-fluid {
   padding: 0 219px;
