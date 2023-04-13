@@ -28611,14 +28611,14 @@ textarea {
 }
 .quiz-to-earn .einstein {
   position: absolute;
-  right: -90px;
+  right: -146px;
   top: 555px;
 }
 .quiz-to-earn .einstein img.text-einstein-talk {
-   position: absolute;
-   max-width: 243px;
-   top: -135px;
-   left: -49px;
+    position: absolute;
+    max-width: 151px;
+    top: -88px;
+    left: -49px;
 }
 .upgrade-your-robot h1.title {
   margin-bottom: 64px;
@@ -29248,6 +29248,7 @@ textarea {
   background: #EAEAEA;
   border-radius: 16px;
   margin-bottom: 80px;
+  width: 100%;
 }
 #buy-box .hero-info-to-claim .img {
   margin-right: 47px;
@@ -29275,6 +29276,7 @@ textarea {
   line-height: 27px;
   margin-bottom: 42px;
   color: #000;
+  width: fit-content;
 }
 #buy-box .hero-info-to-claim .description span.price {
   font-size: 20px;
@@ -29587,8 +29589,10 @@ button.btn-approve {
     padding: 40px 0 0;
   }
 }
-@media screen and (max-width: 1440px) {
-    
+@media screen and (max-width: 1500px) {
+  .funcition-in-game .quiz-to-earn .carousel-inner {
+    width: fit-content;
+  }
 }
 @media (min-width: 992px) {
   .modal-lg, .modal-xl {
