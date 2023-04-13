@@ -28129,14 +28129,6 @@ textarea {
   margin: 0 auto;
 }
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1415px
-);
 .main-page {
   min-height: -webkit-calc(100vh - 252px);
   min-height: -moz-calc(100vh - 252px);
