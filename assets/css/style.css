@@ -29593,6 +29593,9 @@ button.btn-approve {
   .funcition-in-game .quiz-to-earn .carousel-inner {
     width: fit-content;
   }
+  .upgrade-your-robot .carousel-inner {
+    width: fit-content;
+  }
 }
 @media (min-width: 992px) {
   .modal-lg, .modal-xl {
