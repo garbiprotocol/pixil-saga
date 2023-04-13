@@ -29464,8 +29464,8 @@ button.btn-approve {
   height: 110px;
 }
 #claim-first-robot .modal-content .modal-footer a {
-    height: 40px;
-    width: 134px;
+    height: 60px;
+    width: 233px;
     outline: none;
     align-items: center;
     cursor: pointer;
@@ -29473,12 +29473,12 @@ button.btn-approve {
     justify-content: center;
     font-style: normal;
     font-weight: 500;
-    background: url(../images/play-button-bg.png) center center no-repeat;
+    background: url(../images/play-button-bg-2.png) center center no-repeat;
     background-size: cover;
     color: #fff;
     margin-right: 10px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 18px;
 }
 #claim-first-robot .modal-content .modal-header .btn-close {
@@ -29493,14 +29493,14 @@ button.btn-approve {
 }
 #claim-first-robot .modal-content .info-robot .img {
   position: absolute;
-  left: 158px;
+  left: 152px;
   top: 25px;
 }
 #claim-first-robot .modal-content .info-robot .img-robot {
   display: none;
 }
 #claim-first-robot .modal-content .info-robot .img img {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   width: 192px;
   height: 192px;
 }
@@ -29520,12 +29520,14 @@ button.btn-approve {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    padding : 0 20px;
 }
 
 #claim-first-robot .modal-content .info-robot .description p {
   color: #fff;
-  font-size: 24px;
+  font-size: 19px;
   line-height: 36px;
+  width: 100%;
 }
 
 @media screen and (min-width: 1500px) {
@@ -29720,10 +29722,13 @@ button.btn-approve {
     #claim-first-robot .modal-content .info-robot .img-robot {
       display: block;
     }
+    #claim-first-robot .modal-content .info-robot .description {
+      bottom: -30px!important;
+    }
     #claim-first-robot .modal-content .info-robot .img-robot img {
       width: 192px;
       height: 192px;
-      margin-bottom: 30px;
+      margin-bottom: 33px;
     }
     #claim-first-robot .modal-content .info-robot .img h4.name-hero ,#claim-first-robot .modal-content .info-robot .description p {
       color: #000;
