@@ -28489,13 +28489,19 @@ textarea {
   text-align: center;
   padding-bottom: 80px;
 }
-#home .description h1.title {
+#list-team h1.title {
+  color: #459434;
+}
+#list-team h4.title {
+  color: #546374;
+}
+.description h1.title {
   color: #B4ED60;
   font-size: 36px;
   line-height: 54px;
   margin-bottom: 40px;
 }
-#home .description p {
+.description p {
   font-size: 24px;
   line-height: 36px;
   color: #fff;
@@ -29154,7 +29160,7 @@ textarea {
   font-size: 36px;
   line-height: 54px;
   margin-bottom: 32px;
-  color: #7E9DB6;
+  color: #546374;
 }
 #buy-box .step-to-join-game .step-by-step {
   display: flex;
@@ -29268,6 +29274,7 @@ textarea {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 42px;
+  color: #000;
 }
 #buy-box .hero-info-to-claim .description span.price {
   font-size: 20px;
