@@ -28129,6 +28129,14 @@ textarea {
   margin: 0 auto;
 }
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1415px
+);
 .main-page {
   min-height: -webkit-calc(100vh - 252px);
   min-height: -moz-calc(100vh - 252px);
@@ -28232,7 +28240,7 @@ textarea {
   max-height: 100%;
 }
 .header .user-acct {
-  padding: 8px 40px 8px 24px;
+  padding: 8px 24px 8px 24px;
   background: #fff;
   border: 2px solid transparent;
   -webkit-border-radius: 20px;
@@ -28266,10 +28274,6 @@ textarea {
   margin: 0 auto;
 }
 
-.logo img {
-  max-width: 174px;
-  max-height: 50px;
-}
 
 .dropdown-menu__game-header {
   top: 45px !important;
@@ -28712,6 +28716,15 @@ textarea {
 .container-news {
   padding: 0 190px;
 }
+.container-list-new {
+  width: 100%;
+  overflow-x: auto;
+  text-align: center;
+}
+.dev-update .list-new {
+  display: inline-block;
+  width: 1500px;
+}
 .dev-update h1.title {
   margin-bottom: 80px;
 }
@@ -28721,6 +28734,9 @@ textarea {
   width: 360px;
   height: 480px;
   padding: 40px 27px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 .dev-update .news .img {
   margin-bottom: 33px;
@@ -28731,6 +28747,7 @@ textarea {
 }
 .dev-update .news .info {
   padding: 0 16px;
+  text-align: left;
 }
 .dev-update .news .info p {
   font-size: 14px;
@@ -29514,6 +29531,9 @@ button.btn-approve {
   .row-footer .col-footer:first-child {
     border-right: 2px solid #788095;
   }
+  .container-list-new {
+    max-width: 1633px;
+  }
   .container {
     max-width: 1260px;
   }
@@ -29577,6 +29597,9 @@ button.btn-approve {
   }
 }
 @media screen and (max-width: 991px) {
+    #main {
+      padding-top: 56px;
+    }
     .container-fluid , .container-news {
       padding: 0 50px;
     }
