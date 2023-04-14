@@ -28711,13 +28711,12 @@ textarea {
   line-height: 72px;
   color: #fff;
 }
-.container-news {
-  padding: 0 190px;
-}
+
 .container-list-new {
   width: 100%;
   overflow-x: auto;
   text-align: center;
+  margin:auto;
 }
 .dev-update .list-new {
   display: inline-block;
