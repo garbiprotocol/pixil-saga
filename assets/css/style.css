@@ -29492,8 +29492,14 @@ button.btn-approve {
 }
 #claim-first-robot .modal-content .info-robot .img {
   position: absolute;
-  left: 152px;
+  left: 180px;
   top: 25px;
+}
+#claim-first-robot .modal-content .info-robot h4.name-hero {
+    color: #fff;
+    position: absolute;
+    left: 170px;
+    top: 252px;
 }
 #claim-first-robot .modal-content .info-robot .img-robot {
   display: none;
@@ -29720,6 +29726,10 @@ button.btn-approve {
     }
     #claim-first-robot .modal-content .info-robot .img-robot {
       display: block;
+    }
+    #claim-first-robot .modal-content .info-robot h4.name-hero {
+      color: #000;
+      position: unset;
     }
     #claim-first-robot .modal-content .info-robot .description {
       bottom: -30px!important;

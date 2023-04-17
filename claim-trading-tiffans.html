@@ -40,7 +40,7 @@
                           <div class="col-lg-2">
                             <div class="d-flex align-items-center justify-content-between">
                               <a href="/" class="logo">
-                                <img src="../assets/images/logo-pixil.png" alt="logo" />
+                                <img src="/assets/images/logo-pixil.png" alt="logo" />
                               </a>
                               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff;">
                                  <i class="fas fa-bars"></i>
@@ -73,7 +73,7 @@
                                             <div class="wrap-user-acct dropdown show">
                                               <a class="text-decoration-none fs-16 c-main b-600  d-flex align-items-center" href="#" role="button">
                                                 <span class="avatar mr-8" id="pixil-saga-avatar">
-                                                  <img src="../assets/images/default_avatar.png" />
+                                                  <img src="/assets/images/default_avatar.png" />
                                                 </span>
                                                
                                                 <span class="b-600 user-acct">0x00</span>
@@ -129,7 +129,7 @@
                             <div class="">
                                 <div class="hero-info-to-claim">
                                     <div class="img" >
-                                        <img src="../assets/images/Hero_Team_Id_3.png" alt="Hero 1">
+                                        <img src="/assets/images/Hero_Team_Id_3.png" alt="Hero 1">
                                     </div>
                                     <div class="description">
                                         <h4 class="name">Trading Titans</h4>
@@ -157,17 +157,17 @@
                               </div>
                               <div class="modal-body">
                                 <div class="info-robot">
-                                    <div class="img" style="left: 145px;">
-                                        <img src="../assets/images/Hero_Team_Id_3.png" alt="">
-                                        <h4 class="name-hero">Trading Titans #<span class="avatar-id"></span></h4>
+                                    <div class="img">
+                                        <img src="/assets/images/Hero_Team_Id_3.png" alt="">                                        
                                     </div>
+                                    <h4 class="name-hero">Trading Titans #<span class="avatar-id"></span></h4>
                                     <div class="img-robot"  style = "">
-                                        <img src="../assets/images/Robot_level_Id_0.png" alt="">
-                                        <h4 class="name-hero">AIVA's Awakening</h4>
+                                        <img src="/assets/images/Robot_level_Id_0.png" alt="">
+                                        <h4 class="name-robot">AIVA's Awakening</h4>
                                     </div>
                                     <div class="description">
                                         <h4 class="title">Congratulations!</h4>
-                                        <p>Congratulations! You've just received AIVA Level 0, a special gift in the form of an NFT Robot! Get ready to embark on exciting adventures and earn rewards in Pixil Saga with your new mechanical friend and unique avatar. Click the play button below to start your journey!</p>
+                                        <p>You've just received AIVA Level 0, a special gift in the form of an NFT Robot! Get ready to embark on exciting adventures and earn rewards in Pixil Saga with your new mechanical friend and unique avatar. Click the play button below to start your journey!</p>
                                     </div>
                                 </div>
                               </div>
@@ -188,17 +188,17 @@
                         <h1 class="title fade-in">STAY CONNECTED</h1>
                         <div class="social-area fade-in">
                             <a href="" target="_blank" class="mr-54"> 
-                                <img alt="tw" src="../assets/images/twiter-logo.png" > 
+                                <img alt="tw" src="/assets/images/twiter-logo.png" > 
                             </a> 
                             <a href="" target="_blank" class="mr-54"> 
-                                <img alt="tele" src="../assets/images/telegram-logo.png" >
+                                <img alt="tele" src="/assets/images/telegram-logo.png" >
                             </a>
                             <a href="" target="_blank" class=""> 
-                                <img alt="github" src="../assets/images/github.png" >
+                                <img alt="github" src="/assets/images/github.png" >
                             </a>
                         </div>
                         <div class="logo-footer fade-in">
-                            <img src="../assets/images/logo-start-game.png" alt="">
+                            <img src="/assets/images/logo-start-game.png" alt="">
                         </div>
                         <div class="menu-footer fade-in">
                             <nav class="navbar navbar-expand-lg navbar-light">
@@ -293,11 +293,11 @@
                 let contractGameControllerRead = contractBaseHelper.getReadContract(_contractsObj['gameController']['contract'],_abiGameController);
                 function updateAvatar(teamId) {
                     if (teamId == 0) { 
-                        let src = "../assets/images/default_avatar.png" ;
+                        let src = "/assets/images/default_avatar.png" ;
                         $('#pixil-saga-avatar img').attr('src', src);
                     }
                     else {
-                        let src = `../assets/images/avatar_team_Id_${teamId}.png`;
+                        let src = `/assets/images/avatar_team_Id_${teamId}.png`;
                         $('#pixil-saga-avatar img').attr('src', src);
                     }
                 }
