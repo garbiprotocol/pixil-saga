@@ -25,8 +25,6 @@
         <script src="./js/contract/arbitrum/data.js"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="./assets/js/custom.js"></script>
-        <script src="./assets/js/custom.menu.js"></script>
 
 
         <title>Pixil Saga</title>
@@ -42,7 +40,7 @@
                           <div class="col-lg-2">
                             <div class="d-flex align-items-center justify-content-between">
                               <a href="/" class="logo">
-                                <img src="../assets/images/logo-pixil.png" alt="logo" />
+                                <img src="/assets/images/logo-pixil.png" alt="logo" />
                               </a>
                               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff;">
                                  <i class="fas fa-bars"></i>
@@ -53,7 +51,7 @@
                           <div class="col-lg-10">
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <div class="row align-items-center flex-grow-1">
-                                <div class="col-lg-7">
+                                <div class="col-lg-6">
                                   <div class="d-lg-flex align-items-center">
                                     <div class="item-link mr-30">
                                       <a href="#list-team" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
@@ -69,37 +67,18 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-6">
                                     <div class="user-action">
                                         <div class="d-lg-flex align-items-center justify-content-end user-wallet" >
                                             <div class="wrap-user-acct dropdown show">
-                                              <a class="text-decoration-none fs-16 c-main b-600 dropdown-toggle dropdown-toggle-game d-flex align-items-center" href="#" role="button" id="dropdownMenuLinkInfo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <a class="text-decoration-none fs-16 c-main b-600  d-flex align-items-center" href="#" role="button">
                                                 <span class="avatar mr-8" id="pixil-saga-avatar">
-                                                  <img src="../assets/images/default_avatar.png" />
+                                                  <img src="/assets/images/default_avatar.png" />
                                                 </span>
                                                
                                                 <span class="b-600 user-acct">0x00</span>
                                               </a>
-                                              <div class="dropdown-menu dropdown-menu__game-info" aria-labelledby="dropdownMenuLinkInfo">
-                                                <div class="mb-16">
-                                                  <a class="dropdown-item d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#modalChangeAvatar" href="#">
-                                                    <span class="fs-14 b-600">Setting</span>
-                                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.8125 6L15.8125 12L9.8125 18" stroke="#52242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                  </a>
-                                                </div>
-                                                <div class="mb-16">
-                                                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                                    <span class="fs-14 b-600">Sercurity</span>
-                                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.8125 6L15.8125 12L9.8125 18" stroke="#52242A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                  </a>
-                                                </div>
-
-                                                <!-- <div class="wrap-btn-connect"><a href="#" class="btn-logout text-decoration-none fs-16 b-600 c-white background-15 border-15-2 border-btn-hover-15-2 p-8 border-radius-8 btn-transition d-inline-block w-100 text-center f-inter">Log out</a></div> -->
-                                              </div>
+                                              
                                             </div>
 
                                             <div class="wrap-user-btn show">
@@ -109,7 +88,7 @@
                                             </div>
                                           </div>
                                           <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
-                                                <a href="" target="_blank" type="button" class="btn-play-game"  >
+                                                <a href=""  type="button" class="btn-play-game"  >
                                                     <span class="">Earn for Free</span>
                                                 </a>
                                           </div>
@@ -132,7 +111,7 @@
                             <h1 class="title">Create your profile</h1>
                             <div class="step-by-step">
                                 <div class="step-1 ">
-                                    <span>Choose your Avatar</span>
+                                    <span>Choose your Team</span>
                                 </div>
                                 <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                                 <div class="step-2 on-step">
@@ -150,7 +129,7 @@
                             <div class="">
                                 <div class="hero-info-to-claim">
                                     <div class="img">
-                                        <img src="../assets/images/Hero_Team_Id_2.png" alt="Hero 1">
+                                        <img src="/assets/images/Hero_Team_Id_2.png" alt="Hero 1">
                                     </div>
                                     <div class="description">
                                         <h4 class="name">NFT ninjas</h4>
@@ -178,22 +157,22 @@
                               </div>
                               <div class="modal-body">
                                 <div class="info-robot">
-                                    <div class="img"  style = "left: 180px;">
-                                        <img src="../assets/images/Hero_Team_Id_2.png" alt="">
-                                        <h4 class="name-hero">NFT ninjas#1</h4>
+                                    <div class="img">
+                                        <img src="/assets/images/Hero_Team_Id_2.png" alt="">
                                     </div>
+                                    <h4 class="name-hero">NFT ninjas #<span class="avatar-id"></span></h4>
                                     <div class="img-robot"  style = "">
-                                        <img src="../assets/images/Robot_level_Id_0.png" alt="">
-                                        <h4 class="name-hero">Robot lvl 0</h4>
+                                        <img src="/assets/images/Robot_level_Id_0.png" alt="">
+                                        <h4 class="name-robot">AIVA's Awakening</h4>
                                     </div>
                                     <div class="description">
                                         <h4 class="title">Congratulations!</h4>
-                                        <p>You have received your first NFT Robot</p>
+                                        <p>You've just received AIVA Level 0, a special gift in the form of an NFT Robot! Get ready to embark on exciting adventures and earn rewards in Pixil Saga with your new mechanical friend and unique avatar. Click the play button below to start your journey!</p>
                                     </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <a href="http://159.89.203.177:5055/" type="button" class="btn-play-game"  >
+                                <a href="https://pixil-saga.github.io/play" type="button" class="btn-play-game"  >
                                     <span class="">Play</span>
                                 </a>
                               </div>
@@ -203,41 +182,38 @@
                     </div> 
                 </div>
             </main>
-           <footer id="footer" class="">
+            <footer id="footer" class="">
                 <footer id="is-footer-copyright-group">
                     <div id="footer-main" class="footer footer-main fade-in-bg" >
                         <h1 class="title fade-in">STAY CONNECTED</h1>
                         <div class="social-area fade-in">
                             <a href="" target="_blank" class="mr-54"> 
-                                <img alt="tw" src="../assets/images/twiter-logo.png" > 
+                                <img alt="tw" src="/assets/images/twiter-logo.png" > 
                             </a> 
                             <a href="" target="_blank" class="mr-54"> 
-                                <img alt="tele" src="../assets/images/telegram-logo.png" >
+                                <img alt="tele" src="/assets/images/telegram-logo.png" >
                             </a>
                             <a href="" target="_blank" class=""> 
-                                <img alt="github" src="../assets/images/github.png" >
+                                <img alt="github" src="/assets/images/github.png" >
                             </a>
                         </div>
                         <div class="logo-footer fade-in">
-                            <img src="../assets/images/logo-start-game.png" alt="">
+                            <img src="/assets/images/logo-start-game.png" alt="">
                         </div>
                         <div class="menu-footer fade-in">
                             <nav class="navbar navbar-expand-lg navbar-light">
                                 <ul class="navbar-nav mx-auto">
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" href="#">Docs</a>
+                                    <a class="nav-link f-inter" target="_blank" href="https://garbi-protocol.gitbook.io/docs/">Docs</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" href="#">#Twitter</a>
+                                    <a class="nav-link f-inter" target="_blank" href="https://twitter.com/garbi_protocol/" rel="noopener noreferrer">#Twitter</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" href="#">@Telegram</a>
+                                    <a class="nav-link f-inter" target="_blank" href="https://t.me/garbiprotocol" rel="noopener noreferrer">@Telegram</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" href="#">git@</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link f-inter" href="#">Early Whitelist Access</a>
+                                    <a class="nav-link f-inter" target="_blank" href="https://github.com/garbiprotocol">git@</a>
                                   </li>
                                   <li class="nav-item">
                                     <a class="nav-link f-inter" href="#">Version 1.0.0</a>
@@ -246,7 +222,7 @@
                             </nav>
                         </div>
                         <div class="copy-right fade-in">
-                            <p class="f-inter">Garbi Protocol created Pixil Saga - a decentralized blend of blockchain and gamification for adventurous gamers.</p>
+                            <p class="f-inter"><a href="https://garbi.io" class="f-inter" target=_blank>Garbi Protocol</a> created Pixil Saga - a decentralized blend of blockchain and gamification for adventurous gamers.</p>
                         </div>
                      </div>
                 </footer>
@@ -317,21 +293,24 @@
                 let contractGameControllerRead = contractBaseHelper.getReadContract(_contractsObj['gameController']['contract'],_abiGameController);
                 function updateAvatar(teamId) {
                     if (teamId == 0) { 
-                        let src = "../assets/images/default_avatar.png" ;
+                        let src = "/assets/images/default_avatar.png" ;
                         $('#pixil-saga-avatar img').attr('src', src);
                     }
                     else {
-                        let src = `../assets/images/avatar_team_Id_${teamId}.png`;
+                        let src = `/assets/images/avatar_team_Id_${teamId}.png`;
                         $('#pixil-saga-avatar img').attr('src', src);
                     }
                 }
                 contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                    let AvatarId = result.avatarId;
+                    $('.avatar-id').text(AvatarId);
                     let userWallet = coreHelper.getUserAccount();
                     if (result.avatarId == 0) {
                         $('.btn-play-game').attr('href', '/step-1.html');
                     }
                     else {
-                        $('.btn-play-game').attr('href', 'http://159.89.203.177:5055/');
+                        $('.btn-play-game').attr('target', '_blank');
+                        $('.btn-play-game').attr('href', 'https://pixil-saga.github.io/play');
                     }
                     let teamId = result.teamId;
                     updateAvatar(teamId);
@@ -339,12 +318,15 @@
                 setInterval(function () {
                     let userWallet = coreHelper.getUserAccount();
                     contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                        let AvatarId = result.avatarId;
+                        $('.avatar-id').text(AvatarId);
                         let userWallet = coreHelper.getUserAccount();
                         if (result.avatarId == 0) {
                             $('.btn-play-game').attr('href', '/step-1.html');
                         }
                         else {
-                            $('.btn-play-game').attr('href', 'http://159.89.203.177:5055/');
+                            $('.btn-play-game').attr('target', '_blank');
+                            $('.btn-play-game').attr('href', 'https://pixil-saga.github.io/play');
                         }
                         let teamId = result.teamId;              
                         updateAvatar(teamId);
