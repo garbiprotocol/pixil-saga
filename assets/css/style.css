@@ -28734,6 +28734,7 @@ textarea {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
+  position: relative;
 }
 .dev-update .news .img {
   margin-bottom: 33px;
@@ -28755,6 +28756,8 @@ textarea {
   font-size: 12px;
   line-height: 18px;
   color: #B9CAD7;
+  position: absolute;
+  bottom: 30px;
 }
 .btn-buy {
   background: url(../images/bg-btn-buy.png) center center no-repeat;
