@@ -45,17 +45,14 @@ class CYBER_CREDIT_HELPER extends BASE_CONTRACT_ARBITRUM_HELPER
         .send({from: user})
         .on('transactionHash', (hash) => {
             Unity.SendMessage("TransactionLog", "IncreaseLayerTransactionLogt");
-            this.SendLogToUnity("TransactionLog", "SetTransactionLog", "approve: pending");                 
+            this.SendLogToUnity("TransactionLog", "SetTransactionLog", "Transaction sent - lift-off achieved! Keep exploring Pixil Saga's gamified DeFi world as your transaction travels the blockchain galaxy.");                 
         })
         .on('confirmation', (confirmationNumber, receipt) => {             
         })
         .on('receipt', (receipt) => {
             Unity.SendMessage("TransactionLog", "DecreaseLayerTransactionLog");        
-            this.SendLogToUnity("TransactionLog", "SetTransactionLog", "approve: success");
         })
-        .on('error', (err, receipt) => {
-            this.SendLogToUnity("TransactionLog", "SetTransactionLog", "approve: error");
-            Unity.SendMessage("TransactionLog", "DecreaseLayerTransactionLog");        
+        .on('error', (err, receipt) => {   
         });
     }
 }

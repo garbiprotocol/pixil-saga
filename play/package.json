@@ -1,8 +1,8 @@
 {
-  "name": "pixil-saga-v100",
+  "name": "pixil-saga-v101",
   "version": "1.0.0",
   "description": "",
-  "main": "ClientServer.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

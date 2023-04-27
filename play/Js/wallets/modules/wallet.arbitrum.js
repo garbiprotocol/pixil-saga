@@ -5,7 +5,6 @@ class WALLET_ARBITRUM_HELPER {
         this._chainID           = opts.networkConfig.GetConfig("chainId");
         this._rpcUrls           = opts.networkConfig.GetConfig('rpcList');
         this._blockExplorerUrls = opts.networkConfig.GetConfig('blockExplorerUrls');
-
         this._networkConfig   = opts.networkConfig;
         this._providerConnect = null;
         this._isConnected = false;
@@ -160,7 +159,7 @@ class WALLET_ARBITRUM_HELPER {
 
     GetWeb3ToReadData() {
         let ArbAlchemyRpcEndPoint = 'https://arb-mainnet.g.alchemy.com/v2/eAgGBBNJUIxmvqkKrNl2-nhRB6Q_UJk-';
-        if (this._chainId != 42161) 
+        if (this._chainID != 42161) 
         {
             ArbAlchemyRpcEndPoint = 'https://arb-goerli.g.alchemy.com/v2/EjDT3kxi1iFQMt16rz9BvNb7fTRnjc28';
         }

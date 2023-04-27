@@ -1,4 +1,4 @@
-export default
+export default 
 [
    {
       "inputs":[
@@ -284,6 +284,21 @@ export default
    },
    {
       "inputs":[
+         {
+            "internalType":"contract IWhiteList",
+            "name":"addressWhiteList",
+            "type":"address"
+         }
+      ],
+      "name":"SetWhiteListcontract",
+      "outputs":[
+         
+      ],
+      "stateMutability":"nonpayable",
+      "type":"function"
+   },
+   {
+      "inputs":[
          
       ],
       "name":"UnpauseSystem",
@@ -291,6 +306,21 @@ export default
          
       ],
       "stateMutability":"nonpayable",
+      "type":"function"
+   },
+   {
+      "inputs":[
+         
+      ],
+      "name":"WhiteList",
+      "outputs":[
+         {
+            "internalType":"contract IWhiteList",
+            "name":"",
+            "type":"address"
+         }
+      ],
+      "stateMutability":"view",
       "type":"function"
    },
    {
@@ -364,4 +394,4 @@ export default
       "stateMutability":"view",
       "type":"function"
    }
-]
+];

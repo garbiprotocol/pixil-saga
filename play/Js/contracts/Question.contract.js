@@ -64,10 +64,9 @@ class QUESTION_HELPER extends BASE_CONTRACT_ARBITRUM_HELPER
     {
         let userAddress = user ? user : this.GetUserAddress();
         let contractAddress = this.GetContractAddress();
-        
+
         let actionContract = await this.GetReadContract(contractAddress);
         let result = await actionContract.methods.GetDataQuest(userAddress).call();
-
         let totalQuestions = result.data.length;
         let data = {};
 
