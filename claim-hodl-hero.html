@@ -284,10 +284,10 @@
                 let _abiGameController = abiHelper.getGameControllerABI();
                 let _contractsObj = configHelper.getContracts(chainId);
                 let userWallet = coreHelper.getUserAccount();
-                let _abiMGRB = abiHelper.getMGrbABI();
-                let MGRBAddr = configHelper.getTokenAddressByTokenName(chainId , 'mgrb');
-                let contractMGRBRead = contractBaseHelper.getReadContract(MGRBAddr,_abiMGRB);
-                let contractMGRBWhrite = contractBaseHelper.getMainContract(MGRBAddr,_abiMGRB);
+                let _abiGRB = abiHelper.getGrbABI();
+                let GRBAddr = configHelper.getTokenAddressByTokenName(chainId , 'grb');
+                let contractGRBRead = contractBaseHelper.getReadContract(GRBAddr,_abiGRB);
+                let contractGRBWhrite = contractBaseHelper.getMainContract(GRBAddr,_abiGRB);
                 let contractGameControllerWhrite = contractBaseHelper.getMainContract(_contractsObj['gameController']['contract'],_abiGameController);
                 let contractGameControllerRead = contractBaseHelper.getReadContract(_contractsObj['gameController']['contract'],_abiGameController);
                 function updateAvatar(teamId) {
@@ -332,7 +332,7 @@
                 }, 3000);
                 $('.btn-approve').click(function () {
                     let userWallet = coreHelper.getUserAccount();
-                    contractMGRBWhrite.methods
+                    contractGRBWhrite.methods
                     .approve(_contractsObj['gameController']['contract'], coreHelper.getAmountAllow())
                     .send({
                         from: userWallet
@@ -364,7 +364,7 @@
                 });
                 $('.btn-mint-hero').click(function () {
                     let userWallet = coreHelper.getUserAccount();
-                    contractMGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
+                    contractGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
                         if (result == 0) {
                             $('.btn-approve').show();
                         }
