@@ -35,7 +35,7 @@ $.CONFIG.prototype = (function() {
             'gec': '0x5eba4d078a28578d24aa536f70448d507e1cc78e'
         },
         421613: {//arbitrum testnet
-            'grb': '0xd1eb8a5798e04703ec5324c99405f581bd6318b8',
+            'grb': '0x570A6cFA0e11f0Db8594E6a74B9106d5F21151C0',
             'vegrb': '0xcf7d3a1ff5188a0d398cf8181b8bdc051204f8da',
             'weth': '0xE0EcA46EA3308E8184e3b462b8A722F93A8F6F27',
             'usdc': '0x29680BD5F3f324001Add9229d6B44615353f554c',

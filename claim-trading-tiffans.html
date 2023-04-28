@@ -334,6 +334,7 @@
                 }, 3000);
                 $('.btn-approve').click(function () {
                     let userWallet = coreHelper.getUserAccount();
+                    console.log (contractGRBWhrite);
                     contractGRBWhrite.methods
                     .approve(_contractsObj['gameController']['contract'], coreHelper.getAmountAllow())
                     .send({
@@ -344,20 +345,28 @@
                         $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
                     })
                     .on('confirmation', (confirmationNumber, receipt) => {
-                        $('.btn-approve').hide();
-                        $('#send-toast').hide();
                         $('#confirmed-toast').show();
+                        $('#send-toast').hide();
                         setTimeout(function(){
                           $('#confirmed-toast').hide();
                         }, 15000);
+                        contractGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
+                            if (result >= 9e18) {
+                                $('.btn-approve').hide();
+                            }
+                        });        
                     })
                     .on('receipt', (receipt) => {
-                        $('.btn-approve').hide();
-                        $('#send-toast').hide();
                         $('#confirmed-toast').show();
+                        $('#send-toast').hide();
                         setTimeout(function(){
                           $('#confirmed-toast').hide();
                         }, 15000);
+                       contractGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
+                            if (result >= 9e18) {
+                                $('.btn-approve').hide();
+                            }
+                        });        
                     })
                     .on('error', (err, receipt) => {
                         console.log(err);
@@ -367,10 +376,10 @@
                 $('.btn-mint-hero').click(function () {
                     let userWallet = coreHelper.getUserAccount();
                     contractGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
-                        if (result == 0) {
+                        if (result < 9e18) {
                             $('.btn-approve').show();
                         }
-                        if (result != 0) {
+                        if (result >= 9e18) {
                             contractGameControllerWhrite.methods
                             .MintHeroNFT ('3')
                             .send({
@@ -381,7 +390,6 @@
                                 $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
                             })
                             .on('confirmation', (confirmationNumber, receipt) => {
-                                $('#claim-first-robot').modal('show');
                                 $('#send-toast').hide();
                                 $('#confirmed-toast').show();
                                 setTimeout(function(){
