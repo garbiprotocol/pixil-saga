@@ -332,7 +332,6 @@
                 }, 3000);
                 $('.btn-approve').click(function () {
                     let userWallet = coreHelper.getUserAccount();
-                    console.log (contractGRBWhrite);
                     contractGRBWhrite.methods
                     .approve(_contractsObj['gameController']['contract'], coreHelper.getAmountAllow())
                     .send({
