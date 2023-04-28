@@ -47,7 +47,7 @@ class TREASURY_ACTION_HELPER extends BASE_ACTION_HELPER
         if(promise.status == true)
         {
             this.SendLogToUnity("TransactionLog", "SetTransactionLog", "Congratulations! Your transaction has been confirmed, and you have successfully purchased veGRB using your hard-earned Cyber Credits. With your veGRB, you can participate in governance and help shape the future of Pixil Saga's gamified DeFi universe. Happy adventuring!");
-            Unity.SendMessage("Shop", "ShowResultBuyPacket", `+${promise.events.OnBuyPacket.returnValues.amountTokenInputput / 1e18}`);
+            Unity.SendMessage("Shop", "ShowResultBuyPacket", `+${promise.events.OnBuyPacket.returnValues.amountTokenOutput / 1e18}`);
         }
     }
 }

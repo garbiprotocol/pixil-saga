@@ -62,22 +62,21 @@ class LEARNING_CONTRACT_HELPER extends BASE_CONTRACT_ARBITRUM_HELPER
     async UpgrateLevel(user, transactionKey)
     {
         let userAddress = user ? user : this.GetUserAddress();
-        console.log(userAddress);
         let contractAddress = this.GetContractAddress();
 
         let actionContract = await this.GetMainContract(contractAddress);
-        actionContract
+        
+        return actionContract
         .methods.UpgradeLevelRobot()
         .send({from: userAddress})
-        .methods.ForRobotNFTStopLearn()
-        .send({from: userAddress})
         .on('transactionHash', (hash) => {
+            Unity.SendMessage("TransactionLog", "IncreaseLayerTransactionLogt"); 
             this.SendLogToUnity("TransactionLog", "SetTransactionLog", "Transaction sent - lift-off achieved! Keep exploring Pixil Saga's gamified DeFi world as your transaction travels the blockchain galaxy.");                 
         })
         .on('confirmation', (confirmationNumber, receipt) => {             
         })
         .on('receipt', (receipt) => {
-            this.SendLogToUnity("TransactionLog", "SetTransactionLog", "Transaction confirmed.");
+            Unity.SendMessage("TransactionLog", "DecreaseLayerTransactionLog");
         })
         .on('error', (err, receipt) => {       
         });

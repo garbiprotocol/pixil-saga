@@ -535,7 +535,7 @@ export default
       "inputs":[
          {
             "internalType":"uint256",
-            "name":"maxLevelOfRobotNFTinGame",
+            "name":"newMaxLevelOfRobotNFTinGame",
             "type":"uint256"
          }
       ],
@@ -575,7 +575,7 @@ export default
          },
          {
             "internalType":"uint256",
-            "name":"value",
+            "name":"rewardPerBlock",
             "type":"uint256"
          }
       ],
@@ -590,11 +590,11 @@ export default
       "inputs":[
          {
             "internalType":"contract IRobot",
-            "name":"robot",
+            "name":"addressRobotNFT",
             "type":"address"
          }
       ],
-      "name":"SetRobot",
+      "name":"SetRobotNFTContract",
       "outputs":[
          
       ],
@@ -605,11 +605,11 @@ export default
       "inputs":[
          {
             "internalType":"contract IERC20",
-            "name":"tokenReward",
+            "name":"addressTokenReward",
             "type":"address"
          }
       ],
-      "name":"SetTokenReward",
+      "name":"SetTokenRewardContract",
       "outputs":[
          
       ],
@@ -620,7 +620,7 @@ export default
       "inputs":[
          {
             "internalType":"uint256",
-            "name":"totalBlockLearnEachTime",
+            "name":"newTotalBlockLearnEachTime",
             "type":"uint256"
          }
       ],
@@ -773,4 +773,4 @@ export default
       "stateMutability":"nonpayable",
       "type":"function"
    }
-]
+];

@@ -17,7 +17,9 @@ class CONTRACT_HELPER
 			},
 			production: 
 			{
-				
+				Question: "0x48EbeBbEee39F54BF3aefb108BC5F555F9368448",
+				Learning: "0xA721C6aF444Bf4e8A8cf418C54547494b0a7f950",
+				Treasury: "0x78851Af360Dead9caFf50853D8548BA2d539ee99",
 			}
 		};
 	}

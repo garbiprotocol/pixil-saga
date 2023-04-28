@@ -18,7 +18,8 @@ class TOKEN_HELPER
 			
 			production: 
 			{
-				
+				Cyber: "0x85Cf9E2fE7eEA7F362cfA940Cc4bfBb4D05e1D08",
+				veGRB: "0x14c302dca44528a2b00b932afdf01e9d48100b7b",
 			}
 		};
 	}

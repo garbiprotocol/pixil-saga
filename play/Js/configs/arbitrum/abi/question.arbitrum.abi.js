@@ -41,7 +41,7 @@ export default
          {
             "indexed":false,
             "internalType":"uint256",
-            "name":"totalNumberCorrect",
+            "name":"totalAnswerCorrect",
             "type":"uint256"
          },
          {
@@ -603,4 +603,4 @@ export default
       "stateMutability":"nonpayable",
       "type":"function"
    }
-]
+];

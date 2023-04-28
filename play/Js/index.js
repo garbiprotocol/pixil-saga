@@ -2,7 +2,7 @@
 import Config from './configs/index.js';
 
 const Pixiventure_NETWORK = 'arbitrum';
-const Pixiventure_MODE = 'development'; //beta, production
+const Pixiventure_MODE = 'production'; // development, beta, production
 const Pixiventure_CONFIG = {
 	ModeENV: Pixiventure_MODE,
 	NetworkENV: Pixiventure_NETWORK,
