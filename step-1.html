@@ -289,7 +289,10 @@
                     {
                         return false;
                     }
-                    return true;
+                    else {
+                        $('.second-step span.step').addClass('checked');
+                        $('.second-step i.fa-check').show();
+                    }
                 }
                 async function GetChainId()
                 {
@@ -322,7 +325,7 @@
                             let ArbitrumNovaChain = 
                             [{ 
                                 "chainId": chainId.toString(),
-                                "chainName": "Arbitrum",
+                                "chainName": "Arbitrum Nova",
                                 "nativeCurrency": {
                                     "name": 'ETH',
                                     "symbol": 'ETH',
@@ -331,19 +334,17 @@
                                 "rpcUrls": ["https://nova.arbitrum.io/rpc"],
                                 "blockExplorerUrls": ["https://nova.arbiscan.io"],
                             }];
-
+                            
+                            console.log(ArbitrumNovaChain);
                             try
                             {
-                                await window.ethereum.request ({ method: 'eth_requestAccounts' })
                                 await web3.currentProvider.request({ 
                                     "method": 'wallet_addEthereumChain', 
-                                    "params": [ArbitrumNovaChain], 
+                                    "params": ArbitrumNovaChain, 
                                 });
-                                console.log("0");
                             }
                             catch(error)
                             {  
-                                console.log("1");
                                 await web3.currentProvider.request(
                                 {
                                     method: 'wallet_switchEthereumChain',
@@ -372,7 +373,8 @@
                     let teamId = result.teamId;
                     updateAvatar(teamId);
                 });
-                setInterval(function () {
+                setInterval(async function () {
+                    IsValidNode();
                     let userWallet = coreHelper.getUserAccount();
                     contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
                         let userWallet = coreHelper.getUserAccount();
@@ -381,7 +383,7 @@
                         }
                         else {
                             $('.btn-play-game').attr('target', '_blank');
-                            $('.btn-play-game').attr('href', 'https://pixilsaga.com/play/');
+                            $('.btn-play-game').attr('href', 'htt ps://pixilsaga.com/play/');
                         }
                         let teamId = result.teamId;              
                         updateAvatar(teamId);
