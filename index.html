@@ -87,7 +87,7 @@
                                             </div>
                                           </div>
                                           <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
-                                                <a href=""  type="button" class="btn-play-game"  >
+                                                <a href="" type="button" class="btn-play-game"  >
                                                     <span class="">Earn for Free</span>
                                                 </a>
                                           </div>
@@ -415,7 +415,6 @@
                   observer.observe(element);
                 });
 
-
                 let teamId ;
                 let _abiGameController = abiHelper.getGameControllerABI();
                 let _contractsObj = configHelper.getContracts(chainId);
@@ -431,27 +430,39 @@
                         $('#pixil-saga-avatar img').attr('src', src);
                     }
                 }
-                contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
-                    let userWallet = coreHelper.getUserAccount();
-                    if (result.avatarId == 0) {
-                        $('.btn-play-game').attr('href', '/step-1.html');
-                        $('.btn-connect-to-game').attr('href', '/step-1.html');
+                async function IsValidNode() {
+                    let chainId          = await GetChainId();
+                    let chainIdAlowed    = 42170;
+
+                    if(chainId != chainIdAlowed) 
+                    {
+                        return false;
                     }
-                    else {
-                        $('.btn-play-game').attr('target', '_blank');
-                        $('.btn-connect-to-game').attr('target', '_blank');
-                        $('.btn-play-game').attr('href', 'https://pixilsaga.com/play/');
-                        $('.btn-connect-to-game').attr('href', 'https://pixilsaga.com/play/');
+                    return true;
+                }
+
+                async function GetChainId() {
+                    let chainId = await web3.currentProvider.request({ method: 'eth_chainId'});
+
+                    if(`${chainId.charAt(0)}${chainId.charAt(1)}` == '0x')
+                    {
+                        return parseInt(chainId.slice(2), 16);
                     }
-                    let teamId = result.teamId;
-                    updateAvatar(teamId);
-                });
-                setInterval(function () {
-                    let userWallet = coreHelper.getUserAccount();
+                    else
+                    {
+                        return parseInt(chainId, 16);
+                    }
+                }
+                if(!window.ethereum) {
+                    $('.btn-play-game').attr('href', '/step-1.html');
+                    $('.btn-connect-to-game').attr('href', '/step-1.html');
+                }
+                else {
                     contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                        let userWallet = coreHelper.getUserAccount();
                         if (result.avatarId == 0) {
-                            $('.btn-play-game').attr('href', '/step-1.html');
-                            $('.btn-connect-to-game').attr('href', '/step-1.html');
+                            $('.btn-play-game').attr('href', '/step-2.html');
+                            $('.btn-connect-to-game').attr('href', '/step-2.html');
                         }
                         else {
                             $('.btn-play-game').attr('target', '_blank');
@@ -462,7 +473,24 @@
                         let teamId = result.teamId;
                         updateAvatar(teamId);
                     });
-                }, 3000);               
+                    setInterval(function () {
+                        let userWallet = coreHelper.getUserAccount();
+                        contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                            if (result.avatarId == 0) {
+                                $('.btn-play-game').attr('href', '/step-2.html');
+                                $('.btn-connect-to-game').attr('href', '/step-2.html');
+                            }
+                            else {
+                                $('.btn-play-game').attr('target', '_blank');
+                                $('.btn-connect-to-game').attr('target', '_blank');
+                                $('.btn-play-game').attr('href', 'https://pixilsaga.com/play/');
+                                $('.btn-connect-to-game').attr('href', 'https://pixilsaga.com/play/');
+                            }
+                            let teamId = result.teamId;
+                            updateAvatar(teamId);
+                        });
+                    }, 3000);               
+                }
             });
     </script>
 

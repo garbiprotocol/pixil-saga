@@ -47,10 +47,15 @@ $.Core.prototype = (function() {
         },
         makeActionConnectWallet() {
             let self = this;
-            $('.btn-connect-wallet').click(e => {
-                e.preventDefault();
-                self.connectToWallet();
-            });
+            if(!window.ethereum) {
+                $('.btn-connect-wallet').attr('href', '/step-1.html');
+            }
+            else {
+                $('.btn-connect-wallet').click(e => {
+                    e.preventDefault();
+                    self.connectToWallet();
+                });
+            }     
         },
         async connectToWallet() {
             if (window.ethereum) {

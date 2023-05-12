@@ -29180,7 +29180,6 @@ textarea {
 #buy-box .first-step {
   padding-bottom: 24px;
   margin-bottom: 32px;
-  border-bottom: 1px solid #B9CAD7;
 }
 #buy-box .second-step {
   margin-bottom: 32px;
@@ -29196,9 +29195,9 @@ textarea {
 }
 #buy-box .first-step span.checked , #buy-box .second-step span.checked{
   background: #6FC239;
-  color: #fff;
+  color: #fff;s
 }
-#buy-box .first-step i.fa-circle-check , #buy-box .second-step i.fa-circle-check {
+#buy-box .first-step i.fa-check , #buy-box .second-step i.fa-check {
   font-size: 40px;
   color: #6FC239;
   margin-left: 16px;
@@ -29210,7 +29209,7 @@ textarea {
   font-weight: bold;
   line-height: 30px;
   margin-top: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 #buy-box .first-step p , #buy-box .second-step p {
   font-size: 16px;
@@ -29221,8 +29220,19 @@ textarea {
   padding: 16px 24px;
   background: #EAEAEA;
   padding-bottom: 32px;
+  height: 350px;
 }
-#buy-box .download-and-setup h4.title {
+#buy-box .second-step .checking-network ul li {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+#buy-box .first-step .download-and-setup p, #buy-box .second-step .checking-network p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+#buy-box .download-and-setup h4.title , #buy-box .second-step .checking-network h4.title {
   color: #7E9DB6;
   font-size: 20px;
   line-height: 30px;
@@ -29236,10 +29246,10 @@ textarea {
   font-size: 18px;
   margin-bottom: 16px;
 }
-#buy-box .download-and-setup .browser-support a {
+#buy-box .download-and-setup .browser-support a , #buy-box .download-and-setup .mobile-support a  {
   border: 2px solid #546374;
   padding: 6px;
-  width: 240px;
+  width: 100%;
   text-decoration: none;
   font-size: 18px;
   line-height: 27px;
@@ -29247,14 +29257,18 @@ textarea {
   border-radius: 8px;
   align-items: center;
   justify-content: center;
-  margin-right: 32px;
+  margin-bottom: 16px;
 }
-#buy-box .download-and-setup .browser-support a:hover {
+#buy-box .download-and-setup .browser-support a i ,#buy-box .download-and-setup .mobile-support a i {
+  font-size:30px ;
+  margin-right: 8px;
+}
+#buy-box .download-and-setup .browser-support a:hover ,#buy-box .download-and-setup .mobile-support a:hover {
   background: #546374;
   color: #fff;
 }
-#buy-box .download-and-setup .browser-support a img {
-  margin-right: 16px;
+#buy-box .btn-switch-network {
+  border: 0;
 }
 #buy-box span.credit-cost {
   font-size: 14px;
