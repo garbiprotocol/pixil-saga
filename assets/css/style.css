@@ -29177,6 +29177,85 @@ textarea {
 #buy-box .step-to-join-game .step-by-step .on-step span {
   color: #1C1C26;
 }
+#buy-box .first-step {
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #B9CAD7;
+}
+#buy-box .second-step {
+  margin-bottom: 32px;
+}
+#buy-box .button-switch-network {
+  text-align: center;
+}
+#buy-box .first-step span.step , #buy-box .second-step span.step {
+  background: #EAEAEA;
+  color: #546374;
+  font-size: 18px;
+  padding : 8px;
+}
+#buy-box .first-step span.checked , #buy-box .second-step span.checked{
+  background: #6FC239;
+  color: #fff;
+}
+#buy-box .first-step i.fa-circle-check , #buy-box .second-step i.fa-circle-check {
+  font-size: 40px;
+  color: #6FC239;
+  margin-left: 16px;
+  display: none;
+}
+#buy-box .first-step h4.title , #buy-box .second-step h4.title {
+  color: #1C1C26;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+#buy-box .first-step p , #buy-box .second-step p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+#buy-box .first-step .download-and-setup, #buy-box .second-step .checking-network {
+  padding: 16px 24px;
+  background: #EAEAEA;
+  padding-bottom: 32px;
+}
+#buy-box .download-and-setup h4.title {
+  color: #7E9DB6;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #CECECE;
+
+}
+#buy-box .download-and-setup p {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+#buy-box .download-and-setup .browser-support a {
+  border: 2px solid #546374;
+  padding: 6px;
+  width: 240px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 27px;
+  color: #546374;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 32px;
+}
+#buy-box .download-and-setup .browser-support a:hover {
+  background: #546374;
+  color: #fff;
+}
+#buy-box .download-and-setup .browser-support a img {
+  margin-right: 16px;
+}
 #buy-box span.credit-cost {
   font-size: 14px;
   line-height: 20px;
