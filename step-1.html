@@ -108,11 +108,11 @@
                         <h1 class="title">Create Metamask Wallet</h1>
                         <div class="step-by-step">
                             <div class="step-1 on-step">
-                                <span>Create Metamask Wallet</span>
+                                <a href="/step-1.html"><span>Create Metamask Wallet</span></a>
                             </div>
                             <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                             <div class="step-2">
-                                <span>Choose your Team</span>
+                                <a href="/step-2.html"><span>Choose your Team</span></a>
                             </div>
                             <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                             <div class="step-3">
@@ -121,10 +121,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-lg-6">
                             <div class="first-step">
                                 <div class="d-flex align-items-center">
-                                    <span class="step">Step 1</span><i class="fa-solid fa-check"></i>
+                                    <span class="step f-inter">Step 1</span><i class="fa-solid fa-check"></i>
                                 </div>
                                 <h4 class="title f-inter">
                                     Create Your Metamask Wallet
@@ -151,10 +151,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-lg-6">
                             <div class="second-step">
-                                <div class="d-flex">
-                                    <span class="step">Step 2</span><i class="fa-solid fa-check"></i>
+                                <div class="d-flex align-items-center">
+                                    <span class="step f-inter">Step 2</span><i class="fa-solid fa-check"></i>
                                 </div>
                                 <h4 class="title f-inter">
                                     Connect to arbitrum nova network
@@ -163,8 +163,10 @@
                                     <h4 class="title f-inter">What is Arbitrum nova for?</h4>
                                     <p class="f-inter">Benefits of using Arbitrum Nova:</p>
                                     <ul>
-                                        <li class="f-inter">Storing digital assets such as ETH.</li>
-                                        <li class="f-inter">Sending Blockchain transactions without paying expensive gas fees.</li>
+                                        <li class="f-inter">Low-cost blockchain transactions without expensive gas fees.</li>
+                                        <li class="f-inter">Faster transaction confirmation times.</li>
+                                        <li class="f-inter">Improved scalability for handling high transaction volumes.</li>
+                                        <li class="f-inter">Seamless integration with existing Ethereum infrastructure.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -172,6 +174,7 @@
                     </div>
                     <div class="button-switch-network">
                         <button type="button" class="btn-switch-network"><img src="/assets/images/switch-network.png" alt=""></button>
+                        <a href="/step-2.html" class="btn-next" style="display: none;"><img src="/assets/images/btn-next.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -292,6 +295,8 @@
                     else {
                         $('.second-step span.step').addClass('checked');
                         $('.second-step i.fa-check').show();
+                        $('.btn-next').show();
+                        $('.btn-switch-network').hide();
                     }
                 }
                 async function GetChainId()
@@ -310,7 +315,6 @@
                 function ConvertChainIdToHex()
                 {
                     let chainIdAlowed = 42170;
-                    console.log (`0x${parseInt(chainIdAlowed, 10).toString(16)}`);
                     return `0x${parseInt(chainIdAlowed, 10).toString(16)}`;
 
                 }
@@ -335,7 +339,6 @@
                                 "blockExplorerUrls": ["https://nova.arbiscan.io"],
                             }];
                             
-                            console.log(ArbitrumNovaChain);
                             try
                             {
                                 await web3.currentProvider.request({ 
@@ -361,6 +364,7 @@
                 $('.button-switch-network').click(function() {
                     SwitchNetWork();
                 });
+                IsValidNode();
                 contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
                     let userWallet = coreHelper.getUserAccount();
                     if (result.avatarId == 0) {
@@ -383,7 +387,7 @@
                         }
                         else {
                             $('.btn-play-game').attr('target', '_blank');
-                            $('.btn-play-game').attr('href', 'htt ps://pixilsaga.com/play/');
+                            $('.btn-play-game').attr('href', 'https://pixilsaga.com/play/');
                         }
                         let teamId = result.teamId;              
                         updateAvatar(teamId);
