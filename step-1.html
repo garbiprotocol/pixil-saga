@@ -175,6 +175,7 @@
                     <div class="button-switch-network">
                         <button type="button" class="btn-switch-network"><img src="/assets/images/switch-network.png" alt=""></button>
                         <a href="/step-2.html" class="btn-next" style="display: none;"><img src="/assets/images/btn-next.png" alt=""></a>
+                        <a href="https://pixilsaga.com/play" target="_blank" class="btn-play" style="display: none;"><img src="/assets/images/play-button-bg-2.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -287,16 +288,28 @@
                 {
                     let chainId          = await GetChainId();
                     let chainIdAlowed    = 42170;
-
+                    
                     if(chainId != chainIdAlowed) 
                     {
                         return false;
                     }
                     else {
-                        $('.second-step span.step').addClass('checked');
-                        $('.second-step i.fa-check').show();
-                        $('.btn-next').show();
-                        $('.btn-switch-network').hide();
+                        contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                            let userWallet = coreHelper.getUserAccount();
+                            let userAvatarId = result.avatarId;
+                            if (userAvatarId == 0) {
+                                $('.second-step span.step').addClass('checked');
+                                $('.second-step i.fa-check').show();
+                                $('.btn-next').show();
+                                $('.btn-switch-network').hide();
+                            }
+                            else {
+                                $('.second-step span.step').addClass('checked');
+                                $('.second-step i.fa-check').show();
+                                $('.btn-play').show();
+                                $('.btn-switch-network').hide();
+                            }
+                        });
                     }
                 }
                 async function GetChainId()
