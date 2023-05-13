@@ -128,7 +128,7 @@
                             </div>
                             <h4 class="title f-inter">Checking gas fee</h4>
                             <p class="f-inter" style="margin-bottom:8px">Your balance: <span class="user-blance f-inter">Loading</span> ETH</p>
-                            <span class="f-inter hint" style="font-style: italic;">* You must have at least 0.0005 ETH to join the game.</span>
+                            <span class="f-inter hint" style="font-style: italic;display:none;">* You must have at least 0.0005 ETH to join the game.</span>
                             <p class="note f-inter">Deposit ETH on <span class="f-inter">Arbitruma Nova</span> by using Bridge on <a class="f-inter" href="https://bridge.arbitrum.io">bridge.arbitrum.io</a></p>
                         </div>
                         <div class="claim-nft">
@@ -353,6 +353,13 @@
                     .then(balance => {
                         let userBalance = parseInt(balance.slice(2), 16)/10**18;
                         $('.user-blance').text(userBalance);
+                        if (userBalance >= 0.0005) {
+                            $('.check-balance span.step').addClass('checked');
+                            $('.check-balance i.fa-check').show();
+                        }
+                        else {
+                            $('.check-balance span.hint').show();
+                        }
                     })
                     .catch(error => {
                       console.error('Error retrieving balance:', error);

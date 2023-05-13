@@ -29196,7 +29196,7 @@ textarea {
   font-size: 18px;
   padding : 8px;
 }
-#buy-box .first-step span.checked , #buy-box .second-step span.checked{
+#buy-box .first-step span.checked , #buy-box .second-step span.checked , #buy-box .check-balance span.checked {
   background: #6FC239;
   color: #fff;
 }

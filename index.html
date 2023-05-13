@@ -433,12 +433,46 @@
                 async function IsValidNode() {
                     let chainId          = await GetChainId();
                     let chainIdAlowed    = 42170;
-
                     if(chainId != chainIdAlowed) 
                     {
-                        return false;
+                        console.log("123");
+                        $('.btn-play-game').attr('href', '/step-1.html');
+                        $('.btn-connect-to-game').attr('href', '/step-1.html');
                     }
-                    return true;
+                    else {
+                        contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                            let userWallet = coreHelper.getUserAccount();
+                            if (result.avatarId == 0) {
+                                $('.btn-play-game').attr('href', '/step-2.html');
+                                $('.btn-connect-to-game').attr('href', '/step-2.html');
+                            }
+                            else {
+                                $('.btn-play-game').attr('target', '_blank');
+                                $('.btn-connect-to-game').attr('target', '_blank');
+                                $('.btn-play-game').attr('href', 'https://pixilsaga.com/play/');
+                                $('.btn-connect-to-game').attr('href', 'https://pixilsaga.com/play/');
+                            }
+                            let teamId = result.teamId;
+                            updateAvatar(teamId);
+                        });
+                        setInterval(function () {
+                            let userWallet = coreHelper.getUserAccount();
+                            contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
+                                if (result.avatarId == 0) {
+                                    $('.btn-play-game').attr('href', '/step-2.html');
+                                    $('.btn-connect-to-game').attr('href', '/step-2.html');
+                                }
+                                else {
+                                    $('.btn-play-game').attr('target', '_blank');
+                                    $('.btn-connect-to-game').attr('target', '_blank');
+                                    $('.btn-play-game').attr('href', 'https://pixilsaga.com/play/');
+                                    $('.btn-connect-to-game').attr('href', 'https://pixilsaga.com/play/');
+                                }
+                                let teamId = result.teamId;
+                                updateAvatar(teamId);
+                            });
+                        }, 3000);
+                    }
                 }
 
                 async function GetChainId() {
@@ -457,39 +491,19 @@
                     $('.btn-play-game').attr('href', '/step-1.html');
                     $('.btn-connect-to-game').attr('href', '/step-1.html');
                 }
-                else {
+                else if (window.ethereum) {
+                    IsValidNode();
                     contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
-                        let userWallet = coreHelper.getUserAccount();
-                        if (result.avatarId == 0) {
-                            $('.btn-play-game').attr('href', '/step-2.html');
-                            $('.btn-connect-to-game').attr('href', '/step-2.html');
-                        }
-                        else {
-                            $('.btn-play-game').attr('target', '_blank');
-                            $('.btn-connect-to-game').attr('target', '_blank');
-                            $('.btn-play-game').attr('href', 'https://pixilsaga.com/play/');
-                            $('.btn-connect-to-game').attr('href', 'https://pixilsaga.com/play/');
-                        }
                         let teamId = result.teamId;
                         updateAvatar(teamId);
                     });
                     setInterval(function () {
                         let userWallet = coreHelper.getUserAccount();
                         contractGameControllerRead.methods.GetDataUser(userWallet).call().then(function (result) {
-                            if (result.avatarId == 0) {
-                                $('.btn-play-game').attr('href', '/step-2.html');
-                                $('.btn-connect-to-game').attr('href', '/step-2.html');
-                            }
-                            else {
-                                $('.btn-play-game').attr('target', '_blank');
-                                $('.btn-connect-to-game').attr('target', '_blank');
-                                $('.btn-play-game').attr('href', 'https://pixilsaga.com/play/');
-                                $('.btn-connect-to-game').attr('href', 'https://pixilsaga.com/play/');
-                            }
                             let teamId = result.teamId;
                             updateAvatar(teamId);
                         });
-                    }, 3000);               
+                    }, 3000); 
                 }
             });
     </script>
