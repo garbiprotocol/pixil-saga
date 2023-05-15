@@ -29213,8 +29213,10 @@ textarea {
   color: #000;
   margin-bottom: 8px;
 }
+#buy-box .check-balance ul.hint {
+  margin-bottom: 16px;
+}
 #buy-box .check-balance p.note {
-  margin-top: 8px;
   margin-bottom: 0;
 }
 #buy-box .check-balance p.note span {
@@ -29304,6 +29306,13 @@ textarea {
   line-height: 20px;
   color: #DA5132;
 }
+#buy-box .claim-nft h4.title {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #000;
+}
 #buy-box h4.title {
   font-size: 24px;
   line-height: 36px;
@@ -29369,7 +29378,6 @@ textarea {
 }
 
 #buy-box .hero-info-to-claim {
-  margin-top: 40px;
   display: inline-block;
   padding: 40px;
   background: #EAEAEA;

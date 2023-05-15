@@ -114,11 +114,11 @@
                                 </div>
                                 <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                                 <div class="step-2 ">
-                                    <a href="/step-2.html"><span>Choose your Team</span></a>
+                                    <a href="/step-2.html"><span>Choose your Team NFT</span></a>
                                 </div>
                                 <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                                 <div class="step-3 on-step">
-                                    <span>Claim your NFT</span>
+                                    <span>Claim your NFT to start playing</span>
                                 </div>
                             </div>
                         </div>
@@ -126,17 +126,21 @@
                             <div class="d-flex align-items-center">
                                 <span class="step f-inter">Step 1</span><i class="fa-solid fa-check"></i>
                             </div>
-                            <h4 class="title f-inter">Checking gas fee</h4>
-                            <p class="f-inter" style="margin-bottom:8px">Your balance: <span class="user-blance f-inter">Loading</span> ETH</p>
-                            <span class="f-inter hint" style="font-style: italic;display:none;">* You must have at least 0.0005 ETH to join the game.</span>
-                            <p class="note f-inter">Deposit ETH on <span class="f-inter">Arbitruma Nova</span> by using Bridge on <a class="f-inter" href="https://bridge.arbitrum.io">bridge.arbitrum.io</a></p>
+                            <h4 class="title f-inter">Deposit ETH on Arbitrum Nova to start playing</h4>
+                            <p class="f-inter" style="margin-bottom:8px; font-weight:bold;">Your balance: <span class="user-blance f-inter">Loading</span> ETH</p>
+                            <ul class="hint" style="font-style: italic;display:none">
+                                <li class="f-inter">You must have at least 0.0027 ETH (~ 5$) to join the game</li>
+                                <li class="f-inter">The fee includes: 0.0005 ETH (~ $1) transaction fee on Arbitrum Nova and 0.002 ETH ( ~$4) for NFT.</li>
+                            </ul>
+                            <p class="f-inter" style="margin-bottom:0px; font-weight:bold;color: #546374">Having trouble getting ETH on Arbitrum Nova ?</p>
+                            <p class="note f-inter" style="color: #546374">Deposit ETH on <span class="f-inter">Arbitruma Nova</span> by using Bridge on <a class="f-inter" href="https://bridge.arbitrum.io">bridge.arbitrum.io</a></p>
                         </div>
                         <div class="claim-nft">
                             <div class="d-flex align-items-center">
                                 <span class="step f-inter">Step 2</span>
                             </div>
                             <h4 class="title f-inter" style="font-weight: bold;">
-                            Claim your NFT
+                                Claim your NFT to start playing
                             </h4>
                             <p class="f-inter">Claim your team's exclusive NFT in Pixil Saga and showcase your team spirit! Unlock a unique piece of digital art that represents your team and your commitment to the world of blockchain gaming. Join us now and start collecting NFTs in Pixil Saga!</p>
                             <!-- <span class="credit-cost">Cost: 1 CyberCredit</span> -->
@@ -360,7 +364,7 @@
                             }
                             else {
                                 $('.user-blance').text(userBalance);
-                                $('.check-balance span.hint').show();
+                                $('.check-balance ul.hint').show();
                             }
                         }
                     })
