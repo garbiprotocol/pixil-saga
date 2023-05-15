@@ -199,6 +199,21 @@
                                 </div>
                               </div>
                           </div>
+                          <div class="modal fade" id="non-login-wallet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-lg-down">
+                                <div class="modal-content">
+                                  <div class="modal-body">
+                                    <div class="info">
+                                        <h4 class="title f-inter">Hold on !</h4>
+                                        <p class="f-inter">You haven't logged into your Metamask wallet yet.</p>
+                                        <a href="" type="button" class="btn-login-wallet"  >
+                                            <img src="/assets/images/login-wallet-btn.png" alt="">
+                                        </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                     </div> 
                 </div>
@@ -359,6 +374,7 @@
                     .then(balance => {
                         let userBalance = parseInt(balance.slice(2), 16)/10**18;
                         if (userWallet != 0x0000000000000000000000000000000000000000) {
+                            $('#non-login-wallet').modal('hide');
                             if (userBalance >= 0.0005) {
                                 $('.user-blance').text(userBalance);
                                 $('.check-balance span.step').addClass('checked');
@@ -416,40 +432,50 @@
                 });
                 $('.btn-mint-hero').click(function () {
                     let userWallet = coreHelper.getUserAccount();
-                    contractGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
-                        if (result < 9e18) {
-                            $('.btn-approve').show();
-                        }
-                        if (result >= 9e18) {
-                            contractGameControllerWhrite.methods
-                            .MintHeroNFT ('3')
-                            .send({
-                                from: userWallet
-                            })
-                            .on('transactionHash', (hash) => {
-                                $('#send-toast').show();
-                                $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
-                            })
-                            .on('confirmation', (confirmationNumber, receipt) => {
-                                $('#send-toast').hide();
-                                $('#confirmed-toast').show();
-                                setTimeout(function(){
-                                  $('#confirmed-toast').hide();
-                                }, 15000);
-                            })
-                            .on('receipt', (receipt) => {
-                                $('#claim-first-robot').modal('show');
-                                $('#send-toast').hide();
-                                $('#confirmed-toast').show();
-                                setTimeout(function(){
-                                  $('#confirmed-toast').hide();
-                                }, 15000);
-                            })
-                            .on('error', (err, receipt) => {
-                                console.log(err);
-                            });                      
-                        }
-                    });
+                    if (userWallet == 0x0000000000000000000000000000000000000000) {
+                        $('#non-login-wallet').modal('show');
+                        $('.btn-login-wallet').click(e => {
+                            e.preventDefault();
+                            self.coreHelper.connectToWallet();
+                        });
+                    }
+                    else {
+                        contractGRBRead.methods.allowance(userWallet,_contractsObj['gameController']['contract']).call().then(function (result) {
+                            if (result < 9e18) {
+                                $('.btn-approve').show();
+                            }
+                            if (result >= 9e18) {
+                                contractGameControllerWhrite.methods
+                                .MintHeroNFT ('1')
+                                .send({
+                                    from: userWallet
+                                })
+                                .on('transactionHash', (hash) => {
+                                    $('#send-toast').show();
+                                    $('.transaction-hash').attr("href", "https://arbiscan.io/tx/" + hash);
+                                })
+                                .on('confirmation', (confirmationNumber, receipt) => {
+                                    $('#send-toast').hide();
+                                    $('#confirmed-toast').show();
+                                    setTimeout(function(){
+                                      $('#confirmed-toast').hide();
+                                    }, 15000);
+                                })
+                                .on('receipt', (receipt) => {
+                                    $('#claim-first-robot').modal('show');
+                                    $('#send-toast').hide();
+                                    $('#confirmed-toast').show();
+                                    setTimeout(function(){
+                                      $('#confirmed-toast').hide();
+                                    }, 15000);
+                                })
+                                .on('error', (err, receipt) => {
+                                    console.log(err);
+                                });                      
+                            }
+                        }); 
+                    }
+                    
                 });
             });
     </script>
