@@ -29213,6 +29213,9 @@ textarea {
   color: #000;
   margin-bottom: 8px;
 }
+#buy-box .check-balance h4.title span {
+  color: #EF8220;
+}
 #buy-box .check-balance ul.hint {
   margin-bottom: 16px;
 }
