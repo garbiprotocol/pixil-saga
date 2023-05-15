@@ -352,13 +352,16 @@
                     })
                     .then(balance => {
                         let userBalance = parseInt(balance.slice(2), 16)/10**18;
-                        $('.user-blance').text(userBalance);
-                        if (userBalance >= 0.0005) {
-                            $('.check-balance span.step').addClass('checked');
-                            $('.check-balance i.fa-check').show();
-                        }
-                        else {
-                            $('.check-balance span.hint').show();
+                        if (userWallet != 0x0000000000000000000000000000000000000000) {
+                            if (userBalance >= 0.0005) {
+                                $('.user-blance').text(userBalance);
+                                $('.check-balance span.step').addClass('checked');
+                                $('.check-balance i.fa-check').show();
+                            }
+                            else {
+                                $('.user-blance').text(userBalance);
+                                $('.check-balance span.hint').show();
+                            }
                         }
                     })
                     .catch(error => {
