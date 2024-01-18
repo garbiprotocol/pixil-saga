@@ -60,18 +60,23 @@ class BASE_CONTRACT_ARBITRUM_HELPER
     {
         let self = this;
         let Web3 = this.walletHelper.GetWeb3ToReadData();
+        console.log("🚀 ~ file: base.contract.arbitrum.js:63 ~ contract:", Web3)
 
         if(self.readContract[contract])
         {
+        console.log("🚀 ~ file: base.contract.arbitrum.js:82 ~ self.readContract[contract]:", self.readContract[contract])
+
             return self.readContract[contract];
         }
 
         try
         {
             self.readContract[contract] = new Web3.eth.Contract(self.abi, contract);
+            console.log("🚀 ~ file: base.contract.arbitrum.js:73 ~ self.readContract[contract]:", self.readContract[contract])
         }
         catch(e)
         {
+            console.log("🚀 ~ file: base.contract.arbitrum.js:84 ~ e:", e)
             await Delay(3000);
             self.GetReadContract(contract);
         }

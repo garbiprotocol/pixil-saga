@@ -28,7 +28,6 @@ class WALLET_ARBITRUM_HELPER {
             {
                 return false
             }
-            _provider.selectedAddress = accounts[0];
             await self._initUserWeb3();
             await self.SwitchNetWork();
             return true;
