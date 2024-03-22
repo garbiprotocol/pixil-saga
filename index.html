@@ -10,7 +10,8 @@
         <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous"
             referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="./assets/images/pixil-saga-favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="./assets/images/pixil-saga-favicon.png" type="image/x-icon">      
+
         <link href="./assets/css/style.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/big-integer/1.6.48/BigInteger.min.js"></script>
@@ -36,21 +37,10 @@
                   <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg bg-light">
                         <div class="row align-items-center flex-grow-1">
-                          <div class="col-lg-2">
-                            <div class="d-flex align-items-center justify-content-between">
-                              <a href="/" class="logo">
-                                <img src="/assets/images/logo-pixil-1.png" alt="logo" />
-                              </a>
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff;">
-                                 <i class="fas fa-bars"></i>
-                              </button>
-                            </div>
-                          </div>
-
-                          <div class="col-lg-10">
+                          <div class="col-lg-12">
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <div class="row align-items-center flex-grow-1">
-                                <div class="col-lg-6">
+                                <div class="col-lg-4">
                                   <div class="d-lg-flex align-items-center">
                                     <div class="item-link mr-30">
                                       <a href="#list-team" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
@@ -66,7 +56,11 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-4" style="display: flex; justify-content: center;">                                                                 <div class="logo" style="justify-content: center;">
+                                    <img src="/assets/images/logo-pixil.png" width="337.5px" height="40px" alt="logo">
+                                  </div>
+                                </div>                                
+                                <div class="col-lg-4">
                                     <div class="user-action">
                                         <div class="d-lg-flex align-items-center justify-content-end user-wallet" >
                                             <div class="wrap-user-acct dropdown show">
@@ -82,7 +76,7 @@
 
                                             <div class="wrap-user-btn show">
                                                 <div class="wrap-btn-connect">
-                                                    <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white border-transparent-2 py-8 px-24 border-radius-20 btn-transition d-inline-block">Connect Wallet</a>
+                                                  <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white py-8 px-24 border-radius-8 btn-transition d-inline-block" style="border: 2px solid #546374;">Connect Wallet</a>
                                                 </div>
                                             </div>
                                           </div>
@@ -95,8 +89,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
+                          </div>                          
                     </nav>
                     <div class="modal-detail-wrapper">
                     </div>
@@ -104,23 +97,23 @@
                 </div>
             </header>
             <main id="main">
-              <div id="home">
-                    <div class="connect-to-game fade-in-bg">
-                        <div class="container-fluid " style="background: linear-gradient(180deg, rgba(28, 28, 38, 0) 0%, #070513 110.05%);">
-                            <div class="connect-game fade-in">
-                                <div class="logo-connect">
-                                    <img src="/assets/images/logo-start-game-1.png" alt="">
-                                </div>
-                                <div class="button-connect-game">
-                                    <a href="" target="_blank" type="button" class="btn-connect-to-game"></a>
-                                </div>
-                            </div>
-                            <div class="description fade-in">
-                                <h1 class="title">Pixil Saga: Your Gateway to Web3 Adventures</h1>
-                                <p class="f-inter">Join Pixil Saga for an immersive web3 adventure! Explore new worlds, earn tokens, and discover the endless possibilities of NFTs. Start your journey to becoming a blockchain master today!</p>
-                            </div>
+              <div id="home">                
+                    <div class="connect-to-game"></div>
+                    <div style="background-color: #000; height: 460px;">                                            
+                      <div class="container-fluid fade-in-bg">                         
+                        <div class="description fade-in">
+                          <h1 class="title">Pixil Saga: Your Gateway to Web3 Adventures</h1>
+                          <p class="f-inter">Join Pixil Saga for an immersive web3 adventure! Explore new worlds, earn tokens, and discover the endless possibilities of NFTs. Start your journey to becoming a blockchain master today!</p>
                         </div>
+                        <div class="connect-game fade-in">                          
+                          <div class="button-connect-game">
+                              <a href="" target="_blank" type="button"
+                             class="btn-connect-to-game"></a>
+                          </div>
+                        </div>                       
+                    </div>                   
                     </div>
+                    <img src="/assets/images/slide 7.png"  alt="Slide Image">
                     <div id="list-team" class="container-fluid list-team fade-in-bg" >
                         <div class="description fade-in">
                             <h1 class="title fade-in">Meet the Teams of Pixil Saga</h1>
@@ -169,167 +162,164 @@
                             </div>
                         </div>
                     </div>
+                    <img src="/assets/images/slide2 1.png" class="w-100" alt="Slide Image">
                     <div class="funcition-in-game fade-in-bg">
-                        <div class="container-fluid" >
-                            <div id="quiz-to-earn" class="quiz-to-earn pt-80 pb-168 fade-in">
-                                <h1 class="title">Become a Blockchain Expert with Pixil Saga's Quiz to Earn</h1>
-                                <p class="f-inter">Test your knowledge of blockchain technology and DeFi with Pixil Saga's daily quiz! Answer questions and earn Cyber Credits that can be used to unlock rewards and features in the game. Join us now and become a blockchain expert with Pixil Saga's Quiz to Earn!</p>
-                                <div class="einstein">
-                                    <img src="/assets/images/einstein.gif" alt="" style="width: 80px;">
-                                    <img src="/assets/images/einstein-talk.png" alt="" class = "text-einstein-talk">
-                                </div>
-                                <div class="carousel">
-                                    <div id="carouselQuizToEarn" class="carousel slide carousel-fade" data-bs-ride="carousel" >
-                                      <!-- <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselQuizToEarn" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselQuizToEarn" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      </div> -->
-                                      <div class="carousel-inner">
-                                        <div class="carousel-item active" data-bs-interval="5000">
-                                          <img src="/assets/images/quiz-carousel-1.png" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item" data-bs-interval="5000">
-                                          <img src="/assets/images/quiz-carousel-2.png" class="d-block w-100" alt="...">
-                                        </div>
+                      <div class="container-fluid">
+                          <div id="quiz-to-earn" class="quiz-to-earn pt-80 pb-150 fade-in row">
+                              <div class="col-lg-6">
+                                  <div class="left-content">
+                                      <h1 class="title">Become a Blockchain Expert with Pixil Saga's Quiz to Earn</h1>
+                                      <p class="f-inter">Test your knowledge of blockchain technology and DeFi with Pixil Saga's daily quiz! Answer questions and earn Cyber Credits that can be used to unlock rewards and features in the game. Join us now and become a blockchain expert with Pixil Saga's Quiz to Earn!</p>                                                      <img src="/assets/images/mechanist 2.gif" alt="" style="width: 192px;">
+                                      <img src="/assets/images/lvl 2-idle.gif" alt="" style="width: 192px;">
+                                  </div>
+                              </div>
+                              <div class="col-lg-6">
+                                  <div class="right-content">
+                                      <div class="carousel">
+                                          <div id="carouselQuizToEarn" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                              <div class="carousel-indicators">
+                                                  <button type="button" data-bs-target="#carouselQuizToEarn" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                  <button type="button" data-bs-target="#carouselQuizToEarn" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                              </div>
+                                              <div class="carousel-inner">
+                                                  <div class="carousel-item active" data-bs-interval="5000">
+                                                      <img src="/assets/images/quiz-carousel-1.png" class="d-block w-519 ml-80" alt="...">
+                                                  </div>
+                                                  <div class="carousel-item" data-bs-interval="5000">
+                                                      <img src="/assets/images/quiz-carousel-1.png" class="d-block w-519 ml-80" alt="...">
+                                                  </div>
+                                              </div>
+                                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselQuizToEarn" data-bs-slide="prev">
+                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                  <span class="visually-hidden">Previous</span>
+                                              </button>
+                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselQuizToEarn" data-bs-slide="next">
+                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                  <span class="visually-hidden">Next</span>
+                                              </button>
+                                          </div>
                                       </div>
-                                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselQuizToEarn" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                      </button>
-                                      <button class="carousel-control-next" type="button" data-bs-target="#carouselQuizToEarn" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                      </button>
-                                    </div>
-                                </div>  
-                            </div>
-                            <div id="robot" class="upgrade-your-robot pt-80 pb-248 fade-in">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>                  
+                                          
+                        <img src="/assets/images/slide7.1.png" class="w-100" alt="Slide Image">
+                            <div id="robot" class="upgrade-your-robot pb-248 fade-in">
+                              
                                 <h1 class="title">Upgrade Your Robot and <br>Unlock a World of Possibilities in Pixil Saga</h1>
-                                <!-- <h4 class="title f-inter">Type of robot</h4> -->
                                 <p class="f-inter">Meet AIVA, your loyal robot companion in Pixil Saga! Upgrade AIVA to increase your earning potential and unlock new abilities that will help you navigate challenges and earn rewards in our gamified DeFi world. With AIVA by your side, you'll have a valuable asset that can help you succeed in Pixil Saga. So start upgrading AIVA now and unlock the full potential of our blockchain game!</p>
                                 <div class="carousel">
-                                    <div id="carouselUpgadeRobot" class="carousel slide carousel-fade" data-bs-ride="carousel" >
-                                        <div class="carousel-indicators">
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUpgadeRobot" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                            </button>
-                                            <button type="button" data-bs-target="#carouselUpgadeRobot" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-                                                <img src="/assets/images/robo-icon-indicators-0.png" alt="" class="d-block mx-auto">
-                                            </button>
-                                            <button type="button" data-bs-target="#carouselUpgadeRobot" data-bs-slide-to="1" aria-label="Slide 2">
-                                                <img src="/assets/images/robo-icon-indicators-1.png" alt="" class="d-block mx-auto">
-                                            </button>
-                                            <button type="button" data-bs-target="#carouselUpgadeRobot" data-bs-slide-to="2" aria-label="Slide 3">
-                                                <img src="/assets/images/robo-icon-indicators-2.png" alt="" class="d-block mx-auto">
-                                            </button>
-                                            <button type="button" data-bs-target="#carouselUpgadeRobot" data-bs-slide-to="3" aria-label="Slide 4">
-                                                <img src="/assets/images/robo-icon-indicators-3.png" alt="" class="d-block mx-auto">
-                                            </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselUpgadeRobot" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
-                                            </button>
-                                        </div>
-
+                                    <div id="carouselUpgadeRobot" class="carousel slide carousel-fade" data-bs-ride="carousel" >                                      
                                         <div class="carousel-inner">
                                             <div class="carousel-item active" data-bs-interval="5000">
-                                              <img src="/assets/images/robot-carousel-0.png" class="d-block w-100" alt="...">
+                                              <img src="/assets/images/robot-carousel-0.gif" class="d-block w-100" alt="...">
                                             </div>
                                             <div class="carousel-item" data-bs-interval="5000">
-                                              <img src="/assets/images/robot-carousel-1.png" class="d-block w-100" alt="...">
+                                              <img src="/assets/images/robot-carousel-1.gif" class="d-block w-100" alt="...">
                                             </div>
                                             <div class="carousel-item" data-bs-interval="5000">
-                                              <img src="/assets/images/robot-carousel-2.png" class="d-block w-100" alt="...">
+                                              <img src="/assets/images/robot-carousel-2.gif" class="d-block w-100" alt="...">
                                             </div>
                                             <div class="carousel-item" data-bs-interval="5000">
-                                              <img src="/assets/images/robot-carousel-3.png" class="d-block w-100" alt="...">
+                                              <img src="/assets/images/robot-carousel-3.gif" class="d-block w-100" alt="...">
                                             </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Previous</span>
+                                          </button>
+                                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Next</span>
+                                          </button>
                                         </div>
                                     </div>
                                 </div>  
                             </div>
                         </div>
-                        <div class="container-news">
-                             <div class="dev-update pt-80 pb-168 ">
-                                <h1 class="title">DEVELOPER UPDATES</h1>
-                                <div class="container-list-new">
-                                  <div class="list-new">
-                                    <div class="row">  
-                                        <div class="col-lg-3">
-                                            <a href="" target="_blank" >
-                                                <div class="news">
-                                                  <div class="img">
-                                                    <img src="/assets/images/update-4.png" alt="">
-                                                  </div>
-                                                  <div class="info">
-                                                    <p class="f-inter">Unlock the Pixil Prowess: Robot's Double Data Download event in Pixil Saga! Starting at 12:00 PM UTC on May 6, 2023, for 7 days!</p>
-                                                    <span class="date-time f-inter">Saturday, May 6th, 2023</span>
-                                                  </div>
-                                                </div>
-                                            </a>
-                                          </div>                                                            
-                                        <div class="col-lg-3">
-                                            <a href="https://garbi-protocol.gitbook.io/docs/product/garbi-game/garbi-academy-1-pixil-saga/how-to-play" target="_blank">  
-                                                <div class="news">
-                                                  <div class="img">
-                                                    <img src="/assets/images/update-1.png" alt="">
-                                                  </div>
-                                                  <div class="info">
-                                                    <p class="f-inter">Get Ready to Play: Your Complete Guide to Pixil Saga Close Beta</p>
-                                                    <span class="date-time f-inter">Monday, April 17, 2023</span>
-                                                  </div>
-                                                </div>
-                                             </a> 
-                                        </div>                                   
-                                          <div class="col-lg-3">
-                                            <a href="#">
-                                                <div class="news">
-                                                  <div class="img">
-                                                    <img src="/assets/images/update-2.png" alt="">
-                                                  </div>
-                                                  <div class="info">
-                                                    <p class="f-inter">Your guide to the Pixil Saga Open beta.</p>
-                                                    <span class="date-time f-inter">Thursday, April 27, 2023</span>
-                                                  </div>
-                                                </div>
-                                            </a>
-                                          </div>
-                                          <div class="col-lg-3">
-                                            <a href="https://twitter.com/garbi_protocol/status/1651560655126925313" target="_blank">
-                                                <div class="news">
-                                                  <div class="img">
-                                                    <img src="/assets/images/update-3.png" alt="">
-                                                  </div>
-                                                  <div class="info">
-                                                    <p class="f-inter">Pixil Saga Open Beta Event.</p>
-                                                    <span class="date-time f-inter">Thursday, April 27, 2023</span>
-                                                  </div>
-                                                </div>
-                                            </a>
-                                          </div>
+                        
+                                       
+                    <div class="container-news">                      
+                      <div class="dev-update pt-80 pb-168">
+                            <h1 class="title">DEVELOPER UPDATES</h1>
+                            <div class="container-list-new">
+                              <div class="list-new">
+                                <div class="row">  
+                                    <div class="col-lg-3">
+                                        <a href="" target="_blank" >
+                                            <div class="news">
+                                              <div class="img">
+                                                <img src="/assets/images/update-4.png" alt="">
+                                              </div>
+                                              <div class="info">
+                                                <p class="f-inter">Unlock the Pixil Prowess: Robot's Double Data Download event in Pixil Saga! Starting at 12:00 PM UTC on May 6, 2023, for 7 days!</p>
+                                                <span class="date-time f-inter">Saturday, May 6th, 2023</span>
+                                              </div>
+                                            </div>
+                                        </a>
+                                      </div>                                                            
+                                    <div class="col-lg-3">
+                                        <a href="https://garbi-protocol.gitbook.io/docs/product/garbi-game/garbi-academy-1-pixil-saga/how-to-play" target="_blank">  
+                                            <div class="news">
+                                              <div class="img">
+                                                <img src="/assets/images/update-1.png" alt="">
+                                              </div>
+                                              <div class="info">
+                                                <p class="f-inter">Get Ready to Play: Your Complete Guide to Pixil Saga Close Beta</p>
+                                                <span class="date-time f-inter">Monday, April 17, 2023</span>
+                                              </div>
+                                            </div>
+                                         </a> 
                                     </div>                                   
-                                  </div>
-                                </div>
+                                      <div class="col-lg-3">
+                                        <a href="#">
+                                            <div class="news">
+                                              <div class="img">
+                                                <img src="/assets/images/update-2.png" alt="">
+                                              </div>
+                                              <div class="info">
+                                                <p class="f-inter">Your guide to the Pixil Saga Open beta.</p>
+                                                <span class="date-time f-inter">Thursday, April 27, 2023</span>
+                                              </div>
+                                            </div>
+                                        </a>
+                                      </div>
+                                      <div class="col-lg-3">
+                                        <a href="https://twitter.com/garbi_protocol/status/1651560655126925313" target="_blank">
+                                            <div class="news">
+                                              <div class="img">
+                                                <img src="/assets/images/update-3.png" alt="">
+                                              </div>
+                                              <div class="info">
+                                                <p class="f-inter">Pixil Saga Open Beta Event.</p>
+                                                <span class="date-time f-inter">Thursday, April 27, 2023</span>
+                                              </div>
+                                            </div>
+                                        </a>
+                                      </div>
+                                </div>                                   
+                              </div>
                             </div>
                         </div>
                     </div>
               </div>
             </main>
             <footer id="footer" class="">
-                <footer id="is-footer-copyright-group">
+                <footer id="is-footer-copyright-group">                  
                     <div id="footer-main" class="footer footer-main fade-in-bg" >
+                      <img src="/assets/images/slide2 2.png" alt="Slide Image">
                         <h1 class="title fade-in">STAY CONNECTED</h1>
                         <div class="social-area fade-in">
-                            <a href="https://twitter.com/garbi_protocol/" target="_blank" class="mr-54"> 
-                                <img alt="tw" src="/assets/images/twiter-logo.png" > 
-                            </a> 
-                            <a href="https://t.me/garbiprotocol" target="_blank" class="mr-54"> 
-                                <img alt="tele" src="/assets/images/telegram-logo.png" >
+                            <a href="https://t.me/garbiprotocol" target="_blank" class="mr-40"> 
+                              <img alt="tele" src="/assets/images/telegram-logo.svg" >
                             </a>
-                            <a href="https://github.com/garbiprotocol" target="_blank" class=""> 
-                                <img alt="github" src="/assets/images/github.svg" >
+                            <a href="https://github.com/garbiprotocol" target="_blank" class="mr-40"> 
+                              <img alt="github" src="/assets/images/github.svg" >
                             </a>
+                            <a href="https://twitter.com/garbi_protocol/" target="_blank" class=""> 
+                                <img alt="tw" src="/assets/images/x-logo.svg" > 
+                            </a>                                                         
                         </div>
                         <div class="logo-footer fade-in">
                             <img src="/assets/images/logo-start-game-1.png" alt="">
@@ -341,22 +331,22 @@
                                     <a class="nav-link f-inter" target="_blank" href="https://garbi-protocol.gitbook.io/docs/">Docs</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" target="_blank" href="https://twitter.com/garbi_protocol/" rel="noopener noreferrer">#Twitter</a>
+                                    <a class="nav-link f-inter font-weight-bold" target="_blank" href="https://twitter.com/garbi_protocol/" rel="noopener noreferrer">#X</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" target="_blank" href="https://t.me/garbiprotocol" rel="noopener noreferrer">@Telegram</a>
+                                    <a class="nav-link f-inter font-weight-bold" target="_blank" href="https://t.me/garbiprotocol" rel="noopener noreferrer">@Telegram</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" target="_blank" href="https://github.com/garbiprotocol">git@</a>
+                                    <a class="nav-link f-inter font-weight-bold" target="_blank" href="https://github.com/garbiprotocol">git@</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" href="#">Version 1.1.0</a>
+                                    <a class="nav-link f-inter font-weight-bold" href="#">Version 1.1.0</a>
                                 </li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="copy-right fade-in">
-                            <p class="f-inter"><a href="https://garbi.io" class="f-inter" target=_blank>Garbi Protocol</a> created Pixil Saga - a decentralized blend of blockchain and gamification for adventurous gamers.</p>
+                          <p class="f-inter"><a href="https://garbi.io" target="_blank">Garbi Protocol</a> created Pixil Saga - a decentralized blend of blockchain and gamification for adventurous gamers.</p>
                         </div>
                      </div>
                 </footer>
@@ -462,8 +452,40 @@
                         let teamId = result.teamId;
                         updateAvatar(teamId);
                     });
-                }, 3000);               
+                }, 3000);                  
             });
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#prevButton').click(function() {
+          $('#carouselUpgradeRobot').carousel('prev');
+        });
+    
+        $('#nextButton').click(function() {
+          $('#carouselUpgradeRobot').carousel('next');
+        });
+    
+        // Initially hide prevButton
+        $('#prevButton').hide();
+    
+        // Initially check carousel bounds
+        $('#carouselUpgradeRobot').on('slid.bs.carousel', function () {
+          var currentIndex = $('#carouselUpgradeRobot .carousel-item.active').index();
+          var totalItems = $('#carouselUpgradeRobot .carousel-item').length;
+    
+          if (currentIndex === 0) {
+            $('#prevButton').hide();
+            $('#nextButton').show();
+          } else if (currentIndex === totalItems - 1) {
+            $('#prevButton').show();
+            $('#nextButton').hide();
+          } else {
+            $('#prevButton').show();
+            $('#nextButton').show();
+          }
+        });
+      });
+    </script>
 </html>

@@ -32,78 +32,71 @@
 
     <body> 
         <div id="app">
-            <header id="header">
-                <div class="header">
-                  <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-light">
-                        <div class="row align-items-center flex-grow-1">
-                          <div class="col-lg-2">
-                            <div class="d-flex align-items-center justify-content-between">
-                              <a href="/" class="logo">
-                                <img src="/assets/images/logo-pixil.png" alt="logo" />
-                              </a>
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff;">
-                                 <i class="fas fa-bars"></i>
-                              </button>
-                            </div>
-                          </div>
-
-                          <div class="col-lg-10">
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                              <div class="row align-items-center flex-grow-1">
-                                <div class="col-lg-6">
-                                  <div class="d-lg-flex align-items-center">
-                                    <div class="item-link mr-30">
-                                      <a href="/index.html#list-team" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
-                                    </div>
-                                    <div class="item-link mr-30">
-                                      <a href="/index.html#quiz-to-earn" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Quiz to Earn</a>
-                                    </div>
-                                    <div class="item-link mr-30">
-                                      <a href="/index.html#robot" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Robot</a>
-                                    </div>
-                                    <div class="item-link mr-30">
-                                      <a href="https://garbi-protocol.gitbook.io/docs/product/garbi-game/garbi-academy-1-pixil-saga/how-to-play" target="_blank" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">How to Play</a>
-                                    </div>
-                                  </div>
+          <header id="header">
+            <div class="header">
+              <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="row align-items-center flex-grow-1">
+                      <div class="col-lg-12">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <div class="row align-items-center flex-grow-1">
+                            <div class="col-lg-4">
+                              <div class="d-lg-flex align-items-center">
+                                <div class="item-link mr-30">
+                                  <a href="#list-team" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="user-action">
-                                        <div class="d-lg-flex align-items-center justify-content-end user-wallet" >
-                                            <div class="wrap-user-acct dropdown show">
-                                              <a class="text-decoration-none fs-16 c-main b-600  d-flex align-items-center" href="#" role="button">
-                                                <span class="avatar mr-8" id="pixil-saga-avatar">
-                                                  <img src="/assets/images/default_avatar.png" />
-                                                </span>
-                                               
-                                                <span class="b-600 user-acct">0x00</span>
-                                              </a>
-                                              
-                                            </div>
-
-                                            <div class="wrap-user-btn show">
-                                                <div class="wrap-btn-connect">
-                                                    <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white border-transparent-2 py-8 px-24 border-radius-20 btn-transition d-inline-block">Connect Wallet</a>
-                                                </div>
-                                            </div>
-                                          </div>
-                                          <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
-                                                <a href=""  type="button" class="btn-play-game"  >
-                                                    <span class="">Earn for Free</span>
-                                                </a>
-                                          </div>
-                                    </div>
+                                <div class="item-link mr-30">
+                                  <a href="#quiz-to-earn" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Quiz to Earn</a>
+                                </div>
+                                <div class="item-link mr-30">
+                                  <a href="#robot" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Robot</a>
+                                </div>
+                                <div class="item-link mr-30">
+                                  <a href="https://garbi-protocol.gitbook.io/docs/product/garbi-game/garbi-academy-1-pixil-saga/how-to-play" target="_blank" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">How to Play</a>
                                 </div>
                               </div>
                             </div>
+                            <div class="col-lg-4" style="display: flex; justify-content: center;">
+                              <div class="logo" style="justify-content: center;">
+                                <img src="/assets/images/logo-pixil.png" width="337.5px" height="40px" alt="logo">
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="user-action">
+                                    <div class="d-lg-flex align-items-center justify-content-end user-wallet" >
+                                        <div class="wrap-user-acct dropdown show">
+                                          <a class="text-decoration-none fs-16 c-main b-600  d-flex align-items-center" href="#" role="button">
+                                            <span class="avatar mr-8" id="pixil-saga-avatar">
+                                              <img src="/assets/images/default_avatar.png" />
+                                            </span>
+                                           
+                                            <span class="b-600 user-acct">0x00</span>
+                                          </a>
+                                          
+                                        </div>
+
+                                        <div class="wrap-user-btn show">
+                                            <div class="wrap-btn-connect">
+                                              <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white py-8 px-24 border-radius-8 btn-transition d-inline-block" style="border: 2px solid #546374;">Connect Wallet</a>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
+                                            <a href=""  type="button" class="btn-play-game"  >
+                                                <span class="">Earn for Free</span>
+                                            </a>
+                                      </div>
+                                </div>
+                            </div>
                           </div>
                         </div>
-                    </nav>
-                    <div class="modal-detail-wrapper">
-                    </div>
-                  </div>
+                      </div>                          
+                </nav>
+                <div class="modal-detail-wrapper">
                 </div>
-            </header>
+              </div>
+            </div>
+          </header>
             <main id="main">
             <div id="buy-box" class="hero" >
                     <div class="container-fluid">
@@ -119,11 +112,10 @@
                                 </div>
                             </div>
                         </div>
-                        <span>Step 2</span>
-                        <h4 class="title">
-                            Claim your NFT
-                        </h4>
-                        <p class="f-inter">Claim your team's exclusive NFT in Pixil Saga and showcase your team spirit! Unlock a unique piece of digital art that represents your team and your commitment to the world of blockchain gaming. Join us now and start collecting NFTs in Pixil Saga!</p>
+                        <h4 style="color: #7E9DB6;">Step 2</h4>
+                        <h4 class="title" style="color: #000";> Claim your NFT</h4>
+                        
+                        <p class="f-inter" style="color: #000; text-align: left;">Claim your team's exclusive NFT in Pixil Saga and showcase your team spirit! Unlock a unique piece of digital art that represents your team and your commitment to the world of blockchain gaming. Join us now and start collecting NFTs in Pixil Saga!</p>
                         <!-- <span class="credit-cost">Cost: 1 CyberCredit</span> -->
                         <div id="hero-1">
                             <div class="">
@@ -133,7 +125,7 @@
                                     </div>
                                     <div class="description">
                                         <h4 class="name">Trading Titans</h4>
-                                        <p class="f-inter info">This team is focused on short-term gains through active trading in the crypto market. Members of this team are skilled traders, always looking for opportunities to buy and sell at the right time for maximum profit.</p>
+                                        <p class="f-inter info" style="text-align: left;">This team is focused on short-term gains through active trading in the crypto market. Members of this team are skilled traders, always looking for opportunities to buy and sell at the right time for maximum profit.</p>
                                         <span class="price">
                                             Gas fee: 9 GRB
                                         </span>
@@ -183,49 +175,49 @@
                 </div>
             </main>
             <footer id="footer" class="">
-                <footer id="is-footer-copyright-group">
-                    <div id="footer-main" class="footer footer-main fade-in-bg" >
-                        <h1 class="title fade-in">STAY CONNECTED</h1>
-                        <div class="social-area fade-in">
-                            <a href="https://twitter.com/garbi_protocol/" target="_blank" class="mr-54"> 
-                                <img alt="tw" src="/assets/images/twiter-logo.png" > 
-                            </a> 
-                            <a href="https://t.me/garbiprotocol" target="_blank" class="mr-54"> 
-                                <img alt="tele" src="/assets/images/telegram-logo.png" >
-                            </a>
-                            <a href="https://github.com/garbiprotocol" target="_blank" class=""> 
-                                <img alt="github" src="/assets/images/github.svg" >
-                            </a>
-                        </div>
-                        <div class="logo-footer fade-in">
-                            <img src="/assets/images/logo-start-game.png" alt="">
-                        </div>
-                        <div class="menu-footer fade-in">
-                            <nav class="navbar navbar-expand-lg navbar-light">
-                                <ul class="navbar-nav mx-auto">
-                                  <li class="nav-item">
-                                    <a class="nav-link f-inter" target="_blank" href="https://garbi-protocol.gitbook.io/docs/">Docs</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link f-inter" target="_blank" href="https://twitter.com/garbi_protocol/" rel="noopener noreferrer">#Twitter</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link f-inter" target="_blank" href="https://t.me/garbiprotocol" rel="noopener noreferrer">@Telegram</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link f-inter" target="_blank" href="https://github.com/garbiprotocol">git@</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link f-inter" href="#">Version 1.1.0</a>
+              <footer id="is-footer-copyright-group">
+                  <div id="footer-main" class="footer footer-main fade-in-bg" >
+                      <h1 class="title fade-in">STAY CONNECTED</h1>
+                      <div class="social-area fade-in">                           
+                          <a href="https://t.me/garbiprotocol" target="_blank" class="mr-40"> 
+                              <img alt="tele" src="/assets/images/telegram-logo.svg" >
+                          </a>
+                          <a href="https://github.com/garbiprotocol" target="_blank" class="mr-40"> 
+                              <img alt="github" src="/assets/images/github.svg" >
+                          </a>
+                          <a href="https://twitter.com/garbi_protocol/" target="_blank" class=""> 
+                            <img alt="tw" src="/assets/images/x-logo.svg" > 
+                        </a>
+                      </div>
+                      <div class="logo-footer fade-in">
+                        <img src="/assets/images/logo-start-game-1.png" alt="">
+                      </div>
+                      <div class="menu-footer fade-in">
+                          <nav class="navbar navbar-expand-lg navbar-light">
+                              <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                  <a class="nav-link f-inter" target="_blank" href="https://garbi-protocol.gitbook.io/docs/">Docs</a>
                                 </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="copy-right fade-in">
-                            <p class="f-inter"><a href="https://garbi.io" class="f-inter" target=_blank>Garbi Protocol</a> created Pixil Saga - a decentralized blend of blockchain and gamification for adventurous gamers.</p>
-                        </div>
-                     </div>
-                </footer>
+                                <li class="nav-item">
+                                  <a class="nav-link f-inter" target="_blank" href="https://twitter.com/garbi_protocol/" rel="noopener noreferrer">#X</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link f-inter" target="_blank" href="https://t.me/garbiprotocol" rel="noopener noreferrer">@Telegram</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link f-inter" target="_blank" href="https://github.com/garbiprotocol">git@</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link f-inter" href="#">Version 1.1.0</a>
+                              </li>
+                              </ul>
+                          </nav>
+                      </div>
+                      <div class="copy-right fade-in">
+                          <p class="f-inter"><a href="https://garbi.io" class="f-inter" target=_blank>Garbi Protocol</a> created Pixil Saga - a decentralized blend of blockchain and gamification for adventurous gamers.</p>
+                      </div>
+                   </div>
+              </footer>
             </footer>
         </div>
         <div class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
