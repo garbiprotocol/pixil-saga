@@ -29618,12 +29618,12 @@ button.btn-approve {
 }
 #claim-first-robot .modal-content .info-robot .description h4.title {
   color: #07FFFF;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 36px;
 }
 #claim-first-robot .modal-content .info-robot .description {
     position: absolute;
-    bottom: -90px;
+    bottom: -50px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
