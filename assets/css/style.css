@@ -29574,7 +29574,7 @@ button.btn-approve {
     justify-content: center;
     font-style: normal;
     font-weight: 500;
-    background: url(../images/play-button-bg-2.png) center center no-repeat;
+    background: url(../images/button-connect.png) center center no-repeat;
     background-size: cover;
     color: #fff;
     margin-right: 10px;
@@ -29617,7 +29617,7 @@ button.btn-approve {
   color: #fff;
 }
 #claim-first-robot .modal-content .info-robot .description h4.title {
-  color: #B4ED60;
+  color: #07FFFF;
   font-size: 24px;
   line-height: 36px;
 }
