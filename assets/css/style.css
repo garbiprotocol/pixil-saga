@@ -12,6 +12,21 @@
 
 .f-inter {
   font-family: "Inter", sans-serif;
+  color: #FAFAFA;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; 
+}
+
+.f-inter a {
+  color: #07FFFF;
+  font-family: "Inter", sans-serif;
+}
+
+.f-inter a:hover {
+  color: white;
 }
 
 body {
@@ -26286,7 +26301,10 @@ textarea {
 .p-280 {
   padding: 280px;
 }
-
+.pi-280{
+  padding-left: 280px; 
+  padding-right: 280px;
+}
 .px-280 {
   padding-left: 280px;
   padding-right: 280px;
@@ -28139,7 +28157,7 @@ textarea {
   padding-top: 64px;
 }
 .header {
-  background: #292D3A;
+  background: #000;
   padding: 12px 0;
   position: fixed;
   width: 100%;
@@ -28151,7 +28169,7 @@ textarea {
 }
 .header .navbar {
   padding: 0;
-  background-color: #292D3A !important;
+  background-color: #000 !important;
 }
 .header .dropdown-toggle-game {
   position: relative;
@@ -28169,7 +28187,7 @@ textarea {
 }
 .header .button-play-game a {
   height: 40px;
-  width: 134px;
+  width: 144px;
   outline: none;
   align-items: center;
   cursor: pointer;
@@ -28389,19 +28407,17 @@ textarea {
 }
 
 .footer {
-  background: url(../images/footer-bg.png) center center no-repeat;
-  background-size: cover;
-  padding: 240px 0;
-  padding-bottom: 266px;
-  color: #FFFFFF;
+  padding-bottom: 120px;
+  color: #FAFAFA;
   text-align: center;
+  background-color: #292D3A;
 }
 
 .footer .social-area {
   margin-bottom: 122px;
 }
 .footer .social-area img {
-  width: 64px;
+  width: 40px;
 }
 .footer .social-area a {
   text-decoration: none;
@@ -28413,6 +28429,7 @@ textarea {
   text-align: center;
   margin-bottom: 24px;
 }
+
 .footer .menu-footer ul li {
   border-right: 2px solid #fff;
   display: inline-block;
@@ -28428,6 +28445,8 @@ textarea {
 .footer .menu-footer a  {
   color: #fff!important;
   text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+
 }
 .footer .copy-right p {
   margin-bottom: 0;
@@ -28435,10 +28454,11 @@ textarea {
   line-height: 24px;
 }
 .footer h1.title {
-  font-size: 48px;
-  line-height: 72px;
-  color: #B4ED60;
-  margin-bottom: 40px;
+  font-size: 40px;
+  line-height: 60px;
+  color: #07FFFF;
+  margin-bottom: 50px;
+  padding-top: 120px;
 }
 .footer .logo-footer img {
   width: 708px;
@@ -28460,53 +28480,67 @@ textarea {
 }
 
 .connect-to-game {
-  background: url(../images/connect-game-bg-1.png) center no-repeat;
-  background-size: cover;
+  background: url(../images/connect-game-bg-1.svg) center no-repeat;
+  background-size: 100% auto;
+  height: 676px;
+  transition: filter 0.2s ease-in-out;
 }
-.connect-to-game .connect-game {
+
+.logo-connect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 800px;
+  z-index: 9999;
+}
+
+.connect-game {
   text-align: center;
-  margin-bottom: 140px;
-  padding-top: 163px;
 }
-.connect-to-game .connect-game .logo-connect {
+.connect-game .logo-connect {
   margin-bottom: 72px;
 }
-.connect-to-game .connect-game .button-connect-game a.btn-connect-to-game {
+.connect-game .button-connect-game a.btn-connect-to-game {
   background: url(../images/button-connect.png) center no-repeat;
   background-size: cover;
   width: 360px;
   height: 108px;
   transition: filter 0.2s ease-in-out;
 }
-.connect-to-game .connect-game .button-connect-game a.btn-connect-to-game:hover {
+.connect-game .button-connect-game a.btn-connect-to-game:hover {
   filter: brightness(70%);
 }
 #home .list-team {
-  background: url(../images/team-bg.png) center no-repeat;
+  background: url(../images/bh-white.png) center no-repeat;
   background-size: cover;
 }
 .description {
+  padding-top: 40px;
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 #list-team h1.title {
-  color: #459434;
+  color: #049999;
 }
 #list-team h4.title {
   color: #546374;
 }
 .description h1.title {
-  color: #B4ED60;
-  font-size: 36px;
-  line-height: 54px;
+  color: #07FFFF;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
   margin-bottom: 40px;
 }
 .description p {
   font-size: 24px;
   line-height: 36px;
-  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  color: #FAFAFA;
   margin-bottom: 0;
-  width: 964px;
+  width: 1100px;
   margin: auto;
 }
 #home .list-hero-claim {
@@ -28516,7 +28550,7 @@ textarea {
   align-items: flex-start;
 }
 #home .list-hero-claim h4.title {
-  color: #7E9DB6;
+  color: #546374;
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 0px;
@@ -28526,13 +28560,14 @@ textarea {
   font-size: 16px;
   line-height: 24px;
   color: #000;
-  margin-bottom: 24px;
+  text-align: left;
 }
 #home .list-hero-claim .list-hero p {
   font-size: 14px;
   line-height: 24px;
   color: #fff;
   margin-bottom: 24px;
+  width: 900px;
 }
 #home .list-hero-claim .list-hero {
   display: flex;
@@ -28547,11 +28582,17 @@ textarea {
 .hero-info .description , .hero-info-to-claim  .description {
   text-align: left;
 }
+
+.hero-info-to-claim .description {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .list-team {
-  padding-bottom: 382px!important;
+  padding-bottom: 82px!important;
 }
 .list-team .description {
-  padding-top: 240px;
+  padding-top: 80px;
 }
 .list-team .description h1.title {
   margin-bottom: 8px!important;
@@ -28562,46 +28603,63 @@ textarea {
   line-height: 36px;
 }
 .funcition-in-game {
-  /*background: url(../images/funcition-in-game-bg.png) center no-repeat;
-  background-size: cover;*/
-  background: #13071D;
+  background: #000;
 }
 .funcition-in-game h1.title {
-    color: #B4ED60;
+    color: #07FFFF;
     text-align: center;
+}
+
+.upgrade-your-robot h1.title{
+  color: #049999;
+  text-align: center;
+  padding-top: 80px;
 }
 .funcition-in-game p {
   color: #fff;
   font-size: 16px;
   line-height: 24px;
+  text-align: left;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.upgrade-your-robot p{
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
 }
 .funcition-in-game .quiz-to-earn h1.title {
     width: 656px;
     margin: auto;
-    margin-bottom: 152px;
+    margin-bottom: 80px;
 }
 .funcition-in-game .quiz-to-earn p {
-  margin-bottom: 64px;
+  margin-bottom: 56px;
 }
-.funcition-in-game .quiz-to-earn .carousel-inner {
-  width: 900px;
-  margin: auto;
-}
+
 .upgrade-your-robot .carousel-inner {
-  width: 729px;
   margin: auto;
 }
 .upgrade-your-robot .carousel-indicators {
   bottom: -150px;
 }
 .funcition-in-game .quiz-to-earn .carousel-control-next-icon {
-  background: url(../images/next-arrow.png) center no-repeat;
+  background: url(../images/next-arrow.svg) center no-repeat;
   background-size: cover;
   width: 76px;
   height: 76px;
 }
 .funcition-in-game .quiz-to-earn .carousel-control-prev-icon {
-  background: url(../images/pre-arrow.png) center no-repeat;
+  background: url(../images/pre-arrow.svg) center no-repeat;
   background-size: cover;
   width: 76px;
   height: 76px;
@@ -28633,23 +28691,44 @@ textarea {
 .upgrade-your-robot p {
   margin-bottom: 64px;
 }
-.upgrade-your-robot .carousel-control-prev , .upgrade-your-robot .carousel-control-next {
-  position: unset;
-}
+
 .upgrade-your-robot button.carousel-control-prev:hover , .upgrade-your-robot button.carousel-control-next:hover {
   opacity: 1;
 }
 .upgrade-your-robot .carousel-control-next-icon {
-  background: url(../images/update-robot-next-carousel.png) center no-repeat;
+  background: url(../images/next-arrow.svg) center no-repeat;
   background-size: cover;
   width: 78px;
   height: 78px;
 }
+.carousel-control-next {
+  right: 0;
+}
 .upgrade-your-robot .carousel-control-prev-icon {
-  background: url(../images/update-robot-pre-carousel.png) center no-repeat;
+  background: url(../images/pre-arrow.svg) center no-repeat;
   background-size: cover;
   width: 78px;
   height: 78px;
+}
+.carousel-control-prev {
+  left: 0;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px; 
+    height: 50px;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 .road-map {
   padding: 72px 0;
@@ -28718,12 +28797,16 @@ textarea {
   text-align: center;
   margin:auto;
 }
+
+
 .dev-update .list-new {
   display: inline-block;
   width: 1500px;
 }
 .dev-update h1.title {
   margin-bottom: 80px;
+  color: #049999;
+  text-align: center;
 }
 .dev-update .news {
   background: url(../images/news-bg.png) center no-repeat;
@@ -29232,6 +29315,7 @@ textarea {
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 10px;
+  text-align: left;
 }
 .list-hero-claim .hero-info .description p.info {
   font-size: 14px;
@@ -29249,6 +29333,7 @@ textarea {
   padding: 40px;
   background: #EAEAEA;
   border-radius: 16px;
+  border: 2px solid #B9CAD7;
   margin-bottom: 80px;
   width: 100%;
 }
@@ -29260,6 +29345,20 @@ textarea {
   background: url(../images/buy-avatar-bg.png) center center no-repeat;
   background-size: cover;
   position: relative;
+}
+#robot {
+  background-image: url('/assets/images/robot-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+}
+#robot .title,
+#robot p {
+  padding-left: 50px; 
+  padding-right: 50px;
+}
+.container-news{
+  background-color: #000;
 }
 #buy-box .hero-info-to-claim .img img {
   width: 192px;
@@ -29475,7 +29574,7 @@ button.btn-approve {
     justify-content: center;
     font-style: normal;
     font-weight: 500;
-    background: url(../images/play-button-bg-2.png) center center no-repeat;
+    background: url(../images/button-connect.png) center center no-repeat;
     background-size: cover;
     color: #fff;
     margin-right: 10px;
@@ -29518,13 +29617,13 @@ button.btn-approve {
   color: #fff;
 }
 #claim-first-robot .modal-content .info-robot .description h4.title {
-  color: #B4ED60;
-  font-size: 24px;
+  color: #07FFFF;
+  font-size: 32px;
   line-height: 36px;
 }
 #claim-first-robot .modal-content .info-robot .description {
     position: absolute;
-    bottom: -90px;
+    bottom: -50px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -29548,6 +29647,22 @@ button.btn-approve {
   .container {
     max-width: 1260px;
   }
+  #robot .title,
+  #robot .f-inter {
+      padding-left: 280px;
+      padding-right: 280px;
+  }
+  .header .container-fluid{
+    padding: 0 80px;
+  }
+  .connect-to-game{
+    background-size: cover;
+  }
+  .funcition-in-game .quiz-to-earn h1.title{
+    width: auto;
+    text-align: left;
+  }
+  
 }
 @media screen and (min-width: 1285px) {
   .roadmaps-item:nth-child(3n) {
@@ -29564,6 +29679,19 @@ button.btn-approve {
   .dashboard-item:nth-child(4n) {
     margin-right: 0;
   }
+  .connect-to-game{
+    background-size: cover;
+  }
+  .header .container-fluid{
+    padding: 0 10px;
+  }
+  .description p{
+    width:auto;
+  }
+  .description {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .dashboard-item {
@@ -29575,6 +29703,7 @@ button.btn-approve {
   .dashboard-item:nth-child(4n) {
     margin-right: 0;
   }
+  
 }
 @media screen and (max-width: 991px) {
   .header .item-link {
@@ -29586,17 +29715,81 @@ button.btn-approve {
   .roadmaps-item {
     margin: 0 auto 50px;
   }
+  .upgrade-your-robot h1.title{
+    padding-top: 50px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .connect-to-game{
+    background-size: cover;
+  }  
+
+  .left-content img:last-child {
+    margin-left: 500px; 
+  }
+
+  .right-content .carousel img {
+    margin-left: 170px; 
+  }
+  .dev-update .news{
+    width: 360px!important;
+  }
+  .menu-footer{
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   .title-page-desk {
     font-size: 40px;
   }
+  .connect-to-game{
+    background-size: cover;
+  }
+  .connect-game .button-connect-game a.btn-connect-to-game{
+    width: 280px;
+    height: 85px;    
+  }
+  .description h1.title{
+    font-size: 36px;
+  }
+  #home .description p{
+    font-size: 20px;
+  }  
+  .left-content img:last-child {
+    margin-left: 260px; 
+  }
+  .right-content .carousel img {
+    margin-left: 60px; 
+  }
+  .dev-update .news{
+    width: 360px!important;
+  }
+  .footer .social-area{
+    margin-bottom: 50px;
+  }
+  .menu-footer{
+    display: none;
+  }
+  
 }
 @media screen and (max-width: 550px) {
   .milestones-item {
     min-width: 100%;
     max-width: 100%;
     padding: 40px 0 0;
+  }
+  .list-hero-claim .hero-info {
+    width: fit-content;
+    height: 330px;
+  }
+  .list-hero-claim .hero-info .img {
+    padding-top: 10px;
+  }
+  .left-content img {
+    width: 150px!important;
+  }
+  .right-content{
+    padding-top: 20px;
   }
 }
 @media screen and (max-width: 1500px) {
@@ -29669,12 +29862,9 @@ button.btn-approve {
     #home .description p {
       width: fit-content;
     }
-    .list-hero-claim .hero-info {
-      width: fit-content;
-      height: 235px;
-    }
-    .list-hero-claim .hero-info .img {
-      height: 100%;
+    
+    #home .list-hero-claim .list-hero p{
+      width: auto;
     }
     .list-hero-claim .hero-info .img img {
       border-radius: 8px;
@@ -29704,7 +29894,7 @@ button.btn-approve {
       margin-right: 20px;
     }
     .footer .social-area img {
-      width: 30px;
+      width: 40px;
     }
     .footer .nav-item {
       flex-grow: 1;
@@ -29754,6 +29944,85 @@ button.btn-approve {
         min-width: 400px;
         max-height: max-content;
     }
+    .connect-to-game{
+      background-size: cover;
+    }
+    .description h1.title{
+      font-size: 24px;
+      line-height: 40px;
+    }
+    #list-team h4.title{
+      font-size: 18px;
+    }
+    .footer h1.title{
+      font-size: 24px;
+      padding-top: 50px;
+    }
+    .footer .social-area{
+      margin-bottom: 50px;
+    }
+    .footer .logo-footer{
+      margin-bottom: 50px;
+    }
+    .footer .logo-footer img{
+      width: 350px;
+    }
+    .footer .social-area img{
+      width: 30px;
+    }
+    .footer .copy-right p{
+      padding: 0 20px;
+    }
+    .funcition-in-game h1.title{
+      font-size: 24px;
+    }
+    .funcition-in-game .quiz-to-earn h1.title{
+      margin-bottom: 30px;
+    }
+    .menu-footer{
+      display: none;
+    }    
+    .dev-update .news .img img{
+      object-fit: cover;
+    }
+    .dev-update .news{
+      width: 300px;
+    }
+    .container-list-new .news .info .f-inter {
+      text-align: left; 
+    }
+    img[src='/assets/images/slide 7.png'] {
+      display: none;
+    }
+    .carousel-inner img{
+      margin-left: 0;
+    }
+    .upgrade-your-robot .carousel-control-prev-icon{
+      width: 20px;
+      height: 20px;
+    }
+    .upgrade-your-robot .carousel-control-next-icon{
+      width: 20px;
+      height: 20px;
+    }
+    #robot {
+      padding-bottom: 48px;
+    }
+    .description p{
+      font-size: 16px;
+    }
+    .logo-connect{
+      display: none;
+    }
+    .description{
+      padding-top: 10px;
+      padding-bottom: 30px 
+    }
+    .connect-game .button-connect-game a.btn-connect-to-game {
+      width: 180px;
+      height: 54px;
+    }
+
     .blog__container {
         max-width: 400;
         width: 100%;
@@ -29799,6 +30068,12 @@ button.btn-approve {
         margin-left: -15%;
     } */
 
+}
+
+@media screen and (max-width: 400px) {
+  .left-content img {
+    width: 130px!important;
+  }
 }
 .carousel-indicators {
     bottom: -89px;
