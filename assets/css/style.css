@@ -10227,7 +10227,9 @@ textarea {
 .w-100 {
   width: 100px;
 }
-
+.w-500 {
+  width: 500px;
+}
 .h-100 {
   height: 100px;
 }
@@ -28563,11 +28565,10 @@ textarea {
   text-align: left;
 }
 #home .list-hero-claim .list-hero p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #fff;
-  margin-bottom: 24px;
-  width: 900px;
+  width: 100%;
 }
 #home .list-hero-claim .list-hero {
   display: flex;
@@ -28640,7 +28641,7 @@ textarea {
 .funcition-in-game .quiz-to-earn h1.title {
     width: 656px;
     margin: auto;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 .funcition-in-game .quiz-to-earn p {
   margin-bottom: 56px;
@@ -29274,7 +29275,7 @@ textarea {
 #buy-box p {
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 32px;
+  width: 100%;
 }
 .list-hero-claim {
   margin-top: 40px;
@@ -29288,6 +29289,8 @@ textarea {
   text-decoration: none;
 }
 .list-hero-claim .hero-info {
+  display: flex;
+  align-items: center;
   width: 996px;
   height: 150px;
   background: url(../images/buy-box-bg.png) center center no-repeat;
@@ -29297,9 +29300,9 @@ textarea {
   margin-bottom: 16px;
 }
 .list-hero-claim .hero-info .img {
-  margin-right: 16px;
+  margin-right: 8px;
+  flex: 0 0 120px; 
   width: fit-content;
-  float: left;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -29308,13 +29311,23 @@ textarea {
   height: 120px;
 }
 .list-hero-claim .hero-info .description {
-  color: #fff;
-  padding: 5px;
+  flex-grow: 1; 
+  min-width: 0;
+  height: 120px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 16px;
+  border-radius: 8px;
+  color: #FFFFFF; 
 }
 .list-hero-claim .hero-info .description h4.name {
+  color: #EFEFEF;
+  font-family: "retro-land-mayhem", sans-serif;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 30px;
-  margin-bottom: 10px;
   text-align: left;
 }
 .list-hero-claim .hero-info .description p.info {
@@ -29623,7 +29636,7 @@ button.btn-approve {
 }
 #claim-first-robot .modal-content .info-robot .description {
     position: absolute;
-    bottom: -50px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -29723,14 +29736,6 @@ button.btn-approve {
   .connect-to-game{
     background-size: cover;
   }  
-
-  .left-content img:last-child {
-    margin-left: 500px; 
-  }
-
-  .right-content .carousel img {
-    margin-left: 170px; 
-  }
   .dev-update .news{
     width: 360px!important;
   }
@@ -29755,12 +29760,6 @@ button.btn-approve {
   #home .description p{
     font-size: 20px;
   }  
-  .left-content img:last-child {
-    margin-left: 260px; 
-  }
-  .right-content .carousel img {
-    margin-left: 60px; 
-  }
   .dev-update .news{
     width: 360px!important;
   }
@@ -29770,7 +29769,42 @@ button.btn-approve {
   .menu-footer{
     display: none;
   }
+
+  .list-hero-claim .hero-info {
+    display: flex;
+    flex-direction: column;
+    width: 397px;
+    height: 352px;
+    background: url('/assets/images/buy-box-mobile.png') center center no-repeat;
+    background-size: cover;
+    margin-bottom: 16px;
+  }
+
+  .list-hero-claim .hero-info .img {
+    width: 363px; 
+    height: 120px; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .list-hero-claim .hero-info .img img {
+    height: auto; 
+  }
+
+  .list-hero-claim .hero-info .description {
+    width: 365px;
+    padding: 5px 16px;
+    align-items: center;
+  }
+  .list-hero-claim .hero-info .description h4.name,
+  .list-hero-claim .hero-info .description p.info {
+    text-align: center;
+    color: #EFEFEF; 
   
+  }
 }
 @media screen and (max-width: 550px) {
   .milestones-item {
@@ -29780,16 +29814,19 @@ button.btn-approve {
   }
   .list-hero-claim .hero-info {
     width: fit-content;
-    height: 330px;
-  }
-  .list-hero-claim .hero-info .img {
-    padding-top: 10px;
   }
   .left-content img {
     width: 150px!important;
   }
   .right-content{
     padding-top: 20px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+  .description h1.title{
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 1500px) {
@@ -30112,6 +30149,10 @@ button.btn-approve {
 
 .carousel-fade .carousel-item.active {
   opacity: 1;
+}
+.carousel-item img {
+  margin: auto;
+  display: block; 
 }
 .fade-in {
   opacity: 0;
