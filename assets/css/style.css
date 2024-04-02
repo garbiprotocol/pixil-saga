@@ -35,6 +35,10 @@ body {
   line-height: 20px;
   color: #181425;
 }
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 img {
   max-width: 100%;
@@ -29759,7 +29763,8 @@ button.btn-approve {
   .navbar-brand img {
     max-width: 80%; 
     height: auto;
-}
+  }
+  
 }
 @media screen and (max-width: 767px) {
   .title-page-desk {
@@ -29788,6 +29793,32 @@ button.btn-approve {
   .carousel-control-next {
     display: none;
   }
+  .footer .navbar-nav {
+    display: flex;
+    flex-direction: column!important;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }  
+  .footer .navbar-nav .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }
+
+  .footer .navbar-nav .nav-item:not(:last-child)::after {
+    content: none; 
+}
+@media screen and (max-width: 590px) {
+  .description h1.title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  #home .description p{
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 550px) {
   .milestones-item {
@@ -29804,35 +29835,10 @@ button.btn-approve {
   .right-content{
     padding-top: 20px;
   }  
-  .description h1.title {
-    margin-bottom: 10px;
-    font-size: 24px;
-    line-height: 40px;
-  }
   .funcition-in-game .quiz-to-earn h1.title{
     font-size: 30px;
-  }
-  #home .description p{
-    font-size: 16px;
-  }
-  .footer .navbar-nav {
-    display: flex;
-    flex-direction: column!important;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-  }
-  
-  .footer .navbar-nav .nav-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-  }
-
-  .footer .navbar-nav .nav-item:not(:last-child)::after {
-    content: none; 
-  }
+  }  
+}
   .footer .menu-footer ul li {
     border-right: none;
     margin-right: 0; 
@@ -30182,6 +30188,12 @@ button.btn-approve {
   #carouselQuizToEarn .carousel-control-next {
     top: calc(50% + 65px); 
     transform: translateY(-50%);
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  #carouselQuizToEarn .carousel-control-prev, 
+  #carouselQuizToEarn .carousel-control-next {
+      display: none;
   }
 }
 .btn-outline-secondary {
