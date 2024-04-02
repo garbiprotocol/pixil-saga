@@ -28600,7 +28600,7 @@ textarea {
 }
 .list-team .description h4.title {
   color: #7E9DB6;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
 }
 .funcition-in-game {
@@ -29715,8 +29715,7 @@ button.btn-approve {
   }
   .dashboard-item:nth-child(4n) {
     margin-right: 0;
-  }
-  
+  }  
 }
 @media screen and (max-width: 991px) {
   .header .item-link {
@@ -29739,9 +29738,28 @@ button.btn-approve {
   .dev-update .news{
     width: 360px!important;
   }
-  .menu-footer{
-    display: none;
+  #robot.upgrade-your-robot {
+    padding-bottom: 100px;
   }
+  .funcition-in-game .left-content .images-quiz-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .funcition-in-game .left-content .images-quiz-container img {
+    display: inline-block; 
+  }
+  .nav-item {
+    margin-left: 16px;
+  }
+  .navbar-nav .nav-link, .navbar-nav .btn {
+    color: #ffffff !important;
+  }
+  .navbar-brand img {
+    max-width: 80%; 
+    height: auto;
+}
 }
 @media screen and (max-width: 767px) {
   .title-page-desk {
@@ -29755,7 +29773,7 @@ button.btn-approve {
     height: 85px;    
   }
   .description h1.title{
-    font-size: 36px;
+    font-size: 32px;
   }
   #home .description p{
     font-size: 20px;
@@ -29766,44 +29784,9 @@ button.btn-approve {
   .footer .social-area{
     margin-bottom: 50px;
   }
-  .menu-footer{
+  .carousel-control-prev,
+  .carousel-control-next {
     display: none;
-  }
-
-  .list-hero-claim .hero-info {
-    display: flex;
-    flex-direction: column;
-    width: 397px;
-    height: 352px;
-    background: url('/assets/images/buy-box-mobile.png') center center no-repeat;
-    background-size: cover;
-    margin-bottom: 16px;
-  }
-
-  .list-hero-claim .hero-info .img {
-    width: 363px; 
-    height: 120px; 
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-
-  .list-hero-claim .hero-info .img img {
-    height: auto; 
-  }
-
-  .list-hero-claim .hero-info .description {
-    width: 365px;
-    padding: 5px 16px;
-    align-items: center;
-  }
-  .list-hero-claim .hero-info .description h4.name,
-  .list-hero-claim .hero-info .description p.info {
-    text-align: center;
-    color: #EFEFEF; 
-  
   }
 }
 @media screen and (max-width: 550px) {
@@ -29820,12 +29803,42 @@ button.btn-approve {
   }
   .right-content{
     padding-top: 20px;
+  }  
+  .description h1.title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 40px;
   }
-  .carousel-control-prev,
-  .carousel-control-next {
-    display: none;
+  .funcition-in-game .quiz-to-earn h1.title{
+    font-size: 30px;
   }
-  .description h1.title{
+  #home .description p{
+    font-size: 16px;
+  }
+  .footer .navbar-nav {
+    display: flex;
+    flex-direction: column!important;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }
+  
+  .footer .navbar-nav .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }
+
+  .footer .navbar-nav .nav-item:not(:last-child)::after {
+    content: none; 
+  }
+  .footer .menu-footer ul li {
+    border-right: none;
+    margin-right: 0; 
+    padding-right: 0; 
+  }
+  .footer .logo-footer{
     margin-bottom: 10px;
   }
 }
@@ -29836,11 +29849,19 @@ button.btn-approve {
   .upgrade-your-robot .carousel-inner {
     width: fit-content;
   }
+  .container-fluid{
+    padding: 0 80px;
+  }
+  .carousel-item {
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+  }
 }
 @media (min-width: 992px) {
   .modal-lg, .modal-xl {
       max-width: 900px;
-  }
+  }  
 }
 @media screen and (max-width: 991px) {
     #main {
@@ -29972,7 +29993,50 @@ button.btn-approve {
     #claim-first-robot .modal-content .info-robot .img h4.name-hero ,#claim-first-robot .modal-content .info-robot .description p {
       color: #000;
     }
-
+    .footer .navbar-nav {
+      display: flex;
+      flex-direction: row; 
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .footer .navbar-nav .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .list-hero-claim .hero-info {
+      display: flex;
+      flex-direction: column;
+      width: 397px;
+      gap: 5px;
+      height: 352px;
+      background: url('/assets/images/buy-box-mobile.png') center center no-repeat;
+      background-size: cover;
+      margin: 0 10px 10px 0;
+    }
+    .list-hero-claim .hero-info .img {
+      width: 363px; 
+      height: 120px; 
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .list-hero-claim .hero-info .img img {
+      height: auto; 
+    }
+    .list-hero-claim .hero-info .description {
+      width: 365px;
+      padding: 5px 16px;
+      align-items: center;
+    }
+    .list-hero-claim .hero-info .description h4.name,
+    .list-hero-claim .hero-info .description p.info {
+      text-align: center;
+      color: #EFEFEF;   
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -29983,11 +30047,7 @@ button.btn-approve {
     }
     .connect-to-game{
       background-size: cover;
-    }
-    .description h1.title{
-      font-size: 24px;
-      line-height: 40px;
-    }
+    }    
     #list-team h4.title{
       font-size: 18px;
     }
@@ -30015,10 +30075,7 @@ button.btn-approve {
     }
     .funcition-in-game .quiz-to-earn h1.title{
       margin-bottom: 30px;
-    }
-    .menu-footer{
-      display: none;
-    }    
+    } 
     .dev-update .news .img img{
       object-fit: cover;
     }
@@ -30112,6 +30169,40 @@ button.btn-approve {
     width: 130px!important;
   }
 }
+
+@media (min-width: 992px) and (max-width: 1450px) {
+  #carouselQuizToEarn .carousel-item img {
+    width: 400px; 
+    margin-top: 130px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  #carouselQuizToEarn .carousel-control-prev,
+  #carouselQuizToEarn .carousel-control-next {
+    top: calc(50% + 65px); 
+    transform: translateY(-50%);
+  }
+}
+.btn-outline-secondary {
+  color: #ffffff;
+  border-color: #546374;
+}
+
+.btn-primary {
+  background-color: #546374;
+  border: 2px solid #546374;
+  color: #ffffff;
+}
+
+.navbar-light .navbar-toggler {
+  color: #ffffff;
+  border-color: #ffffff; 
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 .carousel-indicators {
     bottom: -89px;
 }
@@ -30151,7 +30242,7 @@ button.btn-approve {
   opacity: 1;
 }
 .carousel-item img {
-  margin: auto;
+  margin: 0 auto;
   display: block; 
 }
 .fade-in {
