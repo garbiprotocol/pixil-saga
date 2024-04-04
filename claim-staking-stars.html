@@ -35,7 +35,7 @@
           <header id="header">
             <div class="header">
               <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg bg-light">
+                <nav class="navbar navbar-expand-lg bg-light">                                                            
                     <div class="row align-items-center flex-grow-1">
                       <div class="col-lg-12">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -43,7 +43,7 @@
                             <div class="col-lg-4">
                               <div class="d-lg-flex align-items-center">
                                 <div class="item-link mr-30">
-                                  <a href="#list-team" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
+                                  <a href="/" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
                                 </div>
                                 <div class="item-link mr-30">
                                   <a href="#quiz-to-earn" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Quiz to Earn</a>
@@ -56,13 +56,12 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-4" style="display: flex; justify-content: center;">
-                              <div class="logo" style="justify-content: center; display: flex;">
-                                <a href="/">
-                                    <img src="/assets/images/logo-pixil.png" width="337.5px" height="40px" alt="logo">
-                                </a>
-                              </div> 
-                            </div>
+                            <div class="col-lg-4" style="display: flex; justify-content: center;">                                                            <div class="logo" style="justify-content: center; display: flex;">
+                              <a href="/">
+                                  <img src="/assets/images/logo-pixil.png" width="337.5px" height="40px" alt="logo">
+                              </a>
+                            </div>                              
+                            </div>                                
                             <div class="col-lg-4">
                                 <div class="user-action">
                                     <div class="d-lg-flex align-items-center justify-content-end user-wallet" >
@@ -84,7 +83,7 @@
                                         </div>
                                       </div>
                                       <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
-                                            <a href=""  type="button" class="btn-play-game"  >
+                                            <a href="/step-1.html"  type="button" class="btn-play-game"  >
                                                 <span class="">Earn for Free</span>
                                             </a>
                                       </div>
@@ -93,10 +92,34 @@
                           </div>
                         </div>
                       </div>                          
-                </nav>
+                </nav>              
                 <div class="modal-detail-wrapper">
                 </div>
               </div>
+
+              <nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none">
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation" style="margin-left: 16px;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand mx-auto" href="/">
+                    <img src="/assets/images/logo-pixil.png" alt="logo" style="max-width: 100%; height: auto;">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSmall">
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="/">Team</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/">Quiz to Earn</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/">Robot</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">How to Play</a></li>
+                    <li class="nav-item">
+                      <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white py-8 px-20 border-radius-8 btn-transition d-inline-block" style="border: 2px solid #546374;">Connect Wallet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn btn-primary text-decoration-none fs-16 b-600 c-9 py-8 px-24 border-radius-8 btn-transition d-inline-block" style="border: 2px solid; background: #ed7510;" href="/step-1.html" id="earnForFree">Earn for Free</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              
             </div>
         </header>
             <main id="main">
@@ -403,5 +426,16 @@
                 });
             });
     </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            var navbarCollapse = document.getElementById('navbarSmall');
+
+            navbarToggler.addEventListener('click', function () {
+                navbarCollapse.classList.toggle('show');
+            });
+        });
+    </script>  
 
 </html>
