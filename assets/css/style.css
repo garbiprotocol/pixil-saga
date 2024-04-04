@@ -35,6 +35,10 @@ body {
   line-height: 20px;
   color: #181425;
 }
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 img {
   max-width: 100%;
@@ -10227,7 +10231,9 @@ textarea {
 .w-100 {
   width: 100px;
 }
-
+.w-500 {
+  width: 500px;
+}
 .h-100 {
   height: 100px;
 }
@@ -28563,11 +28569,10 @@ textarea {
   text-align: left;
 }
 #home .list-hero-claim .list-hero p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #fff;
-  margin-bottom: 24px;
-  width: 900px;
+  width: 100%;
 }
 #home .list-hero-claim .list-hero {
   display: flex;
@@ -28599,7 +28604,7 @@ textarea {
 }
 .list-team .description h4.title {
   color: #7E9DB6;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
 }
 .funcition-in-game {
@@ -28640,7 +28645,7 @@ textarea {
 .funcition-in-game .quiz-to-earn h1.title {
     width: 656px;
     margin: auto;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 .funcition-in-game .quiz-to-earn p {
   margin-bottom: 56px;
@@ -29274,7 +29279,7 @@ textarea {
 #buy-box p {
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 32px;
+  width: 100%;
 }
 .list-hero-claim {
   margin-top: 40px;
@@ -29288,6 +29293,8 @@ textarea {
   text-decoration: none;
 }
 .list-hero-claim .hero-info {
+  display: flex;
+  align-items: center;
   width: 996px;
   height: 150px;
   background: url(../images/buy-box-bg.png) center center no-repeat;
@@ -29297,9 +29304,9 @@ textarea {
   margin-bottom: 16px;
 }
 .list-hero-claim .hero-info .img {
-  margin-right: 16px;
+  margin-right: 8px;
+  flex: 0 0 120px; 
   width: fit-content;
-  float: left;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -29308,13 +29315,23 @@ textarea {
   height: 120px;
 }
 .list-hero-claim .hero-info .description {
-  color: #fff;
-  padding: 5px;
+  flex-grow: 1; 
+  min-width: 0;
+  height: 120px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 16px;
+  border-radius: 8px;
+  color: #FFFFFF; 
 }
 .list-hero-claim .hero-info .description h4.name {
+  color: #EFEFEF;
+  font-family: "retro-land-mayhem", sans-serif;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 30px;
-  margin-bottom: 10px;
   text-align: left;
 }
 .list-hero-claim .hero-info .description p.info {
@@ -29623,7 +29640,7 @@ button.btn-approve {
 }
 #claim-first-robot .modal-content .info-robot .description {
     position: absolute;
-    bottom: -50px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -29702,8 +29719,7 @@ button.btn-approve {
   }
   .dashboard-item:nth-child(4n) {
     margin-right: 0;
-  }
-  
+  }  
 }
 @media screen and (max-width: 991px) {
   .header .item-link {
@@ -29723,20 +29739,32 @@ button.btn-approve {
   .connect-to-game{
     background-size: cover;
   }  
-
-  .left-content img:last-child {
-    margin-left: 500px; 
-  }
-
-  .right-content .carousel img {
-    margin-left: 170px; 
-  }
   .dev-update .news{
     width: 360px!important;
   }
-  .menu-footer{
-    display: none;
+  #robot.upgrade-your-robot {
+    padding-bottom: 100px;
   }
+  .funcition-in-game .left-content .images-quiz-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .funcition-in-game .left-content .images-quiz-container img {
+    display: inline-block; 
+  }
+  .nav-item {
+    margin-left: 16px;
+  }
+  .navbar-nav .nav-link, .navbar-nav .btn {
+    color: #ffffff !important;
+  }
+  .navbar-brand img {
+    max-width: 80%; 
+    height: auto;
+  }
+  
 }
 @media screen and (max-width: 767px) {
   .title-page-desk {
@@ -29750,27 +29778,47 @@ button.btn-approve {
     height: 85px;    
   }
   .description h1.title{
-    font-size: 36px;
+    font-size: 32px;
   }
   #home .description p{
     font-size: 20px;
   }  
-  .left-content img:last-child {
-    margin-left: 260px; 
-  }
-  .right-content .carousel img {
-    margin-left: 60px; 
-  }
   .dev-update .news{
     width: 360px!important;
   }
   .footer .social-area{
     margin-bottom: 50px;
   }
-  .menu-footer{
+  .carousel-control-prev,
+  .carousel-control-next {
     display: none;
   }
-  
+  .footer .navbar-nav {
+    display: flex;
+    flex-direction: column!important;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }  
+  .footer .navbar-nav .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }
+
+  .footer .navbar-nav .nav-item:not(:last-child)::after {
+    content: none; 
+}
+@media screen and (max-width: 590px) {
+  .description h1.title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  #home .description p{
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 550px) {
   .milestones-item {
@@ -29780,16 +29828,24 @@ button.btn-approve {
   }
   .list-hero-claim .hero-info {
     width: fit-content;
-    height: 330px;
-  }
-  .list-hero-claim .hero-info .img {
-    padding-top: 10px;
   }
   .left-content img {
     width: 150px!important;
   }
   .right-content{
     padding-top: 20px;
+  }  
+  .funcition-in-game .quiz-to-earn h1.title{
+    font-size: 30px;
+  }  
+}
+  .footer .menu-footer ul li {
+    border-right: none;
+    margin-right: 0; 
+    padding-right: 0; 
+  }
+  .footer .logo-footer{
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 1500px) {
@@ -29799,11 +29855,19 @@ button.btn-approve {
   .upgrade-your-robot .carousel-inner {
     width: fit-content;
   }
+  .container-fluid{
+    padding: 0 80px;
+  }
+  .carousel-item {
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+  }
 }
 @media (min-width: 992px) {
   .modal-lg, .modal-xl {
       max-width: 900px;
-  }
+  }  
 }
 @media screen and (max-width: 991px) {
     #main {
@@ -29935,7 +29999,50 @@ button.btn-approve {
     #claim-first-robot .modal-content .info-robot .img h4.name-hero ,#claim-first-robot .modal-content .info-robot .description p {
       color: #000;
     }
-
+    .footer .navbar-nav {
+      display: flex;
+      flex-direction: row; 
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .footer .navbar-nav .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .list-hero-claim .hero-info {
+      display: flex;
+      flex-direction: column;
+      width: 397px;
+      gap: 5px;
+      height: 352px;
+      background: url('/assets/images/buy-box-mobile.png') center center no-repeat;
+      background-size: cover;
+      margin: 0 10px 10px 0;
+    }
+    .list-hero-claim .hero-info .img {
+      width: 363px; 
+      height: 120px; 
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .list-hero-claim .hero-info .img img {
+      height: auto; 
+    }
+    .list-hero-claim .hero-info .description {
+      width: 365px;
+      padding: 5px 16px;
+      align-items: center;
+    }
+    .list-hero-claim .hero-info .description h4.name,
+    .list-hero-claim .hero-info .description p.info {
+      text-align: center;
+      color: #EFEFEF;   
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -29946,11 +30053,7 @@ button.btn-approve {
     }
     .connect-to-game{
       background-size: cover;
-    }
-    .description h1.title{
-      font-size: 24px;
-      line-height: 40px;
-    }
+    }    
     #list-team h4.title{
       font-size: 18px;
     }
@@ -29978,10 +30081,7 @@ button.btn-approve {
     }
     .funcition-in-game .quiz-to-earn h1.title{
       margin-bottom: 30px;
-    }
-    .menu-footer{
-      display: none;
-    }    
+    } 
     .dev-update .news .img img{
       object-fit: cover;
     }
@@ -30070,10 +30170,53 @@ button.btn-approve {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .left-content img {
     width: 130px!important;
   }
+  .container-fluid, .container-news {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1450px) {
+  #carouselQuizToEarn .carousel-item img {
+    width: 400px; 
+    margin-top: 130px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  #carouselQuizToEarn .carousel-control-prev,
+  #carouselQuizToEarn .carousel-control-next {
+    top: calc(50% + 65px); 
+    transform: translateY(-50%);
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  #carouselQuizToEarn .carousel-control-prev, 
+  #carouselQuizToEarn .carousel-control-next {
+      display: none;
+  }
+}
+.btn-outline-secondary {
+  color: #ffffff;
+  border-color: #546374;
+}
+
+.btn-primary {
+  background-color: #546374;
+  border: 2px solid #546374;
+  color: #ffffff;
+}
+
+.navbar-light .navbar-toggler {
+  color: #ffffff;
+  border-color: #ffffff; 
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 .carousel-indicators {
     bottom: -89px;
@@ -30112,6 +30255,10 @@ button.btn-approve {
 
 .carousel-fade .carousel-item.active {
   opacity: 1;
+}
+.carousel-item img {
+  margin: 0 auto;
+  display: block; 
 }
 .fade-in {
   opacity: 0;
