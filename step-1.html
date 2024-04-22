@@ -34,7 +34,7 @@
           <header id="header">
             <div class="header">
               <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg bg-light">
+                <nav class="navbar navbar-expand-lg bg-light">                                                            
                     <div class="row align-items-center flex-grow-1">
                       <div class="col-lg-12">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,26 +42,25 @@
                             <div class="col-lg-4">
                               <div class="d-lg-flex align-items-center">
                                 <div class="item-link mr-30">
-                                  <a href="#list-team" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Team</a>
+                                  <a href="/" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">チーム</a>
                                 </div>
                                 <div class="item-link mr-30">
-                                  <a href="#quiz-to-earn" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Quiz to Earn</a>
+                                  <a href="#quiz-to-earn" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">クイズ</a>
                                 </div>
                                 <div class="item-link mr-30">
-                                  <a href="#robot" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">Robot</a>
+                                  <a href="#robot" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">ロボット</a>
                                 </div>
                                 <div class="item-link mr-30">
-                                  <a href="https://garbi-protocol.gitbook.io/docs/product/garbi-game/garbi-academy-1-pixil-saga/how-to-play" target="_blank" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">How to Play</a>
+                                  <a href="https://garbi-protocol.gitbook.io/docs/product/garbi-game/garbi-academy-1-pixil-saga/how-to-play" target="_blank" class="text-decoration-none fs-16 c-4 b-600 menu-dashboard f-inter">プレイ方法</a>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-4" style="display: flex; justify-content: center;">
-                              <div class="logo" style="justify-content: center; display: flex;">
-                                <a href="/">
-                                    <img src="/assets/images/logo-pixil.png" width="337.5px" height="40px" alt="logo">
-                                </a>
-                              </div> 
-                            </div>
+                            <div class="col-lg-4" style="display: flex; justify-content: center;">                                                            <div class="logo" style="justify-content: center; display: flex;">
+                              <a href="/">
+                                  <img src="/assets/images/logo-pixil.png" width="337.5px" height="40px" alt="logo">
+                              </a>
+                            </div>                              
+                            </div>                                
                             <div class="col-lg-4">
                                 <div class="user-action">
                                     <div class="d-lg-flex align-items-center justify-content-end user-wallet" >
@@ -78,13 +77,13 @@
 
                                         <div class="wrap-user-btn show">
                                             <div class="wrap-btn-connect">
-                                              <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white py-8 px-24 border-radius-8 btn-transition d-inline-block" style="border: 2px solid #546374;">Connect Wallet</a>
+                                              <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white py-8 px-24 border-radius-8 btn-transition d-inline-block" style="border: 2px solid #546374;">ウォレットを接続する</a>
                                             </div>
                                         </div>
                                       </div>
                                       <div class="d-lg-flex align-items-center justify-content-end button-play-game" >
-                                            <a href=""  type="button" class="btn-play-game"  >
-                                                <span class="">Earn for Free</span>
+                                            <a href="/step-1.html"  type="button" class="btn-play-game"  >
+                                                <span class="">無料で獲得する</span>
                                             </a>
                                       </div>
                                 </div>
@@ -92,30 +91,54 @@
                           </div>
                         </div>
                       </div>                          
-                </nav>
+                </nav>              
                 <div class="modal-detail-wrapper">
                 </div>
               </div>
+
+              <nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none">
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation" style="margin-left: 16px;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand mx-auto" href="/">
+                    <img src="/assets/images/logo-pixil.png" alt="logo" style="max-width: 100%; height: auto;">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSmall">
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="/">チーム</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/">クイズ</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/">ロボット</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">プレイ方法</a></li>
+                    <li class="nav-item">
+                      <a href="#" class="btn-connect-wallet text-decoration-none fs-16 b-600 c-9 background-white py-8 px-20 border-radius-8 btn-transition d-inline-block" style="border: 2px solid #546374;">ウォレットを接続する</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn btn-primary text-decoration-none fs-16 b-600 c-9 py-8 px-24 border-radius-8 btn-transition d-inline-block" style="border: 2px solid; background: #ed7510;" href="/step-1.html" id="earnForFree">無料で獲得する</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              
             </div>
         </header>
             <main id="main">
               <div id="buy-box">
                 <div class="container-fluid">
                     <div class="step-to-join-game">
-                        <h1 class="title">Create your profile</h1>
+                        <h1 class="title">プロフィールを作成する</h1>
                         <div class="step-by-step">
                             <div class="step-1 on-step">
-                                <span>Choose your Team</span>
+                                <span>チームを選択する</span>
                             </div>
                             <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                             <div class="step-2">
-                                <span>Claim your NFT</span>
+                                <span>NFTをクレームする</span>
                             </div>
                         </div>
                     </div>
-                    <h4 style="color: #7E9DB6;">Step 1</h4>
-                    <h4 class="title" style="color: #000";> Choose your Team</h4>
-                    <p class="f-inter" style="color: #000; text-align: left;">Choose your team in Pixil Saga and gain access to unique abilities and features. With four options to choose from, align yourself with players who share your interests and play style. Join us now and compete for dominance in the world of blockchain gaming!</p>
+                    <h4 style="color: #7E9DB6;">ステップ1</h4>
+                    <h4 class="title" style="color: #000";>チームを選択する</h4>
+                    <p class="f-inter" style="color: #000; text-align: left;">Pixil Sagaでチームを選択し、ユニークな能力と特徴にアクセスしましょう。4つの選択肢があり、自分の興味やプレースタイルに合ったプレイヤーと連携しましょう。今すぐ参加して、ブロックチェーンゲームの世界で優位を競い合いましょう！</p>
                     <div class="list-hero-claim">
                         <a href="/claim-hodl-hero.html">
                             <div class="hero-info">
@@ -123,8 +146,8 @@
                                     <img src="/assets/images/Hero_Team_Id_1.png" alt="Hero 1">
                                 </div>
                                 <div class="description" style="background: #2F5367">
-                                    <h4 class="name">HODL Hero</h4>
-                                    <p class="f-inter info" style="text-align: left">This team is all about the classic strategy of holding onto their digital assets for the long term. Members of this team are patient and strategic, always thinking about the big picture and the potential future value of their investments.</p>
+                                    <h4 class="name">HODLヒーロー</h4>
+                                    <p class="f-inter info" style="text-align: left">このチームは、長期間デジタル資産を保持するという古典的な戦略に全てを捧げています。チームのメンバーは忍耐強く、戦略的であり、常に将来の投資価値や大局を考えています。</p>
                                 </div>
                             </div>
                         </a>
@@ -134,8 +157,8 @@
                                     <img src="/assets/images/Hero_Team_Id_2.png" alt="Hero 2">
                                 </div>
                                 <div class="description" style="background: #583166">
-                                    <h4 class="name">NFT Ninjas</h4>
-                                    <p class="f-inter info" style="text-align: left">This team is focused on earning through the booming market for non-fungible tokens (NFTs), which are unique digital assets such as art, collectibles, and gaming items. Members of this team are creative and always on the lookout for the next big NFT opportunity.</p>
+                                    <h4 class="name">NFTニンジャ</h4>
+                                    <p class="f-inter info" style="text-align: left">このチームは、非代替性トークン（NFT）の急成長する市場を通じて収益を上げることに焦点を当てています。NFTは、アート、コレクション、ゲームアイテムなどのユニークなデジタル資産です。このチームのメンバーは創造的であり、常に次の大きなNFTのチャンスを探しています。</p>
                                 </div>
                             </div>
                         </a>
@@ -145,8 +168,8 @@
                                     <img src="../assets/images/Hero_Team_Id_3.png" alt="Hero 3">
                                 </div>
                                 <div class="description" style="background: #683131">
-                                    <h4 class="name">Trading Titans</h4>
-                                    <p class="f-inter info" style="text-align: left">This team is focused on short-term gains through active trading in the crypto market. Members of this team are skilled traders, always looking for opportunities to buy and sell at the right time for maximum profit.</p>
+                                    <h4 class="name">トレーディングタイタンズ</h4>
+                                    <p class="f-inter info" style="text-align: left">このチームは、暗号市場での積極的な取引を通じて短期的な利益に焦点を当てています。チームのメンバーは熟練したトレーダーであり、常に最大の利益を得るために適切な時に買い物や売り物の機会を探しています。</p>
                                 </div>
                             </div>
                         </a>
@@ -156,8 +179,8 @@
                                     <img src="/assets/images/Hero_Team_Id_4.png" alt="Hero 4">
                                 </div>
                                 <div class="description" style="background: #296327">
-                                    <h4 class="name">Staking Stars</h4>
-                                    <p class="f-inter info" style="text-align: left">This team is focused on earning through the process of staking, which involves holding a certain amount of digital assets in a wallet in order to support the network and earn rewards. Members of this team are strategic and focused on maximizing their staking rewards.</p>
+                                    <h4 class="name">ステーキングスターズ</h4>
+                                    <p class="f-inter info" style="text-align: left">このチームはステーキングを通じて収益を得ることに注力しています。ステーキングとは、デジタル資産をウォレットに保持し、ネットワークを支援して報酬を獲得するプロセスです。メンバーは戦略的にステーキング報酬を最大化することに集中しています。</p>
                                 </div>
                             </div>
                         </a>
@@ -168,7 +191,7 @@
             <footer id="footer" class="">
                 <footer id="is-footer-copyright-group">
                     <div id="footer-main" class="footer footer-main fade-in-bg" >
-                        <h1 class="title fade-in">STAY CONNECTED</h1>
+                        <h1 class="title fade-in">接続を維持する</h1>
                         <div class="social-area fade-in">                           
                             <a href="https://t.me/garbiprotocol" target="_blank" class="mr-40"> 
                                 <img alt="tele" src="/assets/images/telegram-logo.svg" >
@@ -187,7 +210,7 @@
                             <nav class="navbar navbar-expand-lg navbar-light">
                                 <ul class="navbar-nav mx-auto">
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" target="_blank" href="https://garbi-protocol.gitbook.io/docs/">Docs</a>
+                                    <a class="nav-link f-inter" target="_blank" href="https://garbi-protocol.gitbook.io/docs/">書類</a>
                                   </li>
                                   <li class="nav-item">
                                     <a class="nav-link f-inter" target="_blank" href="https://twitter.com/garbi_protocol/" rel="noopener noreferrer">#X</a>
@@ -199,13 +222,13 @@
                                     <a class="nav-link f-inter" target="_blank" href="https://github.com/garbiprotocol">git@</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link f-inter" href="#">Version 1.1.0</a>
+                                    <a class="nav-link f-inter" href="#">バージョン1.1.0</a>
                                 </li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="copy-right fade-in">
-                            <p class="f-inter"><a href="https://garbi.io" class="f-inter" target=_blank>Garbi Protocol</a> created Pixil Saga - a decentralized blend of blockchain and gamification for adventurous gamers.</p>
+                          <p class="f-inter"><a href="https://garbi.io" target="_blank">ガービ・プロトコルは</a> 冒険心旺盛なゲーマー向けにブロックチェーンとゲーミフィケーションを組み合わせた分散型プラットフォームであるPixil Sagaを生み出しました。</p>
                         </div>
                      </div>
                 </footer>
@@ -299,5 +322,15 @@
                 }, 3000);
             });
     </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            var navbarCollapse = document.getElementById('navbarSmall');
 
+            navbarToggler.addEventListener('click', function () {
+                navbarCollapse.classList.toggle('show');
+            });
+        });
+    </script>  
 </html>

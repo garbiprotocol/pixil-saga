@@ -1,17 +1,17 @@
-@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap);
+@import url(https://fonts.google.com/noto/specimen/Noto+Sans+JP:wght@400;600;700;900&display=swap);
 @font-face {
-  font-family: "retro-land-mayhem";
-  src: url("../fonts/retro-land-mayhem.woff") format("woff"), url("../fonts/retro-land-mayhem.otf") format("otf"), url("../fonts/retro-land-mayhem.ttf") format("truetype"), url("../fonts/retro-land-mayhem.eot") format("eot"), url("../fonts/retro-land-mayhem.svg") format("svg");
+  font-family: "PixelMplus";
+  src: url("../fonts/PixelMplus12-Bold.ttf") format("truetype"), url("../PixelMplus12-Regular.ttf") format("truetype");
 }
 * {
-  font-family: "retro-land-mayhem", sans-serif;
+  font-family: "PixelMplus";
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .f-inter {
-  font-family: "Inter", sans-serif;
+  font-family: "Noto+Sans+JP", sans-serif;
   color: #FAFAFA;
   text-align: center;
   font-size: 18px;
@@ -22,7 +22,7 @@
 
 .f-inter a {
   color: #07FFFF;
-  font-family: "Inter", sans-serif;
+  font-family: "Noto+Sans+JP", sans-serif;
 }
 
 .f-inter a:hover {
@@ -30,7 +30,7 @@
 }
 
 body {
-  font-family: "retro-land-mayhem", sans-serif;
+  font-family: "PixelMplus", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #181425;
@@ -28451,7 +28451,7 @@ textarea {
 .footer .menu-footer a  {
   color: #fff!important;
   text-transform: uppercase;
-  font-family: "Inter", sans-serif;
+  font-family: "Noto+Sans+JP", sans-serif;
 
 }
 .footer .copy-right p {
@@ -28460,11 +28460,15 @@ textarea {
   line-height: 24px;
 }
 .footer h1.title {
-  font-size: 40px;
-  line-height: 60px;
-  color: #07FFFF;
   margin-bottom: 50px;
   padding-top: 120px;
+  color: #07FFFF;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
+  margin-bottom: 40px;
+  letter-spacing: 4.8px;
 }
 .footer .logo-footer img {
   width: 708px;
@@ -28531,13 +28535,20 @@ textarea {
 }
 #list-team h4.title {
   color: #546374;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
 }
 .description h1.title {
   color: #07FFFF;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 60px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
   margin-bottom: 40px;
+  letter-spacing: 4.8px;
 }
 .description p {
   font-size: 24px;
@@ -28810,8 +28821,14 @@ textarea {
 }
 .dev-update h1.title {
   margin-bottom: 80px;
-  color: #049999;
   text-align: center;
+  color: #07FFFF;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
+  margin-bottom: 40px;
+  letter-spacing: 4.8px;
 }
 .dev-update .news {
   background: url(../images/news-bg.png) center no-repeat;
@@ -29327,7 +29344,7 @@ textarea {
 }
 .list-hero-claim .hero-info .description h4.name {
   color: #EFEFEF;
-  font-family: "retro-land-mayhem", sans-serif;
+  font-family: "PixelMplus";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -29337,7 +29354,7 @@ textarea {
 .list-hero-claim .hero-info .description p.info {
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 #genesis-hero {
